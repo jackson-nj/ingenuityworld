@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { Pencil, Trash2, X, Upload, Save, Plus } from "lucide-react";
+import { Pencil, Trash2, X, Save, Plus } from "lucide-react";
+import serviceImg1 from "../../assets/services/equipment hire.jpg";
+import serviceImg2 from "../../assets/services/wet hire.jpg";
+import serviceImg3 from "../../assets/services/delivery.jpg";
+import serviceImg4 from "../../assets/services/dry hire.jpg";
 import { Button } from "@/components/ui/button";
 import FileUploader from "@/components/admin/FileUploader";
 import AdminLayout from "@/components/admin/AdminLayout";
@@ -12,10 +16,10 @@ interface ServiceItem {
 }
 
 const initialServices: ServiceItem[] = [
-  { id: "1", title: "Equipments for Hire", description: "Excavators, bulldozers, graders, loaders, rollers, dump trucks, cranes.", image: new URL("../../assets/services/equipment%20hire.jpg", import.meta.url).href },
-  { id: "2", title: "Wet Hire (Equipment + Operator)", description: "Certified, experienced operators supplied with machinery.", image: new URL("../../assets/services/wet%20hire.jpg", import.meta.url).href },
-  { id: "3", title: "Equipment Delivery", description: "Reliable delivery and pickup services to your project site.", image: new URL("../../assets/services/delivery.jpg", import.meta.url).href },
-  { id: "4", title: "Dry Hire (Equipment Only)", description: "Well-maintained machines for experienced contractors.", image: new URL("../../assets/services/dry%20hire.jpg", import.meta.url).href },
+  { id: "1", title: "Equipments for Hire", description: "Excavators, bulldozers, graders, loaders, rollers, dump trucks, cranes.", image: serviceImg1 },
+  { id: "2", title: "Wet Hire (Equipment + Operator)", description: "Certified, experienced operators supplied with machinery.", image: serviceImg2 },
+  { id: "3", title: "Equipment Delivery", description: "Reliable delivery and pickup services to your project site.", image: serviceImg3 },
+  { id: "4", title: "Dry Hire (Equipment Only)", description: "Well-maintained machines for experienced contractors.", image: serviceImg4 },
 ];
 
 const AdminServices = () => {

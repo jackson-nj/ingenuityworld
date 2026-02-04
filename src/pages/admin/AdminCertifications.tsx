@@ -1,4 +1,9 @@
 import { useState } from "react";
+import cert1 from "../../assets/certifications/National Pension Scheme Authority.png";
+import cert2 from "../../assets/certifications/pacra.png";
+import cert3 from "../../assets/certifications/Workers' Compensation Fund Control Board.png";
+import cert4 from "../../assets/certifications/zambia revenue authority.png";
+import cert5 from "../../assets/certifications/Zambian Public Procurement Authority.png";
 import { Plus, Pencil, Trash2, X, Upload, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FileUploader from "@/components/admin/FileUploader";
@@ -12,11 +17,11 @@ interface CertificationItem {
 }
 
 const initialCertifications: CertificationItem[] = [
-  { id: "1", name: "National Pension Scheme Authority (NAPSA)", description: "Registered and compliant with NAPSA, ensuring all our employees are covered under the national pension scheme.", image: new URL("../../assets/certifications/National%20Pension%20Scheme%20Authority.png", import.meta.url).href },
-  { id: "2", name: "Patents and Companies Registration Agency (PACRA)", description: "Officially registered company with PACRA, operating as a legitimate business entity in Zambia.", image: new URL("../../assets/certifications/pacra.png", import.meta.url).href },
-  { id: "3", name: "Workers' Compensation Fund Control Board (WCFCB)", description: "Certified with WCFCB, providing workers' compensation coverage for all our employees.", image: new URL("../../assets/certifications/Workers'%20Compensation%20Fund%20Control%20Board.png", import.meta.url).href },
-  { id: "4", name: "Zambia Revenue Authority (ZRA)", description: "Tax compliant and registered with ZRA, meeting all our fiscal obligations to the government.", image: new URL("../../assets/certifications/zambia%20revenue%20authority.png", import.meta.url).href },
-  { id: "5", name: "Zambia Public Procurement Authority (ZPPA)", description: "Registered supplier with ZPPA, qualified to participate in public procurement and government contracts.", image: new URL("../../assets/certifications/Zambian%20Public%20Procurement%20Authority.png", import.meta.url).href },
+  { id: "1", name: "National Pension Scheme Authority (NAPSA)", description: "Registered and compliant with NAPSA, ensuring all our employees are covered under the national pension scheme.", image: cert1 },
+  { id: "2", name: "Patents and Companies Registration Agency (PACRA)", description: "Officially registered company with PACRA, operating as a legitimate business entity in Zambia.", image: cert2 },
+  { id: "3", name: "Workers' Compensation Fund Control Board (WCFCB)", description: "Certified with WCFCB, providing workers' compensation coverage for all our employees.", image: cert3 },
+  { id: "4", name: "Zambia Revenue Authority (ZRA)", description: "Tax compliant and registered with ZRA, meeting all our fiscal obligations to the government.", image: cert4 },
+  { id: "5", name: "Zambia Public Procurement Authority (ZPPA)", description: "Registered supplier with ZPPA, qualified to participate in public procurement and government contracts.", image: cert5 },
 ];
 
 const AdminCertifications = () => {

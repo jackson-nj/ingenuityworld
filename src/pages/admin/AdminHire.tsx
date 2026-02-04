@@ -1,4 +1,16 @@
 import { useState } from "react";
+import backhoeloaderImg from "../../assets/hire/backhoeloader.png";
+import bulldozerImg from "../../assets/hire/bulldozer.png";
+import craneImg from "../../assets/hire/CRANE TRUCKS.png";
+import excavatorImg from "../../assets/hire/excavator.png";
+import forkliftsImg from "../../assets/hire/forlifts.png";
+import frontloaderImg from "../../assets/hire/frontloader.jpg";
+import graderImg from "../../assets/hire/grader.png";
+import lowbedImg from "../../assets/hire/lowbedtrailer.png";
+import rockbreakerImg from "../../assets/hire/rock breaker.png";
+import rollerImg from "../../assets/hire/rollercompactor.png";
+import tippersImg from "../../assets/hire/tippers.png";
+import waterbowserImg from "../../assets/hire/waterbowser.png";
 import { Plus, Pencil, Trash2, X, Upload, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FileUploader from "@/components/admin/FileUploader";
@@ -12,18 +24,18 @@ interface HireItem {
 }
 
 const initialHire: HireItem[] = [
-  { id: "1", name: "Backhoe Loader", description: "Versatile machine for digging, loading, and material handling.", image: new URL("../../assets/hire/backhoeloader.png", import.meta.url).href },
-  { id: "2", name: "Bulldozer", description: "Powerful earthmoving equipment for grading and clearing land.", image: new URL("../../assets/hire/bulldozer.png", import.meta.url).href },
-  { id: "3", name: "Crane Trucks", description: "Mobile cranes for lifting and transporting heavy loads.", image: new URL("../../assets/hire/CRANE%20TRUCKS.png", import.meta.url).href },
-  { id: "4", name: "Excavator", description: "Heavy-duty digging machine for excavation and demolition.", image: new URL("../../assets/hire/excavator.png", import.meta.url).href },
-  { id: "5", name: "Forklifts", description: "Industrial trucks for lifting and moving materials.", image: new URL("../../assets/hire/forlifts.png", import.meta.url).href },
-  { id: "6", name: "Front Loader", description: "Wheel loader for scooping and transporting bulk materials.", image: new URL("../../assets/hire/frontloader.jpg", import.meta.url).href },
-  { id: "7", name: "Grader", description: "Precision machine for leveling and grading surfaces.", image: new URL("../../assets/hire/grader.png", import.meta.url).href },
-  { id: "8", name: "Lowbed Trailer", description: "Heavy-haul trailer for transporting oversized equipment.", image: new URL("../../assets/hire/lowbedtrailer.png", import.meta.url).href },
-  { id: "9", name: "Rock Breaker", description: "Hydraulic attachment for breaking rocks and concrete.", image: new URL("../../assets/hire/rock%20breaker.png", import.meta.url).href },
-  { id: "10", name: "Roller Compactor", description: "Compaction equipment for soil, gravel, and asphalt.", image: new URL("../../assets/hire/rollercompactor.png", import.meta.url).href },
-  { id: "11", name: "Tippers", description: "Dump trucks for hauling and unloading bulk materials.", image: new URL("../../assets/hire/tippers.png", import.meta.url).href },
-  { id: "12", name: "Water Bowser", description: "Water tanker for dust suppression and site watering.", image: new URL("../../assets/hire/waterbowser.png", import.meta.url).href },
+  { id: "1", name: "Backhoe Loader", description: "Versatile machine for digging, loading, and material handling.", image: backhoeloaderImg },
+  { id: "2", name: "Bulldozer", description: "Powerful earthmoving equipment for grading and clearing land.", image: bulldozerImg },
+  { id: "3", name: "Crane Trucks", description: "Mobile cranes for lifting and transporting heavy loads.", image: craneImg },
+  { id: "4", name: "Excavator", description: "Heavy-duty digging machine for excavation and demolition.", image: excavatorImg },
+  { id: "5", name: "Forklifts", description: "Industrial trucks for lifting and moving materials.", image: forkliftsImg },
+  { id: "6", name: "Front Loader", description: "Wheel loader for scooping and transporting bulk materials.", image: frontloaderImg },
+  { id: "7", name: "Grader", description: "Precision machine for leveling and grading surfaces.", image: graderImg },
+  { id: "8", name: "Lowbed Trailer", description: "Heavy-haul trailer for transporting oversized equipment.", image: lowbedImg },
+  { id: "9", name: "Rock Breaker", description: "Hydraulic attachment for breaking rocks and concrete.", image: rockbreakerImg },
+  { id: "10", name: "Roller Compactor", description: "Compaction equipment for soil, gravel, and asphalt.", image: rollerImg },
+  { id: "11", name: "Tippers", description: "Dump trucks for hauling and unloading bulk materials.", image: tippersImg },
+  { id: "12", name: "Water Bowser", description: "Water tanker for dust suppression and site watering.", image: waterbowserImg },
 ];
 
 const AdminHire = () => {

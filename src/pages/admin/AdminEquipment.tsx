@@ -1,4 +1,12 @@
 import { useState } from "react";
+import backhoeImg from "../../assets/equipment/backhoeLoader.jpg";
+import rollerImg from "../../assets/equipment/rollercompactor.png";
+import lowbedImg from "../../assets/equipment/lowbedtrailer.jpg";
+import frontloaderImg from "../../assets/equipment/frontloader.jpg";
+import excavatorImg from "../../assets/equipment/excavator.png";
+import graderImg from "../../assets/equipment/grader.png";
+import bulldozerImg from "../../assets/equipment/bulldozer.png";
+import rockbreakerImg from "../../assets/equipment/rockbreaker.jpg";
 import { Plus, Pencil, Trash2, X, Upload, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FileUploader from "@/components/admin/FileUploader";
@@ -11,14 +19,14 @@ interface EquipmentItem {
 }
 
 const initialEquipment: EquipmentItem[] = [
-  { id: "1", title: "Backhoe Loader", image: new URL("../../assets/equipment/backhoeLoader.jpg", import.meta.url).href },
-  { id: "2", title: "Roller Compactor", image: new URL("../../assets/equipment/rollercompactor.png", import.meta.url).href },
-  { id: "3", title: "Low Bed Trailer", image: new URL("../../assets/equipment/lowbedtrailer.jpg", import.meta.url).href },
-  { id: "4", title: "Front Loader", image: new URL("../../assets/equipment/frontloader.jpg", import.meta.url).href },
-  { id: "5", title: "Excavator", image: new URL("../../assets/equipment/excavator.png", import.meta.url).href },
-  { id: "6", title: "Grader", image: new URL("../../assets/equipment/grader.png", import.meta.url).href },
-  { id: "7", title: "Bulldozer", image: new URL("../../assets/equipment/bulldozer.png", import.meta.url).href },
-  { id: "8", title: "Rock Breaker", image: new URL("../../assets/equipment/rockbreaker.jpg", import.meta.url).href },
+  { id: "1", title: "Backhoe Loader", image: backhoeImg },
+  { id: "2", title: "Roller Compactor", image: rollerImg },
+  { id: "3", title: "Low Bed Trailer", image: lowbedImg },
+  { id: "4", title: "Front Loader", image: frontloaderImg },
+  { id: "5", title: "Excavator", image: excavatorImg },
+  { id: "6", title: "Grader", image: graderImg },
+  { id: "7", title: "Bulldozer", image: bulldozerImg },
+  { id: "8", title: "Rock Breaker", image: rockbreakerImg },
 ];
 
 const AdminEquipment = () => {
