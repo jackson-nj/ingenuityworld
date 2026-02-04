@@ -12,11 +12,11 @@ interface CertificationItem {
 }
 
 const initialCertifications: CertificationItem[] = [
-  { id: "1", name: "National Pension Scheme Authority (NAPSA)", description: "Registered and compliant with NAPSA, ensuring all our employees are covered under the national pension scheme.", image: "/assets/certifications/National Pension Scheme Authority.png" },
-  { id: "2", name: "Patents and Companies Registration Agency (PACRA)", description: "Officially registered company with PACRA, operating as a legitimate business entity in Zambia.", image: "/assets/certifications/pacra.png" },
-  { id: "3", name: "Workers' Compensation Fund Control Board (WCFCB)", description: "Certified with WCFCB, providing workers' compensation coverage for all our employees.", image: "/assets/certifications/Workers' Compensation Fund Control Board.png" },
-  { id: "4", name: "Zambia Revenue Authority (ZRA)", description: "Tax compliant and registered with ZRA, meeting all our fiscal obligations to the government.", image: "/assets/certifications/zambia revenue authority.png" },
-  { id: "5", name: "Zambia Public Procurement Authority (ZPPA)", description: "Registered supplier with ZPPA, qualified to participate in public procurement and government contracts.", image: "/assets/certifications/Zambian Public Procurement Authority.png" },
+  { id: "1", name: "National Pension Scheme Authority (NAPSA)", description: "Registered and compliant with NAPSA, ensuring all our employees are covered under the national pension scheme.", image: new URL("../../assets/certifications/National%20Pension%20Scheme%20Authority.png", import.meta.url).href },
+  { id: "2", name: "Patents and Companies Registration Agency (PACRA)", description: "Officially registered company with PACRA, operating as a legitimate business entity in Zambia.", image: new URL("../../assets/certifications/pacra.png", import.meta.url).href },
+  { id: "3", name: "Workers' Compensation Fund Control Board (WCFCB)", description: "Certified with WCFCB, providing workers' compensation coverage for all our employees.", image: new URL("../../assets/certifications/Workers'%20Compensation%20Fund%20Control%20Board.png", import.meta.url).href },
+  { id: "4", name: "Zambia Revenue Authority (ZRA)", description: "Tax compliant and registered with ZRA, meeting all our fiscal obligations to the government.", image: new URL("../../assets/certifications/zambia%20revenue%20authority.png", import.meta.url).href },
+  { id: "5", name: "Zambia Public Procurement Authority (ZPPA)", description: "Registered supplier with ZPPA, qualified to participate in public procurement and government contracts.", image: new URL("../../assets/certifications/Zambian%20Public%20Procurement%20Authority.png", import.meta.url).href },
 ];
 
 const AdminCertifications = () => {
@@ -144,15 +144,8 @@ const AdminCertifications = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Image URL</label>
+                  <label className="block text-sm font-medium mb-2">Upload Image</label>
                   <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={formData.image}
-                      onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                      className="flex-1 border border-border rounded-md px-3 py-2 bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="Enter image URL"
-                    />
                     <FileUploader folder="certifications" onUpload={(url) => setFormData({ ...formData, image: url })} />
                   </div>
                 </div>

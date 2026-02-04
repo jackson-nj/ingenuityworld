@@ -12,18 +12,18 @@ interface HireItem {
 }
 
 const initialHire: HireItem[] = [
-  { id: "1", name: "Backhoe Loader", description: "Versatile machine for digging, loading, and material handling.", image: "/assets/hire/backhoeloader.png" },
-  { id: "2", name: "Bulldozer", description: "Powerful earthmoving equipment for grading and clearing land.", image: "/assets/hire/bulldozer.png" },
-  { id: "3", name: "Crane Trucks", description: "Mobile cranes for lifting and transporting heavy loads.", image: "/assets/hire/CRANE TRUCKS.png" },
-  { id: "4", name: "Excavator", description: "Heavy-duty digging machine for excavation and demolition.", image: "/assets/hire/excavator.png" },
-  { id: "5", name: "Forklifts", description: "Industrial trucks for lifting and moving materials.", image: "/assets/hire/forlifts.png" },
-  { id: "6", name: "Front Loader", description: "Wheel loader for scooping and transporting bulk materials.", image: "/assets/hire/frontloader.jpg" },
-  { id: "7", name: "Grader", description: "Precision machine for leveling and grading surfaces.", image: "/assets/hire/grader.png" },
-  { id: "8", name: "Lowbed Trailer", description: "Heavy-haul trailer for transporting oversized equipment.", image: "/assets/hire/lowbedtrailer.png" },
-  { id: "9", name: "Rock Breaker", description: "Hydraulic attachment for breaking rocks and concrete.", image: "/assets/hire/rock breaker.png" },
-  { id: "10", name: "Roller Compactor", description: "Compaction equipment for soil, gravel, and asphalt.", image: "/assets/hire/rollercompactor.png" },
-  { id: "11", name: "Tippers", description: "Dump trucks for hauling and unloading bulk materials.", image: "/assets/hire/tippers.png" },
-  { id: "12", name: "Water Bowser", description: "Water tanker for dust suppression and site watering.", image: "/assets/hire/waterbowser.png" },
+  { id: "1", name: "Backhoe Loader", description: "Versatile machine for digging, loading, and material handling.", image: new URL("../../assets/hire/backhoeloader.png", import.meta.url).href },
+  { id: "2", name: "Bulldozer", description: "Powerful earthmoving equipment for grading and clearing land.", image: new URL("../../assets/hire/bulldozer.png", import.meta.url).href },
+  { id: "3", name: "Crane Trucks", description: "Mobile cranes for lifting and transporting heavy loads.", image: new URL("../../assets/hire/CRANE%20TRUCKS.png", import.meta.url).href },
+  { id: "4", name: "Excavator", description: "Heavy-duty digging machine for excavation and demolition.", image: new URL("../../assets/hire/excavator.png", import.meta.url).href },
+  { id: "5", name: "Forklifts", description: "Industrial trucks for lifting and moving materials.", image: new URL("../../assets/hire/forlifts.png", import.meta.url).href },
+  { id: "6", name: "Front Loader", description: "Wheel loader for scooping and transporting bulk materials.", image: new URL("../../assets/hire/frontloader.jpg", import.meta.url).href },
+  { id: "7", name: "Grader", description: "Precision machine for leveling and grading surfaces.", image: new URL("../../assets/hire/grader.png", import.meta.url).href },
+  { id: "8", name: "Lowbed Trailer", description: "Heavy-haul trailer for transporting oversized equipment.", image: new URL("../../assets/hire/lowbedtrailer.png", import.meta.url).href },
+  { id: "9", name: "Rock Breaker", description: "Hydraulic attachment for breaking rocks and concrete.", image: new URL("../../assets/hire/rock%20breaker.png", import.meta.url).href },
+  { id: "10", name: "Roller Compactor", description: "Compaction equipment for soil, gravel, and asphalt.", image: new URL("../../assets/hire/rollercompactor.png", import.meta.url).href },
+  { id: "11", name: "Tippers", description: "Dump trucks for hauling and unloading bulk materials.", image: new URL("../../assets/hire/tippers.png", import.meta.url).href },
+  { id: "12", name: "Water Bowser", description: "Water tanker for dust suppression and site watering.", image: new URL("../../assets/hire/waterbowser.png", import.meta.url).href },
 ];
 
 const AdminHire = () => {
@@ -153,15 +153,8 @@ const AdminHire = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Image URL</label>
+                  <label className="block text-sm font-medium mb-2">Upload Image</label>
                   <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={formData.image}
-                      onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                      className="flex-1 border border-border rounded-md px-3 py-2 bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="Enter image URL"
-                    />
                     <FileUploader folder="hire" onUpload={(url) => setFormData({ ...formData, image: url })} />
                   </div>
                 </div>

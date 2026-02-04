@@ -11,14 +11,14 @@ interface EquipmentItem {
 }
 
 const initialEquipment: EquipmentItem[] = [
-  { id: "1", title: "Backhoe Loader", image: "/assets/equipment/backhoeloader.jpg" },
-  { id: "2", title: "Roller Compactor", image: "/assets/equipment/rollercompactor.png" },
-  { id: "3", title: "Low Bed Trailer", image: "/assets/equipment/lowbedtrailer.jpg" },
-  { id: "4", title: "Front Loader", image: "/assets/equipment/frontloader.jpg" },
-  { id: "5", title: "Excavator", image: "/assets/equipment/excavator.png" },
-  { id: "6", title: "Grader", image: "/assets/equipment/grader.png" },
-  { id: "7", title: "Bulldozer", image: "/assets/equipment/bulldozer.png" },
-  { id: "8", title: "Rock Breaker", image: "/assets/equipment/rock breaker.jpg" },
+  { id: "1", title: "Backhoe Loader", image: new URL("../../assets/equipment/backhoeLoader.jpg", import.meta.url).href },
+  { id: "2", title: "Roller Compactor", image: new URL("../../assets/equipment/rollercompactor.png", import.meta.url).href },
+  { id: "3", title: "Low Bed Trailer", image: new URL("../../assets/equipment/lowbedtrailer.jpg", import.meta.url).href },
+  { id: "4", title: "Front Loader", image: new URL("../../assets/equipment/frontloader.jpg", import.meta.url).href },
+  { id: "5", title: "Excavator", image: new URL("../../assets/equipment/excavator.png", import.meta.url).href },
+  { id: "6", title: "Grader", image: new URL("../../assets/equipment/grader.png", import.meta.url).href },
+  { id: "7", title: "Bulldozer", image: new URL("../../assets/equipment/bulldozer.png", import.meta.url).href },
+  { id: "8", title: "Rock Breaker", image: new URL("../../assets/equipment/rockbreaker.jpg", import.meta.url).href },
 ];
 
 const AdminEquipment = () => {
@@ -157,17 +157,8 @@ const AdminEquipment = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Image URL</label>
+                  <label className="block text-sm font-medium mb-2">Upload Image</label>
                   <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={formData.image}
-                      onChange={(e) =>
-                        setFormData({ ...formData, image: e.target.value })
-                      }
-                      className="flex-1 border border-border rounded-md px-3 py-2 bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="Enter image URL or upload"
-                    />
                     <FileUploader folder="equipment" onUpload={(url) => setFormData({ ...formData, image: url })} />
                   </div>
                 </div>

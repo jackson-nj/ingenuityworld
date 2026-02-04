@@ -11,27 +11,27 @@ interface GalleryItem {
 }
 
 const initialGallery: GalleryItem[] = [
-  { id: "1", alt: "Project 1", src: "/assets/gallery/project1.jpg" },
-  { id: "2", alt: "Project 2", src: "/assets/gallery/project2.jpg" },
-  { id: "3", alt: "Project 3", src: "/assets/gallery/project3.jpg" },
-  { id: "4", alt: "Project 4", src: "/assets/gallery/project4.jpg" },
-  { id: "5", alt: "Project 5", src: "/assets/gallery/project5.jpg" },
-  { id: "6", alt: "Project 6", src: "/assets/gallery/project6.jpg" },
-  { id: "7", alt: "Project 7", src: "/assets/gallery/project7.jpg" },
-  { id: "8", alt: "Project 8", src: "/assets/gallery/project8.jpg" },
-  { id: "9", alt: "Project 10", src: "/assets/gallery/project10.jpg" },
-  { id: "10", alt: "Project 11", src: "/assets/gallery/project11.jpg" },
-  { id: "11", alt: "Project 12", src: "/assets/gallery/project12.jpg" },
-  { id: "12", alt: "Project 13", src: "/assets/gallery/project13.jpg" },
-  { id: "13", alt: "Project 14", src: "/assets/gallery/project14.jpg" },
-  { id: "14", alt: "Project A", src: "/assets/gallery/projectA.jpg" },
-  { id: "15", alt: "Project C", src: "/assets/gallery/projectC.jpg" },
-  { id: "16", alt: "Project D", src: "/assets/gallery/projectD.jpg" },
-  { id: "17", alt: "Project E", src: "/assets/gallery/projectE.jpg" },
-  { id: "18", alt: "Project F", src: "/assets/gallery/projectF.jpg" },
-  { id: "19", alt: "Project G", src: "/assets/gallery/projectG.jpg" },
-  { id: "20", alt: "Project H", src: "/assets/gallery/projectH.jpg" },
-  { id: "21", alt: "Project I", src: "/assets/gallery/projectI.jpg" },
+  { id: "1", alt: "Project 1", src: new URL("../../assets/gallery/project1.jpg", import.meta.url).href },
+  { id: "2", alt: "Project 2", src: new URL("../../assets/gallery/project2.jpg", import.meta.url).href },
+  { id: "3", alt: "Project 3", src: new URL("../../assets/gallery/project3.jpg", import.meta.url).href },
+  { id: "4", alt: "Project 4", src: new URL("../../assets/gallery/project4.jpg", import.meta.url).href },
+  { id: "5", alt: "Project 5", src: new URL("../../assets/gallery/project5.jpg", import.meta.url).href },
+  { id: "6", alt: "Project 6", src: new URL("../../assets/gallery/project6.jpg", import.meta.url).href },
+  { id: "7", alt: "Project 7", src: new URL("../../assets/gallery/project7.jpg", import.meta.url).href },
+  { id: "8", alt: "Project 8", src: new URL("../../assets/gallery/project8.jpg", import.meta.url).href },
+  { id: "9", alt: "Project 10", src: new URL("../../assets/gallery/project10.jpg", import.meta.url).href },
+  { id: "10", alt: "Project 11", src: new URL("../../assets/gallery/project11.jpg", import.meta.url).href },
+  { id: "11", alt: "Project 12", src: new URL("../../assets/gallery/project12.jpg", import.meta.url).href },
+  { id: "12", alt: "Project 13", src: new URL("../../assets/gallery/project13.jpg", import.meta.url).href },
+  { id: "13", alt: "Project 14", src: new URL("../../assets/gallery/project14.jpg", import.meta.url).href },
+  { id: "14", alt: "Project A", src: new URL("../../assets/gallery/projectA.jpg", import.meta.url).href },
+  { id: "15", alt: "Project C", src: new URL("../../assets/gallery/projectC.jpg", import.meta.url).href },
+  { id: "16", alt: "Project D", src: new URL("../../assets/gallery/projectD.jpg", import.meta.url).href },
+  { id: "17", alt: "Project E", src: new URL("../../assets/gallery/projectE.jpg", import.meta.url).href },
+  { id: "18", alt: "Project F", src: new URL("../../assets/gallery/projectF.jpg", import.meta.url).href },
+  { id: "19", alt: "Project G", src: new URL("../../assets/gallery/projectG.jpg", import.meta.url).href },
+  { id: "20", alt: "Project H", src: new URL("../../assets/gallery/projectH.jpg", import.meta.url).href },
+  { id: "21", alt: "Project I", src: new URL("../../assets/gallery/projectI.jpg", import.meta.url).href },
 ];
 
 const AdminGallery = () => {
@@ -130,15 +130,8 @@ const AdminGallery = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Image URL</label>
+                  <label className="block text-sm font-medium mb-2">Upload Image</label>
                   <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={formData.src}
-                      onChange={(e) => setFormData({ ...formData, src: e.target.value })}
-                      className="flex-1 border border-border rounded-md px-3 py-2 bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="Enter image URL"
-                    />
                     <FileUploader folder="gallery" onUpload={(url) => setFormData({ ...formData, src: url })} />
                   </div>
                 </div>

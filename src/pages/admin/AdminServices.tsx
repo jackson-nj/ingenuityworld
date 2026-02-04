@@ -12,10 +12,10 @@ interface ServiceItem {
 }
 
 const initialServices: ServiceItem[] = [
-  { id: "1", title: "Equipments for Hire", description: "Excavators, bulldozers, graders, loaders, rollers, dump trucks, cranes.", image: "/assets/services/equipment hire.jpg" },
-  { id: "2", title: "Wet Hire (Equipment + Operator)", description: "Certified, experienced operators supplied with machinery.", image: "/assets/services/wet hire.jpg" },
-  { id: "3", title: "Equipment Delivery", description: "Reliable delivery and pickup services to your project site.", image: "/assets/services/delivery.jpg" },
-  { id: "4", title: "Dry Hire (Equipment Only)", description: "Well-maintained machines for experienced contractors.", image: "/assets/services/dry hire.jpg" },
+  { id: "1", title: "Equipments for Hire", description: "Excavators, bulldozers, graders, loaders, rollers, dump trucks, cranes.", image: new URL("../../assets/services/equipment%20hire.jpg", import.meta.url).href },
+  { id: "2", title: "Wet Hire (Equipment + Operator)", description: "Certified, experienced operators supplied with machinery.", image: new URL("../../assets/services/wet%20hire.jpg", import.meta.url).href },
+  { id: "3", title: "Equipment Delivery", description: "Reliable delivery and pickup services to your project site.", image: new URL("../../assets/services/delivery.jpg", import.meta.url).href },
+  { id: "4", title: "Dry Hire (Equipment Only)", description: "Well-maintained machines for experienced contractors.", image: new URL("../../assets/services/dry%20hire.jpg", import.meta.url).href },
 ];
 
 const AdminServices = () => {
@@ -143,15 +143,8 @@ const AdminServices = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Image URL</label>
+                  <label className="block text-sm font-medium mb-2">Upload Image</label>
                   <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={formData.image}
-                      onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                      className="flex-1 border border-border rounded-md px-3 py-2 bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="Enter image URL"
-                    />
                     <FileUploader folder="services" onUpload={(url) => setFormData({ ...formData, image: url })} />
                   </div>
                 </div>
