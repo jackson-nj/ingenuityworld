@@ -1,49 +1,44 @@
 import { Link } from "react-router-dom";
-import backhoeLoaderImg from "@/assets/equipment/backhoeloader.jpg";
-import rollerCompactorImg from "@/assets/equipment/rollercompactor.png";
-import lowBedsImg from "@/assets/equipment/lowbedtrailer.jpg";
-import frontLoaderImg from "@/assets/equipment/frontloader.jpg";
-import excavatorImg from "@/assets/equipment/excavator.png";
-import graderImg from "@/assets/equipment/grader.png";
-import bulldozerImg from "@/assets/equipment/bulldozer.png";
-import rockBreakerImg from "@/assets/equipment/rock breaker.jpg";
 
-const equipmentCategories = [
-  { 
-    title: "Backhoe Loader",
-    image: backhoeLoaderImg
-  },
-  { 
-    title: "Roller Compactor",
-    image: rollerCompactorImg
-  },
-  { 
-    title: "Low Bed Trailer",
-    image: lowBedsImg
-  },
-  { 
-    title: "Front Loader",
-    image: frontLoaderImg
-  },
-  { 
-    title: "Excavator",
-    image: excavatorImg
-  },
-  { 
-    title: "Grader",
-    image: graderImg
-  },
-  { 
-    title: "Bulldozer",
-    image: bulldozerImg
-  },
-  { 
-    title: "Rock Breaker",
-    image: rockBreakerImg
-  },
-];
+// Resolve asset URLs at runtime to avoid early-evaluation ReferenceErrors
+// (this prevents cases where a variable is referenced before module initialization)
 
 const EquipmentSection = () => {
+  const equipmentCategories = [
+    {
+      title: "Backhoe Loader",
+      image: new URL("../assets/equipment/backhoeLoader.jpg", import.meta.url).href,
+    },
+    {
+      title: "Roller Compactor",
+      image: new URL("../assets/equipment/rollercompactor.png", import.meta.url).href,
+    },
+    {
+      title: "Low Bed Trailer",
+      image: new URL("../assets/equipment/lowbedtrailer.jpg", import.meta.url).href,
+    },
+    {
+      title: "Front Loader",
+      image: new URL("../assets/equipment/frontloader.jpg", import.meta.url).href,
+    },
+    {
+      title: "Excavator",
+      image: new URL("../assets/equipment/excavator.png", import.meta.url).href,
+    },
+    {
+      title: "Grader",
+      image: new URL("../assets/equipment/grader.png", import.meta.url).href,
+    },
+    {
+      title: "Bulldozer",
+      image: new URL("../assets/equipment/bulldozer.png", import.meta.url).href,
+    },
+    {
+      title: "Rock Breaker",
+      image: new URL("../assets/equipment/rockbreaker.jpg", import.meta.url).href,
+    },
+  ];
+
   return (
     <section id="equipment" className="py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-6">
