@@ -1,0 +1,146 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+
+const faqData = [
+  {
+    category: "General",
+    questions: [
+      {
+        question: "What types of equipment do you offer for hire?",
+        answer: "We offer a wide range of heavy construction equipment including excavators, bulldozers, graders, front loaders, backhoe loaders, roller compactors, crane trucks, tippers, water bowsers, rock breakers, forklifts, and lowbed trailers. All our equipment is well-maintained and ready for immediate deployment."
+      },
+      {
+        question: "What areas do you serve?",
+        answer: "We primarily serve Zambia. Our main operations are based in Lusaka, but we can deliver equipment to construction sites across the country. Contact us for specific location inquiries."
+      },
+      {
+        question: "How long has Changati Construction been in business?",
+        answer: "Changati Construction has been providing reliable equipment hire services since 2019. In this time, we've built a strong reputation for quality equipment, professional service, and customer satisfaction."
+      }
+    ]
+  },
+  {
+    category: "Hiring Process",
+    questions: [
+      {
+        question: "What is the difference between wet hire and dry hire?",
+        answer: "Wet hire includes the equipment along with a trained operator and fuel, giving you a complete solution. Dry hire means you rent just the equipment and provide your own operator. We offer both options to suit your project needs and budget."
+      },
+      {
+        question: "How do I book equipment?",
+        answer: "You can book equipment by calling us directly, sending an email, or filling out the contact form on our website. Our team will discuss your requirements, check availability, and provide a quote. Once confirmed, we'll arrange delivery to your site."
+      }
+    ]
+  }
+];
+
+const FAQ = () => {
+  const [openItems, setOpenItems] = useState<string[]>([]);
+
+  const toggleItem = (id: string) => {
+    setOpenItems(prev => 
+      prev.includes(id) 
+        ? prev.filter(item => item !== id)
+        : [...prev, id]
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero Section */}
+      <section className="relative h-[40vh] min-h-[300px] flex items-end justify-center pb-16 bg-black">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black" />
+        <div className="relative z-10 text-center px-6">
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
+            FAQ
+          </h1>
+        </div>
+      </section>
+
+      {/* FAQ Content */}
+      <section className="py-20 lg:py-28 bg-zinc-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+              Got Questions?
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              FREQUENTLY ASKED <span className="text-primary">QUESTIONS</span>
+            </h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              Find answers to common questions about our equipment hire services, booking process, and more.
+            </p>
+          </div>
+
+          {/* FAQ Categories */}
+          <div className="max-w-4xl mx-auto space-y-10">
+            {faqData.map((category, catIndex) => (
+              <div key={catIndex}>
+                <h3 className="font-display text-xl font-bold text-foreground mb-6 pb-2 border-b-2 border-primary inline-block">
+                  {category.category}
+                </h3>
+                <div className="space-y-4">
+                  {category.questions.map((item, qIndex) => {
+                    const itemId = `${catIndex}-${qIndex}`;
+                    const isOpen = openItems.includes(itemId);
+                    return (
+                      <div
+                        key={qIndex}
+                        className="bg-white border border-gray-200 overflow-hidden"
+                      >
+                        <button
+                          onClick={() => toggleItem(itemId)}
+                          className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                        >
+                          <span className="font-semibold text-foreground pr-4">
+                            {item.question}
+                          </span>
+                          <ChevronDown 
+                            className={`h-5 w-5 text-primary flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                          />
+                        </button>
+                        <div 
+                          className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96' : 'max-h-0'}`}
+                        >
+                          <p className="px-6 pb-5 text-muted-foreground leading-relaxed">
+                            {item.answer}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Contact CTA */}
+          <div className="text-center mt-16 p-10 bg-charcoal">
+            <h3 className="font-display text-2xl font-bold text-white mb-4">
+              Still Have Questions?
+            </h3>
+            <p className="text-white/70 mb-6">
+              Can't find the answer you're looking for? Feel free to contact us directly.
+            </p>
+            <a
+              href="https://wa.me/260971688888?text=Hello%2C%20I%27m%20interested%20in%20hiring%20heavy%20equipment.%20Please%20advise%20on%20availability%20and%20next%20steps."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary text-black font-bold px-8 py-4 text-sm uppercase tracking-wider hover:bg-white transition-colors"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default FAQ;
