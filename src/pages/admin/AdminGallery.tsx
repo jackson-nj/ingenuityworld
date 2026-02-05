@@ -7,10 +7,12 @@ import AdminLayout from "@/components/admin/AdminLayout";
 
 interface GalleryItem {
   id: string;
-  alt: string;
+  alt?: string;
+  name?: string;
+  description?: string;
   src: string;
-   display_order?: number;
-   created_at?: string;
+  display_order?: number;
+  created_at?: string;
 }
 
 const AdminGallery = () => {
@@ -20,21 +22,27 @@ const AdminGallery = () => {
    const [saving, setSaving] = useState(false);
 
   const openAddModal = () => {
-    setFormData({ alt: "", src: "" });
+    setFormData({ alt: "", src: "", description: "" });
     setIsModalOpen(true);
   };
 
-   const handleSave = async () => {
+  const handleSave = async () => {
     if (!formData.src) return;
-     setSaving(true);
-     try {
-       await create({ alt: formData.alt || "Project Image", src: formData.src });
-       setIsModalOpen(false);
-     } catch (err) {
-       // Error handled by hook
-     } finally {
-       setSaving(false);
-     }
+    setSaving(true);
+    try {
+      const payload: any = {
+        src: formData.src,
+        alt: formData.alt || "Project Image",
+      };
+      if ((formData as any).description) payload.description = (formData as any).description;
+      if ((formData as any).alt) payload.name = (formData as any).alt;
+      await create(payload);
+      setIsModalOpen(false);
+    } catch (err) {
+      // Error handled by hook
+    } finally {
+      setSaving(false);
+    }
   };
 
    const handleDelete = async (id: string) => {
@@ -58,12 +66,8 @@ const AdminGallery = () => {
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="font-display text-3xl font-bold text-foreground">
-              Gallery
-            </h1>
-            <p className="text-muted-foreground mt-1">
-              Manage project gallery media (images & videos)
-            </p>
+            <h1 className="font-display text-3xl font-bold text-foreground">Projects</h1>
+            <p className="text-muted-foreground mt-1">Manage project media (images & videos)</p>
           </div>
           <Button onClick={openAddModal} className="gap-2">
             <Plus className="h-4 w-4" />
@@ -94,7 +98,8 @@ const AdminGallery = () => {
                   </Button>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs p-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  {item.alt}
+                  <div className="font-semibold text-sm">{item.name || item.alt}</div>
+                  {item.description && <div className="text-[11px] opacity-90">{item.description}</div>}
                 </div>
               </div>
             );
@@ -110,20 +115,29 @@ const AdminGallery = () => {
           <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
              <div className="bg-card border border-border rounded-lg w-full max-w-md max-h-[90vh] overflow-y-auto">
               <div className="flex items-center justify-between p-4 border-b border-border">
-                <h2 className="font-display text-xl font-bold">Add Media</h2>
+                <h2 className="font-display text-xl font-bold">Add Project Media</h2>
                 <Button variant="ghost" size="icon" onClick={() => setIsModalOpen(false)}>
                   <X className="h-4 w-4" />
                 </Button>
               </div>
               <div className="p-4 space-y-4">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Alt Text</label>
+                  <label className="block text-sm font-medium mb-2">Project Title</label>
                   <input
                     type="text"
                     value={formData.alt}
                     onChange={(e) => setFormData({ ...formData, alt: e.target.value })}
                     className="w-full border border-border rounded-md px-3 py-2 bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="Enter media description"
+                    placeholder="Enter project title"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Project Description</label>
+                  <textarea
+                    value={(formData as any).description || ""}
+                    onChange={(e) => setFormData({ ...formData, src: formData.src, alt: formData.alt, ...( { description: e.target.value } ) })}
+                    className="w-full border border-border rounded-md px-3 py-2 bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="Enter project description"
                   />
                 </div>
                 <div>

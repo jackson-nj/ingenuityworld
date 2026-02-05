@@ -71,6 +71,9 @@ const AdminLogin = () => {
           <p className="text-white/40 text-sm text-center">
             Demo mode: Enter any password to continue
           </p>
+          <p className="text-white/40 text-sm text-center">
+            Secured by SSL and TLS
+          </p>
         </form>
       </div>
     </div>
