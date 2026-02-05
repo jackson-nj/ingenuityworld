@@ -25,8 +25,8 @@ const AdminLogin = () => {
     <div className="min-h-screen bg-surface-dark flex items-center justify-center px-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-            <Key className="h-8 w-8 text-primary-foreground" />
+          <div className="w-16 h-16 mx-auto mb-4">
+            <img src={require("@/assets/services/logo.png")} alt="Logo" className="w-16 h-16 object-contain mx-auto" />
           </div>
           <h1 className="font-display text-3xl font-bold text-white mb-2">
             Admin Login

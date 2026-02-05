@@ -22,7 +22,7 @@ const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", path: "/admin/dashboard" },
   { icon: Truck, label: "Equipment", path: "/admin/equipment" },
   { icon: Wrench, label: "Hire", path: "/admin/hire" },
-  { icon: Image, label: "Gallery", path: "/admin/gallery" },
+  { icon: Image, label: "Projects", path: "/admin/gallery" },
   { icon: Award, label: "Certifications", path: "/admin/certifications" },
   { icon: Settings, label: "Services", path: "/admin/services" },
 ];
@@ -51,18 +51,10 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
           {/* Logo */}
           <div className="p-6 border-b border-white/10">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary rounded flex items-center justify-center">
-                <span className="font-display text-lg font-bold text-primary-foreground">
-                  CC
-                </span>
-              </div>
+              <img src={require("@/assets/services/logo.png")} alt="Changati" className="w-10 h-10 object-contain" />
               <div className="flex flex-col">
-                <span className="font-display text-sm font-bold text-white">
-                  CHANGATI
-                </span>
-                <span className="text-[10px] text-white/60 uppercase tracking-wider">
-                  Admin Panel
-                </span>
+                <span className="font-display text-sm font-bold text-white">CHANGATI</span>
+                <span className="text-[10px] text-white/60 uppercase tracking-wider">Admin Panel</span>
               </div>
             </Link>
           </div>

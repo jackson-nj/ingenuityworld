@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, Facebook, Instagram, Youtube, Menu, X, ChevronDown } from "lucide-react";
+import logo from "@/assets/services/logo.png";
 
 
 const TopContactBar = () => (
@@ -95,9 +96,7 @@ const Header = () => {
         <div className="container mx-auto px-4 py-5 flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 mr-auto">
-            <div className="w-12 h-12 bg-primary rounded flex items-center justify-center">
-              <span className="font-display text-2xl font-bold text-primary-foreground">CC</span>
-            </div>
+            <img src={logo} alt="Changati Construction" className="w-12 h-12 object-contain" />
             <div className="flex flex-col">
               <span className="font-display text-xl font-bold text-white tracking-wide leading-tight">
                 CHANGATI<span className="text-primary"> CONSTRUCTION</span>
