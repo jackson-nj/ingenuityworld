@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Key, Lock, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logomain from "@/assets/services/logomain.png";
 
 const AdminLogin = () => {
   const [password, setPassword] = useState("");
@@ -26,7 +27,7 @@ const AdminLogin = () => {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="w-16 h-16 mx-auto mb-4">
-            <img src={require("@/assets/services/logomain.png")} alt="Logo" className="w-16 h-16 object-contain mx-auto" />
+            <img src={logomain} alt="Logo" className="w-16 h-16 object-contain mx-auto" />
           </div>
           <h1 className="font-display text-3xl font-bold text-white mb-2">
             Admin Login

@@ -13,6 +13,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logomain from "@/assets/services/logomain.png";
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -51,7 +52,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
           {/* Logo */}
           <div className="p-6 border-b border-white/10">
             <Link to="/" className="flex items-center gap-3">
-              <img src={require("@/assets/services/logomain.png")} alt="Changati" className="w-10 h-10 object-contain" />
+              <img src={logomain} alt="Changati" className="w-10 h-10 object-contain" />
               <div className="flex flex-col">
                 <span className="font-display text-sm font-bold text-white">CHANGATI</span>
                 <span className="text-[10px] text-white/60 uppercase tracking-wider">Admin Panel</span>
