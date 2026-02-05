@@ -1,7 +1,7 @@
  import { useState, useEffect } from "react";
  import Header from "@/components/Header";
  import Footer from "@/components/Footer";
- import { X, Loader2 } from "lucide-react";
+import { X, Loader2, CheckCircle } from "lucide-react";
  import { supabase } from "@/integrations/supabase/client";
  
  // Fallback gallery images
@@ -118,6 +118,49 @@ const Gallery = () => {
             <p className="text-muted-foreground max-w-3xl mx-auto">
               Explore our portfolio of completed projects showcasing our equipment and expertise in action.
             </p>
+          </div>
+
+          {/* Project Experience */}
+          <div className="mb-12">
+            <div className="max-w-4xl mx-auto text-center">
+              <h3 className="text-primary font-semibold uppercase tracking-wider text-sm">Project Experience</h3>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mt-3">Selected Projects & Experience</h2>
+              <p className="text-muted-foreground mt-3">A selection of notable projects and collaborations demonstrating our field experience.</p>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+              <div className="p-4 bg-white rounded-lg shadow-sm border border-border flex gap-4 items-start">
+                <div className="text-primary mt-1"><CheckCircle className="h-6 w-6" /></div>
+                <div>
+                  <div className="font-semibold">Road works in Kafue and Lusaka</div>
+                  <div className="text-sm text-muted-foreground">with Sanyati Civil Engineering & Constructions Ltd (South Africa)</div>
+                </div>
+              </div>
+
+              <div className="p-4 bg-white rounded-lg shadow-sm border border-border flex gap-4 items-start">
+                <div className="text-primary mt-1"><CheckCircle className="h-6 w-6" /></div>
+                <div>
+                  <div className="font-semibold">Township road projects in Lusaka</div>
+                  <div className="text-sm text-muted-foreground">with Lone Rock Constructions Company and Plinth Technical Works</div>
+                </div>
+              </div>
+
+              <div className="p-4 bg-white rounded-lg shadow-sm border border-border flex gap-4 items-start">
+                <div className="text-primary mt-1"><CheckCircle className="h-6 w-6" /></div>
+                <div>
+                  <div className="font-semibold">Construction projects in Ndola</div>
+                  <div className="text-sm text-muted-foreground">with WBHO (South Africa)</div>
+                </div>
+              </div>
+
+              <div className="p-4 bg-white rounded-lg shadow-sm border border-border flex gap-4 items-start">
+                <div className="text-primary mt-1"><CheckCircle className="h-6 w-6" /></div>
+                <div>
+                  <div className="font-semibold">Fish ponds and dam construction</div>
+                  <div className="text-sm text-muted-foreground">in Lusaka and Chipata</div>
+                </div>
+              </div>
+            </div>
           </div>
 
            {loading ? (
