@@ -1,0 +1,284 @@
+{
+  "hire": [],
+  "services": [],
+  "gallery": [
+    {
+      "id": "62f029af-8666-49db-a6f5-fbc1fbf122f1",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285225748-project1.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285225748-project1.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "198fff9f-9318-47b5-9619-64ad3f0a2891",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285226287-project10.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285226287-project10.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "19667afb-e6fd-4909-982b-5e7d107ec39e",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285226713-project11.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285226713-project11.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "28a8e256-4752-4c59-aa30-58609e67cf94",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285227091-project12.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285227091-project12.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "2fa235b6-6ddf-41e0-9998-863f37847a9a",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285227659-project13.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285227659-project13.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "d1eb8a66-253d-4a3c-844c-7ce9a5659b3b",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285228050-project14.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285228050-project14.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "683ebe14-3a31-4bf4-96bc-305d431c5917",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285228448-project2.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285228448-project2.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "0b14dca5-e74d-49ab-9371-08a8e149ae82",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285228815-project3.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285228815-project3.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "45e03f4c-a016-4f0c-8a6e-49d943444227",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285229307-project4.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285229307-project4.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "138022b5-cd15-4558-b48a-ec9f8a600cfe",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285229716-project5.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285229716-project5.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "e2ef7507-b904-4244-94de-8bcedec8f340",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285230180-project6.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285230180-project6.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "a2242b0c-bd46-4872-a4a0-b718e0b4e46e",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285230636-project7.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285230636-project7.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "753d19d7-f0e4-431c-9e31-3e76934de32f",
+      "alt": "project",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285231217-project8.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "project",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285231217-project8.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "cb2d7a9c-7f60-49ae-8a1a-33450ac4c0f2",
+      "alt": "projectA",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285231787-projectA.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "projectA",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285231787-projectA.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "35ff3a57-d97e-4ade-a4a3-d8ecff1ffd89",
+      "alt": "projectC",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285232316-projectC.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "projectC",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285232316-projectC.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "afd1bb8e-1dfd-4e6b-b0fe-90e1fb71ea44",
+      "alt": "projectD",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285232722-projectD.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "projectD",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285232722-projectD.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "d22dedb8-30de-4240-9cf7-7fd76465b3b9",
+      "alt": "projectE",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285233084-projectE.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "projectE",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285233084-projectE.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "b9453b18-37c5-4ce2-9e3e-8d185ef4a974",
+      "alt": "projectF",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285233459-projectF.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "projectF",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285233459-projectF.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "5a745ef7-c973-45b2-8ac0-0fee3413f0d9",
+      "alt": "projectG",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285233845-projectG.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "projectG",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285233845-projectG.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "f71ee821-49e0-46b0-94bf-d4c807f182b3",
+      "alt": "projectH",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285234258-projectH.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "projectH",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285234258-projectH.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    },
+    {
+      "id": "054a2cb2-db1e-46dd-93d5-55e07fcb0b1a",
+      "alt": "projectI",
+      "src": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285234617-projectI.jpg",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.22647+00:00",
+      "name": "projectI",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285234617-projectI.jpg",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.22647+00:00"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "0ff51727-9ad3-4753-9ab4-26b3a5aff8d6",
+      "name": "National Pension Scheme Authority",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/certifications/1770285235047-National_Pension_Scheme_Authority.png",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.830221+00:00",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.830221+00:00"
+    },
+    {
+      "id": "fb114891-bb43-4de6-ae4d-040e9002fa86",
+      "name": "pacra",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/certifications/1770285247861-pacra.png",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.830221+00:00",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.830221+00:00"
+    },
+    {
+      "id": "8d09a72e-714f-48cf-a155-0fe0fc8aa33f",
+      "name": "Workers' Compensation Fund Control Board",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/certifications/1770285251905-Workers'_Compensation_Fund_Control_Board.png",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.830221+00:00",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.830221+00:00"
+    },
+    {
+      "id": "d309959f-7bb3-47de-8437-dbc1835189ba",
+      "name": "zambia revenue authority",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/certifications/1770285255021-zambia_revenue_authority.png",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.830221+00:00",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.830221+00:00"
+    },
+    {
+      "id": "52829774-3718-45b6-8a8c-a3ef87e3422e",
+      "name": "Zambian Public Procurement Authority",
+      "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/certifications/1770285260187-Zambian_Public_Procurement_Authority.png",
+      "display_order": 0,
+      "created_at": "2026-02-05T10:14:42.830221+00:00",
+      "description": null,
+      "updated_at": "2026-02-05T10:14:42.830221+00:00"
+    }
+  ]
+}

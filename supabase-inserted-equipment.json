@@ -1,0 +1,101 @@
+[
+  {
+    "id": "9db167b8-6990-4838-b7e4-b63c42cec35b",
+    "name": "backhoeloader",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285112880-backhoeloader.jpg",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  },
+  {
+    "id": "a52cb8ee-d12e-455a-803e-8f0dc05da9b5",
+    "name": "bulldozer",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285113717-bulldozer.png",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  },
+  {
+    "id": "a7fc9d12-0d44-4b42-a1f8-d47564abf1aa",
+    "name": "excavator",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285117159-excavator.png",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  },
+  {
+    "id": "d18c2fe8-e9e1-4660-8927-87a32c72cf6b",
+    "name": "frontloader",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285121566-frontloader.jpg",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  },
+  {
+    "id": "697739f5-4777-4295-9025-7941c6e408a7",
+    "name": "grader",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285122318-grader.png",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  },
+  {
+    "id": "ac203ae6-7f14-4e2e-9680-03d033c66707",
+    "name": "hero",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285125464-hero.jpg",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  },
+  {
+    "id": "50ca9e25-0f5f-4e06-9cb4-6fd6ca7cf7ac",
+    "name": "hero",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285128330-hero2.jpg",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  },
+  {
+    "id": "b4ed20b2-beaa-4fa0-8565-221314b17d6e",
+    "name": "lowbedtrailer",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285130712-lowbedtrailer.jpg",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  },
+  {
+    "id": "67af5250-eeaf-45fa-946d-a3b86ccf8d25",
+    "name": "rockbreaker",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285131580-rockbreaker.jpg",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  },
+  {
+    "id": "97eb4c2a-5c4d-40ff-835a-33686ef756f8",
+    "name": "rollercompactor",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285132040-rollercompactor.png",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  },
+  {
+    "id": "dd8d39a6-8a67-432f-9d73-82bf82527180",
+    "name": "whychooseus",
+    "description": null,
+    "image_url": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285135425-whychooseus.jpg",
+    "display_order": 0,
+    "created_at": "2026-02-05T10:00:55.688524+00:00",
+    "updated_at": "2026-02-05T10:00:55.688524+00:00"
+  }
+]

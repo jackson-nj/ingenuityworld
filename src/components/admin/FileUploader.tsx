@@ -44,11 +44,21 @@
  
    return (
      <div className="flex items-center gap-2">
-       <input ref={fileRef} type="file" className="hidden" onChange={handleFile} accept="image/*,video/*" />
-       <Button variant="outline" onClick={handleClick} disabled={loading} className="gap-2">
-         {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Upload className="h-4 w-4" />}
-         {loading ? "Uploading..." : "Choose File"}
-       </Button>
+       <input
+         id="file-upload-input"
+         ref={fileRef}
+         type="file"
+         className="hidden"
+         onChange={handleFile}
+         accept="image/*,video/*"
+         title="Upload file"
+       />
+       <label htmlFor="file-upload-input">
+         <Button variant="outline" onClick={handleClick} disabled={loading} className="gap-2">
+           {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Upload className="h-4 w-4" />}
+           {loading ? "Uploading..." : "Choose File"}
+         </Button>
+       </label>
      </div>
    );
  };

@@ -1,0 +1,312 @@
+{
+  "equipment": [
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\backhoeloader.jpg",
+      "remote": "equipment/1770285112880-backhoeloader.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285112880-backhoeloader.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\bulldozer.png",
+      "remote": "equipment/1770285113717-bulldozer.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285113717-bulldozer.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\excavator.png",
+      "remote": "equipment/1770285117159-excavator.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285117159-excavator.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\frontloader.jpg",
+      "remote": "equipment/1770285121566-frontloader.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285121566-frontloader.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\grader.png",
+      "remote": "equipment/1770285122318-grader.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285122318-grader.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\hero.jpg",
+      "remote": "equipment/1770285125464-hero.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285125464-hero.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\hero2.jpg",
+      "remote": "equipment/1770285128330-hero2.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285128330-hero2.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\lowbedtrailer.jpg",
+      "remote": "equipment/1770285130712-lowbedtrailer.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285130712-lowbedtrailer.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\rockbreaker.jpg",
+      "remote": "equipment/1770285131580-rockbreaker.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285131580-rockbreaker.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\rollercompactor.png",
+      "remote": "equipment/1770285132040-rollercompactor.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285132040-rollercompactor.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\equipment\\whychooseus.jpg",
+      "remote": "equipment/1770285135425-whychooseus.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/equipment/1770285135425-whychooseus.jpg"
+    }
+  ],
+  "services": [
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\about us1.jpg",
+      "remote": "services/1770285137017-about_us1.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285137017-about_us1.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\about us2.jpg",
+      "remote": "services/1770285138210-about_us2.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285138210-about_us2.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\about us3.jpg",
+      "remote": "services/1770285139140-about_us3.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285139140-about_us3.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\delivery.jpg",
+      "remote": "services/1770285140161-delivery.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285140161-delivery.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\dry hire.jpg",
+      "remote": "services/1770285141212-dry_hire.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285141212-dry_hire.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\equipment hire.jpg",
+      "remote": "services/1770285142452-equipment_hire.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285142452-equipment_hire.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\how it works 1.png",
+      "remote": "services/1770285144357-how_it_works_1.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285144357-how_it_works_1.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\how it works2.jpg",
+      "remote": "services/1770285151948-how_it_works2.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285151948-how_it_works2.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\logo.png",
+      "remote": "services/1770285153982-logo.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285153982-logo.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\testimonial.jpg",
+      "remote": "services/1770285157310-testimonial.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285157310-testimonial.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\services\\wet hire.jpg",
+      "remote": "services/1770285158713-wet_hire.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/services/1770285158713-wet_hire.jpg"
+    }
+  ],
+  "hire": [
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\backhoeloader.png",
+      "remote": "hire/1770285159798-backhoeloader.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285159798-backhoeloader.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\bulldozer.png",
+      "remote": "hire/1770285167125-bulldozer.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285167125-bulldozer.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\CRANE TRUCKS.png",
+      "remote": "hire/1770285177758-CRANE_TRUCKS.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285177758-CRANE_TRUCKS.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\excavator.png",
+      "remote": "hire/1770285181391-excavator.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285181391-excavator.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\forlifts.png",
+      "remote": "hire/1770285189833-forlifts.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285189833-forlifts.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\frontloader.jpg",
+      "remote": "hire/1770285193966-frontloader.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285193966-frontloader.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\grader.png",
+      "remote": "hire/1770285194705-grader.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285194705-grader.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\lowbedtrailer.png",
+      "remote": "hire/1770285198888-lowbedtrailer.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285198888-lowbedtrailer.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\rock breaker.png",
+      "remote": "hire/1770285204525-rock_breaker.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285204525-rock_breaker.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\rollercompactor.png",
+      "remote": "hire/1770285207497-rollercompactor.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285207497-rollercompactor.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\tippers.png",
+      "remote": "hire/1770285212528-tippers.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285212528-tippers.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\hire\\waterbowser.png",
+      "remote": "hire/1770285216366-waterbowser.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/hire/1770285216366-waterbowser.png"
+    }
+  ],
+  "gallery": [
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project1.jpg",
+      "remote": "gallery/1770285225748-project1.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285225748-project1.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project10.jpg",
+      "remote": "gallery/1770285226287-project10.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285226287-project10.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project11.jpg",
+      "remote": "gallery/1770285226713-project11.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285226713-project11.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project12.jpg",
+      "remote": "gallery/1770285227091-project12.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285227091-project12.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project13.jpg",
+      "remote": "gallery/1770285227659-project13.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285227659-project13.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project14.jpg",
+      "remote": "gallery/1770285228050-project14.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285228050-project14.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project2.jpg",
+      "remote": "gallery/1770285228448-project2.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285228448-project2.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project3.jpg",
+      "remote": "gallery/1770285228815-project3.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285228815-project3.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project4.jpg",
+      "remote": "gallery/1770285229307-project4.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285229307-project4.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project5.jpg",
+      "remote": "gallery/1770285229716-project5.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285229716-project5.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project6.jpg",
+      "remote": "gallery/1770285230180-project6.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285230180-project6.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project7.jpg",
+      "remote": "gallery/1770285230636-project7.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285230636-project7.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\project8.jpg",
+      "remote": "gallery/1770285231217-project8.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285231217-project8.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\projectA.jpg",
+      "remote": "gallery/1770285231787-projectA.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285231787-projectA.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\projectC.jpg",
+      "remote": "gallery/1770285232316-projectC.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285232316-projectC.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\projectD.jpg",
+      "remote": "gallery/1770285232722-projectD.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285232722-projectD.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\projectE.jpg",
+      "remote": "gallery/1770285233084-projectE.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285233084-projectE.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\projectF.jpg",
+      "remote": "gallery/1770285233459-projectF.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285233459-projectF.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\projectG.jpg",
+      "remote": "gallery/1770285233845-projectG.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285233845-projectG.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\projectH.jpg",
+      "remote": "gallery/1770285234258-projectH.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285234258-projectH.jpg"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\gallery\\projectI.jpg",
+      "remote": "gallery/1770285234617-projectI.jpg",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/gallery/1770285234617-projectI.jpg"
+    }
+  ],
+  "certifications": [
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\certifications\\National Pension Scheme Authority.png",
+      "remote": "certifications/1770285235047-National_Pension_Scheme_Authority.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/certifications/1770285235047-National_Pension_Scheme_Authority.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\certifications\\pacra.png",
+      "remote": "certifications/1770285247861-pacra.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/certifications/1770285247861-pacra.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\certifications\\Workers' Compensation Fund Control Board.png",
+      "remote": "certifications/1770285251905-Workers'_Compensation_Fund_Control_Board.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/certifications/1770285251905-Workers'_Compensation_Fund_Control_Board.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\certifications\\zambia revenue authority.png",
+      "remote": "certifications/1770285255021-zambia_revenue_authority.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/certifications/1770285255021-zambia_revenue_authority.png"
+    },
+    {
+      "local": "C:\\Users\\Lenovo\\Desktop\\Changati construction\\heavy-hire-hub\\src\\assets\\certifications\\Zambian Public Procurement Authority.png",
+      "remote": "certifications/1770285260187-Zambian_Public_Procurement_Authority.png",
+      "publicUrl": "https://lbnuqprjkbqrtcdqjopy.supabase.co/storage/v1/object/public/heavy-hire-hub/certifications/1770285260187-Zambian_Public_Procurement_Authority.png"
+    }
+  ]
+}

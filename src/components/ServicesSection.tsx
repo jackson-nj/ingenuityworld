@@ -45,6 +45,13 @@ const ServicesSection = () => {
      fetchServices();
    }, []);
  
+  const getDescription = (service: ServiceItem) => {
+    if (service.description && service.description.trim().length > 0) return service.description;
+    const fallback = fallbackServices.find((f) => f.title.toLowerCase() === (service.title || "").toLowerCase());
+    if (fallback && fallback.description) return fallback.description;
+    return "Description coming soon.";
+  };
+
   return (
     <section id="services" className="py-20 lg:py-28 bg-white">
       <div className="container mx-auto px-6">
@@ -65,23 +72,23 @@ const ServicesSection = () => {
           {services.map((service) => (
             <div
                  key={service.id}
-              className="bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 group overflow-hidden flex flex-col"
+              className="bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 group overflow-hidden flex flex-col lg:flex-row"
             >
               {/* Image */}
-              <div className="relative h-64 lg:h-80 overflow-hidden bg-gray-50">
+              <div className="relative h-48 lg:h-auto lg:w-1/2 overflow-hidden bg-gray-50 flex-shrink-0">
                 <img
                      src={service.image_url || "/placeholder.svg"}
                   alt={service.title}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               {/* Content */}
-              <div className="p-8 flex flex-col flex-grow">
-                <h3 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-4">
+              <div className="p-6 lg:p-8 flex flex-col justify-center lg:w-1/2">
+                <h3 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-3">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground text-base leading-relaxed mb-6 flex-grow">
-                     {service.description || ""}
+                <p className="text-muted-foreground text-base leading-relaxed mb-0">
+                     {getDescription(service)}
                 </p>
               </div>
             </div>
