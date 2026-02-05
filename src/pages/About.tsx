@@ -76,6 +76,11 @@ const About = () => {
       <style>{`
         .about-hero-bg {
           background-image: url(${aboutUs1});
+          background-size: cover;
+          background-position: center;
+          /* Force permanent grayscale on hero background */
+          filter: grayscale(100%);
+          -webkit-filter: grayscale(100%);
         }
         .fade-up {
           opacity: 0;
