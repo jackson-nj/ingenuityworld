@@ -7,10 +7,10 @@ import aboutUs2 from "@/assets/services/about us2.jpg";
 import aboutUs3 from "@/assets/services/about us3.jpg";
 
 const stats = [
-  { value: "25+", label: "Years Experience" },
-  { value: "500+", label: "Projects Completed" },
-  { value: "150+", label: "Equipment Fleet" },
-  { value: "98%", label: "Client Satisfaction" },
+  { value: "6+", label: "Years Experience" },
+  { value: "130+", label: "Projects Completed" },
+  { value: "50+", label: "Equipment Fleet" },
+  { value: "100%", label: "Client Satisfaction" },
 ];
 
 const aboutFeatures = [
@@ -142,21 +142,11 @@ const About = () => {
           position: relative;
           overflow: hidden;
         }
-        
+
         .img-color {
           position: relative;
           z-index: 1;
-        }
-        
-        .img-grayscale {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
           filter: grayscale(100%);
-          z-index: 2;
         }
         
         .paint-overlay {
@@ -207,21 +197,7 @@ const About = () => {
         .img-reveal-container.animate-in .paint-drop:nth-child(7) { animation-delay: 0.05s; }
         .img-reveal-container.animate-in .paint-drop:nth-child(8) { animation-delay: 0.35s; }
         
-        .img-grayscale-wrapper {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 2;
-          opacity: 1;
-          transition: opacity 0.5s ease-out;
-          transition-delay: 1.5s;
-        }
-        
-        .img-reveal-container.animate-in .img-grayscale-wrapper {
-          opacity: 0;
-        }
+        /* Grayscale handled on the primary image via .img-color */
         
         @keyframes paintDrop {
           0% {
@@ -259,7 +235,7 @@ const About = () => {
               <div className="bg-white p-10 lg:p-12 lg:pr-16">
                 <span className="fade-up text-primary font-bold uppercase tracking-[0.2em] text-sm">Who We Are</span>
                 <h2 className="fade-up fade-up-delay-1 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
-                  YOUR TRUSTED PARTNER IN <span className="text-primary">CONSTRUCTION</span>
+                  YOUR TRUSTED PARTNER IN <span className="text-primary">EQUIPMENTS</span>
                 </h2>
                 <p className="fade-up fade-up-delay-2 text-primary font-semibold mb-6 text-lg italic">
                   Building the future with reliable equipment and exceptional service since 2019
@@ -291,16 +267,8 @@ const About = () => {
                 <img
                   src={aboutUs2}
                   alt="Changati Construction Team"
-                  className="img-color w-full h-full object-cover"
+                  className="img-color w-full h-full object-cover filter grayscale"
                 />
-                <div className="img-grayscale-wrapper">
-                  <img
-                    src={aboutUs2}
-                    alt=""
-                    className="img-grayscale w-full h-full"
-                    aria-hidden="true"
-                  />
-                </div>
                 {/* Paint drops overlay */}
                 <div className="paint-overlay">
                   <div className="paint-drop paint-drop1" />
@@ -389,16 +357,8 @@ const About = () => {
                 <img
                   src={aboutUs3}
                   alt="Industries We Serve"
-                  className="img-color w-full h-full object-cover"
+                  className="img-color w-full h-full object-cover filter grayscale"
                 />
-                <div className="img-grayscale-wrapper">
-                  <img
-                    src={aboutUs3}
-                    alt=""
-                    className="img-grayscale w-full h-full"
-                    aria-hidden="true"
-                  />
-                </div>
                 {/* Paint drops overlay */}
                 <div className="paint-overlay">
                   <div className="paint-drop paint-drop9" />
