@@ -16,7 +16,7 @@ interface EquipmentItem {
 }
 
 const AdminEquipment = () => {
-   const { data: equipment, loading, create, update, remove } = useSupabaseData<EquipmentItem>("equipment");
+  const { data: equipment, loading, create, update, remove, refetch } = useSupabaseData<EquipmentItem>("equipment");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<EquipmentItem | null>(null);
    const [formData, setFormData] = useState({ name: "", description: "", image_url: "" });
@@ -44,6 +44,12 @@ const AdminEquipment = () => {
          await create({ name: formData.name, description: formData.description, image_url: formData.image_url });
        }
        setIsModalOpen(false);
+      // ensure list reflects DB order (newest first) and includes legacy rows
+      try {
+        await refetch();
+      } catch {
+        // ignore refetch errors, UI already updated optimistically
+      }
      } catch (err) {
        // Error handled by hook
      } finally {
@@ -54,6 +60,9 @@ const AdminEquipment = () => {
    const handleDelete = async (id: string) => {
      if (confirm("Are you sure you want to delete this item?")) {
        await remove(id);
+       try {
+         await refetch();
+       } catch {}
     }
   };
 
