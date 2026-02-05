@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, Facebook, Instagram, Youtube, Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/assets/services/logo.png";
+import logo from "@/assets/services/logo1.png";
 
 
 const TopContactBar = () => (
