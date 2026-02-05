@@ -27,11 +27,19 @@
  import projectH from "@/assets/gallery/projectH.jpg";
  import projectI from "@/assets/gallery/projectI.jpg";
  
- interface GalleryImage {
-   id: string;
-   src: string;
-   alt: string;
- }
+interface GalleryImage {
+  id: string;
+  src: string;
+  alt: string;
+}
+
+type GalleryItemType = "image" | "video";
+
+interface SelectedItem {
+  src: string;
+  type: GalleryItemType;
+  alt?: string;
+}
  
  const fallbackGallery: GalleryImage[] = [
    { id: "1", src: project1, alt: "Project 1" },
@@ -58,7 +66,7 @@
  ];
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<SelectedItem | null>(null);
    const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([]);
    const [loading, setLoading] = useState(true);
  
@@ -118,26 +126,41 @@ const Gallery = () => {
              </div>
            ) : (
              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-               {galleryImages.map((image) => (
-              <div
-                   key={image.id}
-                className="group cursor-pointer overflow-hidden"
-                onClick={() => setSelectedImage(image.src)}
-              >
-                <div className="relative overflow-hidden aspect-square">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/40 transition-all duration-300 flex items-center justify-center">
-                    <span className="text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg">
-                      View
-                    </span>
+               {galleryImages.map((image) => {
+                const isVideo = (src: string) => /\.(mp4|webm|ogg)$/i.test(src) || /youtube|vimeo/.test(src);
+                const type: GalleryItemType = isVideo(image.src) ? "video" : "image";
+                return (
+                  <div
+                    key={image.id}
+                    className="group cursor-pointer overflow-hidden"
+                    onClick={() => setSelectedImage({ src: image.src, type, alt: image.alt })}
+                  >
+                    <div className="relative overflow-hidden aspect-square">
+                      {type === "image" ? (
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-black">
+                          <video
+                            src={image.src}
+                            className="w-full h-full object-cover"
+                            muted
+                            playsInline
+                          />
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/40 transition-all duration-300 flex items-center justify-center">
+                        <span className="text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg">
+                          View
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                );
+              })}
           </div>
            )}
         </div>
@@ -157,12 +180,21 @@ const Gallery = () => {
           >
             <X className="h-8 w-8" />
           </button>
-          <img
-            src={selectedImage}
-            alt="Gallery preview"
-            className="max-w-full max-h-[90vh] object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
+          {selectedImage.type === "image" ? (
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt || "Gallery preview"}
+              className="max-w-full max-h-[90vh] object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          ) : (
+            <video
+              src={selectedImage.src}
+              controls
+              className="max-w-full max-h-[90vh] bg-black"
+              onClick={(e) => e.stopPropagation()}
+            />
+          )}
         </div>
       )}
 
