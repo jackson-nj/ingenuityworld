@@ -120,11 +120,7 @@ const AdminDashboard = () => {
 
         {/* Projects form removed per user request */}
 
-        {/* Info */}
-        <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-6">
-          <h3 className="font-display text-lg font-bold text-foreground mb-2">✅ Connected to Supabase</h3>
-          <p className="text-muted-foreground">Your admin dashboard is connected to Supabase. All changes are saved to the cloud and synced across the website in real-time.</p>
-        </div>
+        {/* Supabase info removed per request */}
       </div>
     </AdminLayout>
   );
