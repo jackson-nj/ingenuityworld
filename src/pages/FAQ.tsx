@@ -139,7 +139,7 @@ const FAQ = () => {
               Can't find the answer you're looking for? Feel free to contact us directly.
             </p>
             <a
-              href="https://wa.me/260971688888?text=Hello%2C%20I%27m%20interested%20in%20hiring%20heavy%20equipment.%20Please%20advise%20on%20availability%20and%20next%20steps."
+              href="https://wa.me/260975078766?text=Hello%2C%20I%27m%20interested%20in%20hiring%20heavy%20equipment.%20Please%20advise%20on%20availability%20and%20next%20steps."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-primary text-black font-bold px-8 py-4 text-sm uppercase tracking-wider hover:bg-white transition-colors"
