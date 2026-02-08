@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from "react";
  import { Loader2 } from "lucide-react";
  import { supabase } from "@/integrations/supabase/client";
-import equipmentHireImg from "@/assets/services/construction1.jpg";
-import construction2Img from "@/assets/services/construction2.jpg";
-import construction3Img from "@/assets/services/construction3.jpg";
-import construction4Img from "@/assets/services/construction4.jpg";
+import equipmentHireImg from "@/assets/services/card3.jpg";
+import construction2Img from "@/assets/services/card2.jpg";
+import construction3Img from "@/assets/services/mechanical1.jpeg";
+import construction4Img from "@/assets/services/mechanical2.jpeg";
 import mechanical1Img from "@/assets/services/mechanical1.jpeg";
-import wetHireImg from "@/assets/services/mopani.jpg";
+import wetHireImg from "@/assets/services/card2.jpg";
 import dryHireImg from "@/assets/services/card3.jpg";
-import deliveryImg from "@/assets/services/Barrick-Gold-Mine.png";
+import deliveryImg from "@/assets/services/card3.jpg";
  
  interface ServiceItem {
    id: string;

@@ -21,7 +21,19 @@ export function useSupabaseData<T extends { id: string }>(tableName: TableName) 
  
        if (fetchError) throw fetchError;
        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-       setData((result as any) || []);
+      // sanitize image urls: replace remote or heavy-equipment images with a local neutral asset (keep hero images)
+      const localNeutral = new URL("../assets/services/card3.jpg", import.meta.url).href;
+      const heavyKeywords = /(bulldozer|excavator|backhoe|backhoeloader|grader|roller|frontloader|lowbed|rockbreaker|construction|mining|mine|heavy)/i;
+      const sanitize = (item: any) => {
+        if (!item || !item.image_url) return item;
+        const url = String(item.image_url);
+        if (/hero/i.test(url)) return item;
+        if (/^https?:\/\//i.test(url) || /supabase\.co/i.test(url) || heavyKeywords.test(url)) {
+          return { ...item, image_url: localNeutral };
+        }
+        return item;
+      };
+      setData(((result as any) || []).map(sanitize));
      } catch (err: unknown) {
        const message = err instanceof Error ? err.message : "Unknown error";
        setError(message);

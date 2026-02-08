@@ -10,14 +10,11 @@ interface EquipmentItem {
 }
 
 const fallbackEquipment = [
-  { id: "1", name: "Barrick Mine", image_url: new URL("../assets/services/Barrick-Gold-Mine.png", import.meta.url).href },
-  { id: "2", name: "Kansashi Site", image_url: new URL("../assets/services/kansashi.jpg", import.meta.url).href },
+  { id: "1", name: "Mopani Works", image_url: new URL("../assets/services/mopani.jpg", import.meta.url).href },
+  { id: "2", name: "Neelkanth Lime", image_url: new URL("../assets/services/Neelkanth-lime-1.png", import.meta.url).href },
   { id: "3", name: "Konkola Plant", image_url: new URL("../assets/services/konkola.avif", import.meta.url).href },
-  { id: "4", name: "Mopani Works", image_url: new URL("../assets/services/mopani.jpg", import.meta.url).href },
-  { id: "5", name: "Neelkanth Lime", image_url: new URL("../assets/services/Neelkanth-lime-1.png", import.meta.url).href },
-  { id: "6", name: "Mining Ops", image_url: new URL("../assets/services/84f18f05b6fa96f541dbec904c673f05.jpg", import.meta.url).href },
-  { id: "7", name: "About Image A", image_url: new URL("../assets/services/about us1.jpg", import.meta.url).href },
-  { id: "8", name: "About Image B", image_url: new URL("../assets/services/about us2.jpg", import.meta.url).href },
+  { id: "4", name: "Kansashi Site", image_url: new URL("../assets/services/kansashi.jpg", import.meta.url).href },
+  { id: "5", name: "Barrick Mine", image_url: new URL("../assets/services/Barrick-Gold-Mine.png", import.meta.url).href },
 ];
  
  const EquipmentSection = () => {
@@ -67,7 +64,13 @@ const fallbackEquipment = [
            </div>
          ) : (
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {equipment.slice(0, Math.max(0, equipment.length - 3)).map((item) => (
+            {[
+              { id: "1", name: "Mopani Works", image_url: new URL("../assets/services/mopani.jpg", import.meta.url).href },
+              { id: "2", name: "Neelkanth Lime", image_url: new URL("../assets/services/Neelkanth-lime-1.png", import.meta.url).href },
+              { id: "3", name: "Konkola Plant", image_url: new URL("../assets/services/konkola.avif", import.meta.url).href },
+              { id: "4", name: "Kansashi Site", image_url: new URL("../assets/services/kansashi.jpg", import.meta.url).href },
+              { id: "5", name: "Barrick Mine", image_url: new URL("../assets/services/Barrick-Gold-Mine.png", import.meta.url).href },
+            ].map((item) => (
               <a
                 key={item.id}
                 href="https://wa.me/260971688888?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps."
