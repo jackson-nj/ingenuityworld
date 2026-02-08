@@ -1,4 +1,4 @@
- import { useEffect, useState } from "react";
+ import { useEffect, useState, useCallback } from "react";
  import { Link } from "react-router-dom";
 import { Image, Settings, ArrowRight } from "lucide-react";
 import AdminLayout from "@/components/admin/AdminLayout";
@@ -13,7 +13,7 @@ const AdminDashboard = () => {
 
   // no local project form state (Projects form removed)
 
-  const fetchCounts = async () => {
+  const fetchCounts = useCallback(async () => {
     // We only need counts for projects (stored in `gallery`) and services
     const tables = ["gallery", "services"] as const;
     const results = await Promise.all(
@@ -29,11 +29,11 @@ const AdminDashboard = () => {
       return acc;
     }, {} as Record<string, number>);
     setCounts(newCounts as typeof counts);
-  };
+  }, []);
 
   useEffect(() => {
-    fetchCounts();
-  }, []);
+    void fetchCounts();
+  }, [fetchCounts]);
  
   const sections = [
     {

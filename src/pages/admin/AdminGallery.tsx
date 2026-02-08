@@ -18,7 +18,7 @@ interface GalleryItem {
 const AdminGallery = () => {
    const { data: items, loading, create, remove } = useSupabaseData<GalleryItem>("gallery");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({ alt: "", src: "" });
+  const [formData, setFormData] = useState<{ alt?: string; src?: string; description?: string }>({ alt: "", src: "" });
    const [saving, setSaving] = useState(false);
 
   const openAddModal = () => {
@@ -30,13 +30,13 @@ const AdminGallery = () => {
     if (!formData.src) return;
     setSaving(true);
     try {
-      const payload: any = {
-        src: formData.src,
+      const payload: Partial<GalleryItem> = {
+        src: formData.src || "",
         alt: formData.alt || "Project Image",
       };
-      if ((formData as any).description) payload.description = (formData as any).description;
-      if ((formData as any).alt) payload.name = (formData as any).alt;
-      await create(payload);
+      if (formData.description) payload.description = formData.description;
+      if (formData.alt) payload.name = formData.alt;
+      await create(payload as GalleryItem);
       setIsModalOpen(false);
     } catch (err) {
       // Error handled by hook
@@ -134,8 +134,8 @@ const AdminGallery = () => {
                 <div>
                   <label className="block text-sm font-medium mb-2">Project Description</label>
                   <textarea
-                    value={(formData as any).description || ""}
-                    onChange={(e) => setFormData({ ...formData, src: formData.src, alt: formData.alt, ...( { description: e.target.value } ) })}
+                    value={formData.description || ""}
+                    onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                     className="w-full border border-border rounded-md px-3 py-2 bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Enter project description"
                   />

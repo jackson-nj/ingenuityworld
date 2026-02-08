@@ -23,7 +23,7 @@ export default function TextScramble({ text, className = "", interval = 30, reve
     // per-character reveal times with small randomness
     const revealTimes = new Array<number>(length).fill(0).map((_, i) => (i + 1) * revealSpeed + Math.floor(Math.random() * revealSpeed));
 
-    let output = new Array<string>(length).fill("");
+    const output = new Array<string>(length).fill("");
 
     function update(ts: number) {
       if (startRef.current == null) startRef.current = ts;

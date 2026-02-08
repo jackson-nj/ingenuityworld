@@ -51,11 +51,11 @@ const fallbackEquipment = [
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Our Services</span>
+          
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-2">
-            SERVICES <span className="text-primary">OFFERED</span>
+            TARGET <span className="text-primary">SERVICES</span>
           </h2>
-          <div className="text-sm text-muted-foreground mb-4">Target: Mining Operations</div>
+          <div className="text-sm text-muted-foreground mb-4">Mining Operations</div>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
             Browse our core service offerings focused on industrial mining, construction and mechanical projects.
           </p>
@@ -67,7 +67,7 @@ const fallbackEquipment = [
            </div>
          ) : (
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {equipment.map((item) => (
+            {equipment.slice(0, Math.max(0, equipment.length - 3)).map((item) => (
               <a
                 key={item.id}
                 href="https://wa.me/260971688888?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps."
@@ -89,7 +89,7 @@ const fallbackEquipment = [
                   <span className="font-display text-base font-bold text-foreground absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-full">
                        {item.name}
                   </span>
-                  <span className="font-display text-sm font-bold text-black absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0">
+                  <span className="font-display text-sm font-bold text-white absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0">
                     Hire Now
                   </span>
                 </div>
@@ -103,7 +103,7 @@ const fallbackEquipment = [
         <div className="text-center mt-12">
           <Link
             to="/services"
-            className="inline-block bg-primary text-black font-bold px-10 py-4 text-sm uppercase tracking-wider hover:bg-charcoal hover:text-white transition-all duration-300"
+            className="inline-block bg-primary text-white font-bold px-10 py-4 text-sm uppercase tracking-wider transition-colors duration-300 hover:bg-charcoal hover:text-white"
           >
             View All Services
           </Link>

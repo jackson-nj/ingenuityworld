@@ -3,7 +3,14 @@ import TextScramble from "./ui/TextScramble";
 
 // Dynamically import all hero images from src/assets/hero (place your hero images there)
 const heroModules = import.meta.glob('../assets/hero/*.{jpg,jpeg,png,webp}', { eager: true });
-const heroImages: string[] = Object.values(heroModules).map((m: any) => (m as { default: string }).default).filter(Boolean as any);
+const heroImages: string[] = Object.values(heroModules)
+  .map((m) => {
+    const mm = m as { default?: string } | string | undefined;
+    if (mm && typeof mm === 'object' && 'default' in mm) return (mm as { default: string }).default;
+    if (typeof mm === 'string') return mm;
+    return '';
+  })
+  .filter(Boolean) as string[];
 
 const HeroSection = () => {
   return (

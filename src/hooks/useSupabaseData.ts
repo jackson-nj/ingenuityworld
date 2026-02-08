@@ -4,8 +4,7 @@
  
  type TableName = "equipment" | "hire" | "gallery" | "certifications" | "services";
  
- // eslint-disable-next-line @typescript-eslint/no-explicit-any
- export function useSupabaseData<T extends { id: string }>(tableName: TableName) {
+export function useSupabaseData<T extends { id: string }>(tableName: TableName) {
    const [data, setData] = useState<T[]>([]);
    const [loading, setLoading] = useState(true);
    const [error, setError] = useState<string | null>(null);

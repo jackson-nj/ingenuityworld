@@ -48,10 +48,10 @@ const AdminEquipment = () => {
       try {
         await refetch();
       } catch {
-        // ignore refetch errors, UI already updated optimistically
+        void 0;
       }
-     } catch (err) {
-       // Error handled by hook
+    } catch (err) {
+       void 0;
      } finally {
        setSaving(false);
      }
@@ -62,7 +62,9 @@ const AdminEquipment = () => {
        await remove(id);
        try {
          await refetch();
-       } catch {}
+       } catch {
+         void 0;
+       }
     }
   };
 

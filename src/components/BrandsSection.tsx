@@ -1,12 +1,9 @@
-const brands = [
-  { name: "Caterpillar", initials: "CAT" },
-  { name: "Komatsu", initials: "KMT" },
-  { name: "Hitachi", initials: "HIT" },
-  { name: "Volvo", initials: "VOL" },
-  { name: "John Deere", initials: "JD" },
-  { name: "Liebherr", initials: "LIE" },
-  { name: "Case", initials: "CSE" },
-  { name: "JCB", initials: "JCB" },
+const services = [
+  { name: "Mechanical Fabrication", initials: "MF" },
+  { name: "Industrial Maintenance", initials: "IM" },
+  { name: "Civil Construction", initials: "CC" },
+  { name: "PPE & Hardware Supply", initials: "PPE" },
+  { name: "Logistics & Transport", initials: "LT" },
 ];
 
 const BrandsSection = () => {
@@ -21,18 +18,18 @@ const BrandsSection = () => {
         {/* Scrolling container */}
         <div className="flex animate-marquee items-center">
           {/* First set of brands */}
-          {[...brands, ...brands, ...brands].map((brand, index) => (
+          {[...services, ...services, ...services].map((service, index) => (
             <div
-              key={`${brand.name}-${index}`}
+              key={`${service.name}-${index}`}
               className="flex-shrink-0 mx-6 flex items-center justify-center group"
             >
               <div className="w-14 h-14 bg-zinc-100 rounded-none flex items-center justify-center group-hover:bg-primary transition-all duration-300">
                 <span className="font-display text-lg font-bold text-zinc-700 group-hover:text-white transition-colors">
-                  {brand.initials}
+                  {service.initials}
                 </span>
               </div>
               <span className="ml-2 text-xs text-zinc-500 font-semibold uppercase tracking-wider group-hover:text-primary transition-colors">
-                {brand.name}
+                {service.name}
               </span>
             </div>
           ))}

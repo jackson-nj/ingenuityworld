@@ -1,5 +1,5 @@
 import { Shield, Users, Clock, Wrench, Award, Headphones } from "lucide-react";
-import whyChooseUsImg from "@/assets/equipment/welding tools.jpg";
+import whyChooseUsImg from "@/assets/services/mechanical1.jpeg";
 
 const benefits = [
   {
