@@ -46,7 +46,7 @@ const HeroSection = () => {
           <p className="text-lg text-white/80 mb-6 max-w-xl">Reliable industrial solutions for mining, construction, and mechanical projects</p>
 
           <div className="flex gap-4">
-            <a href="https://wa.me/260975078766?text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noreferrer noopener" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
+            <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
             <a href="/gallery" className="inline-flex items-center justify-center border border-white/30 text-white/90 px-5 py-3">View Projects</a>
           </div>
         </div>

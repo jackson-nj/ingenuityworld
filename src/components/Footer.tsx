@@ -119,13 +119,13 @@ const Footer = () => {
           <a href="https://web.facebook.com/profile.php?id=100085097660946" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
             <Facebook className="h-4 w-4 text-white" />
           </a>
-          <a href="https://wa.me/260975078766" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+          <a href="https://api.whatsapp.com/send?phone=260975078766" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
             <Instagram className="h-4 w-4 text-white" />
           </a>
           <a href="tel:+260975078766" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
             <Phone className="h-4 w-4 text-white" />
           </a>
-          <a href="https://wa.me/260975078766" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+          <a href="https://api.whatsapp.com/send?phone=260975078766" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
             <Twitter className="h-4 w-4 text-white" />
           </a>
         </div>

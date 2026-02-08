@@ -39,13 +39,13 @@ const TopContactBar = () => (
           <a href="https://web.facebook.com/profile.php?id=100085097660946" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
             <Facebook className="h-4 w-4" />
           </a>
-          <a href="https://wa.me/260975078766?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." className="hover:text-primary transition-colors" aria-label="WhatsApp">
+          <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="WhatsApp">
             <Instagram className="h-4 w-4" />
           </a>
-          <a href="https://wa.me/260975078766?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." className="hover:text-primary transition-colors" aria-label="WhatsApp">
+          <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="WhatsApp">
             <Phone className="h-4 w-4" />
           </a>
-          <a href="https://wa.me/260975078766?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." className="hover:text-primary transition-colors" aria-label="WhatsApp">
+          <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="WhatsApp">
             <Youtube className="h-4 w-4" />
           </a>
         </div>

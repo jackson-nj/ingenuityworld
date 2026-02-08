@@ -142,7 +142,7 @@ const Hire = () => {
             flexible hire terms, and delivery across the region.
           </p>
           <a
-            href="https://wa.me/260975078766?text=Hello%2C%20I%27m%20interested%20in%20hiring%20heavy%20equipment.%20Please%20advise%20on%20availability%20and%20next%20steps."
+            href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20hiring%20heavy%20equipment.%20Please%20advise%20on%20availability%20and%20next%20steps."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-primary hover:bg-charcoal hover:text-white font-bold px-8 py-3 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer rounded-none text-lg"
