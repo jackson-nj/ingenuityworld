@@ -54,41 +54,50 @@ const ServicesSection = () => {
   ];
  
    useEffect(() => {
+     // Force the three primary service cards to the exact content and local assets requested
+     const primaryServices: ServiceItem[] = [
+       {
+         id: "mechanical",
+         title: "Mechanical Engineering",
+         description:
+           "Welding, fabrication, boiler making, hydraulics, and industrial maintenance delivered by skilled technicians.",
+         image_url: new URL("../assets/services/mechanical1.jpeg", import.meta.url).href,
+       },
+       {
+         id: "construction",
+         title: "Construction Works",
+         description:
+           "Civil works, earthworks, structural and finishing works delivered with safety and quality at the forefront.",
+         image_url: constructionImages[0],
+       },
+       {
+         id: "supplies",
+         title: "Supplies & Logistics",
+         description:
+           "Procurement, transport, warehousing and logistics support to ensure your project runs smoothly.",
+         image_url: new URL("../assets/services/card3.jpg", import.meta.url).href,
+       },
+     ];
+
+     // Immediately render the primary services (do not show remote/heavy images)
+     setServices(primaryServices);
+     setLoading(false);
+
+     // Fetch from Supabase in background for Admin sync, but do not override primary services
      const fetchServices = async () => {
        try {
          const { data, error } = await supabase
            .from("services")
            .select("*")
            .order("created_at", { ascending: false });
- 
+
          if (error) throw error;
-        const rows = (data ?? []) as any[];
-        const localNeutral = new URL("../assets/services/card3.jpg", import.meta.url).href;
-        const heavyKeywords = /(bulldozer|excavator|backhoe|backhoeloader|grader|roller|frontloader|lowbed|rockbreaker|construction|mining|mine|heavy)/i;
-        const sanitizeUrl = (u?: string | null) => {
-          if (!u) return undefined;
-          const s = String(u);
-          if (/hero/i.test(s)) return s; // preserve hero images
-          if (/^https?:\/\//i.test(s) || /supabase\.co/i.test(s) || heavyKeywords.test(s)) return localNeutral;
-          return s;
-        };
-
-        const normalized: ServiceItem[] = rows.map((d) => ({
-          id: String(d.id),
-          title: d.title ?? "",
-          description: d.description ?? undefined,
-          image_url: sanitizeUrl(d.image_url) ?? undefined,
-        }));
-
-        setServices(normalized.length > 0 ? normalized : fallbackServices);
+         // keep data for admin sync / future features; don't overwrite the primary cards
        } catch (err) {
          console.error("Error fetching services:", err);
-         setServices(fallbackServices);
-       } finally {
-         setLoading(false);
        }
      };
- 
+
      fetchServices();
    }, []);
 
