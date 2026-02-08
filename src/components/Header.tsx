@@ -88,11 +88,11 @@ const Header = () => {
               {/* Logo + text: show logo and large text; ensure visible */}
               <Link to="/" className="flex items-center gap-4 mr-auto">
                 <img src={logo} alt="Ingenuity logo" className="w-16 h-16 object-contain shrink-0" />
-                <div className="flex flex-col">
+                <div className="flex flex-col items-start w-min">
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                     INGENUITY
                   </span>
-                  <span className="text-base md:text-lg text-secondary/90 uppercase tracking-[0.12em]">
+                  <span className="font-display text-sm md:text-base text-secondary/90 uppercase tracking-[0.06em] w-full text-center leading-none mt-1">
                     SPECIALIZED ENGINEERING
                   </span>
                 </div>
