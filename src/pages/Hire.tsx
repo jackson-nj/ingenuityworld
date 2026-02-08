@@ -104,35 +104,25 @@ const Hire = () => {
                {equipment.map((item) => (
               <div
                    key={item.id}
-                className="group bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+                className="bg-white overflow-hidden shadow-sm transition-all duration-300"
               >
                 {/* Image Container */}
                 <div className="relative h-56 overflow-hidden bg-zinc-100 flex items-center justify-center">
                   <img
                        src={item.image_url || "/placeholder.svg"}
                     alt={item.name}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="font-display text-lg font-bold text-foreground mb-2">
                     {item.name}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                        {item.description || ""}
                   </p>
-                  <a 
-                    href="https://wa.me/260971688888?text=Hello%2C%20I%27m%20interested%20in%20hiring%20heavy%20equipment.%20Please%20advise%20on%20availability%20and%20next%20steps."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition-colors rounded text-sm font-medium gap-2"
-                  >
-                    <Phone className="h-4 w-4" />
-                    Enquire Now
-                  </a>
                 </div>
               </div>
             ))}
