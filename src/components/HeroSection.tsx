@@ -38,7 +38,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6">
         <div className="max-w-3xl">
-          <span className="inline-block bg-black/40 text-white/90 px-3 py-1 rounded-full text-xs mb-4">Trusted since 1989</span>
+          <span className="inline-block bg-black/40 text-white/90 px-3 py-1 rounded-full text-xs mb-4">Trusted</span>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
             providing best industry <TextScramble text={"solutions"} revealSpeed={100} />
           </h1>
@@ -47,7 +47,6 @@ const HeroSection = () => {
 
           <div className="flex gap-4">
             <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
-            <a href="/gallery" className="inline-flex items-center justify-center border border-white/30 text-white/90 px-5 py-3">View Projects</a>
           </div>
         </div>
       </div>

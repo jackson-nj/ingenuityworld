@@ -71,33 +71,25 @@ const fallbackEquipment = [
               { id: "4", name: "Kansashi Site", image_url: new URL("../assets/services/kansashi.jpg", import.meta.url).href },
               { id: "5", name: "Barrick Mine", image_url: new URL("../assets/services/Barrick-Gold-Mine.png", import.meta.url).href },
             ].map((item) => (
-              <a
+              <div
                 key={item.id}
-                href="https://wa.me/260971688888?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-white border-2 border-gray-100 hover:border-primary overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg shadow-sm"
+                className="bg-white border-2 border-gray-100 overflow-hidden transition-all duration-300 shadow-sm"
               >
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden bg-white">
                 <img
                   src={item.image_url || "/placeholder.svg"}
                   alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              {/* Title / Hire Button */}
-              <div className="p-4 text-center bg-gray-50/50 border-t border-gray-100 group-hover:bg-primary transition-colors duration-300 overflow-hidden">
-                <div className="relative h-6">
-                  <span className="font-display text-base font-bold text-foreground absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-full">
-                       {item.name}
-                  </span>
-                  <span className="font-display text-sm font-bold text-white absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0">
-                    Hire Now
-                  </span>
+              {/* Title (no buttons) */}
+              <div className="p-4 text-center bg-gray-50/50 border-t border-gray-100">
+                <div className="h-6 flex items-center justify-center">
+                  <span className="font-display text-base font-bold text-foreground">{item.name}</span>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
          )}

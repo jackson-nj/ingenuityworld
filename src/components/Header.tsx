@@ -140,7 +140,7 @@ const Header = () => {
                 <Link to="/faq" className="hidden lg:inline-block" />
 
                 <a
-                  href="mailto:ingenuity.engltd@gmail.com?subject=Request%20a%20Quote"
+                  href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27d%20like%20to%20request%20a%20quote."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-accent-2 font-bold px-5 py-2 rounded-full text-sm"
@@ -160,10 +160,28 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile Navigation */}
-          {isMobileMenuOpen && (
-            <div className="container mx-auto px-4 lg:hidden mt-4">
-              <div className="bg-white shadow-sm p-4">
+          {/* Mobile Navigation (sliding from left) */}
+          <div className={`fixed inset-0 z-40 lg:hidden ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`} aria-hidden={!isMobileMenuOpen}>
+            {/* Overlay */}
+            <div
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`}
+            />
+
+            {/* Sliding panel */}
+            <aside
+              role="dialog"
+              aria-modal="true"
+              className={`fixed inset-y-0 left-0 w-72 max-w-full bg-white shadow-lg transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+            >
+              <div className="p-4 h-full overflow-y-auto">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="font-display font-bold text-lg">Menu</div>
+                  <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu" className="p-2">
+                    <X className="h-6 w-6" />
+                  </button>
+                </div>
+
                 <div className="flex flex-col gap-4">
                   {navItems.map((item) => {
                     if (item.dropdown) {
@@ -199,17 +217,17 @@ const Header = () => {
                   })}
 
                   <a
-                    href="mailto:ingenuity.engltd@gmail.com?subject=Request%20a%20Quote"
+                    href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27d%20like%20to%20request%20a%20quote."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-accent-2 font-bold w-full text-center py-3"
+                    className="btn-accent-2 font-bold w-full text-center py-3 mt-4"
                   >
                     Request a Quote
                   </a>
                 </div>
               </div>
-            </div>
-          )}
+            </aside>
+          </div>
         </div>
       </nav>
     </header>

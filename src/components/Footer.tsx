@@ -39,7 +39,9 @@ const Footer = () => {
             </p>
             
             <a
-              href="mailto:ingenuity.engltd@gmail.com?subject=Request%20a%20Quote"
+              href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27d%20like%20to%20request%20a%20quote."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block btn-accent-2 font-bold px-5 py-2 rounded-full text-sm mb-4"
             >
               Request a Quote
