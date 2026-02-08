@@ -143,7 +143,7 @@ const Services = () => {
             </div>
 
             <div className="mt-8 text-center">
-              <a href="/contact" className="inline-block btn-accent font-bold px-6 py-3 rounded-md">Get in touch</a>
+              <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="inline-block btn-accent-2 font-bold px-6 py-3 rounded-md">Get in touch</a>
             </div>
           </div>
         </section>
