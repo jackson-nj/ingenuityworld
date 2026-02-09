@@ -11,8 +11,8 @@ import useSeo from "@/hooks/useSeo";
 
 const Index = () => {
   useSeo({
-    title: "Ingenuity — Mining Services Zambia | PPE supplier & Industrial Hardware",
-    description: "Ingenuity Specialized Engineering Works Ltd — mining services Zambia, PPE supplier Zambia, industrial hardware Zambia, construction company Zambia, mining supply Copperbelt. Heavy equipment hire, fabrication, and procurement."
+    title: "Ingenuity Mining Services Zambia | PPE supplier & Industrial Hardware",
+    description: "Ingenuity Specialized Engineering Works Ltd mining services Zambia, PPE supplier Zambia, industrial hardware Zambia, construction company Zambia, mining supply Copperbelt. Heavy equipment hire, fabrication, and procurement."
   });
 
   return (

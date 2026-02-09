@@ -93,12 +93,11 @@ const Services = () => {
           <div className="container mx-auto px-6 text-center">
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Our Services</h1>
             <p className="text-muted-foreground max-w-3xl mx-auto text-lg">     
-              End-to-end mechanical, civil and logistics services — delivered wi
-th safety and quality.                                                                      </p>
+              End-to-end mechanical, civil and logistics services delivered with safety and quality.                                                                      </p>
           </div>
         </section>
 
-        {/* Services cards: Mechanical, Construction, Supplies — horizontal on d
+        {/* Services cards: Mechanical, Construction, Supplies horizontal on d
 esktop */}
         <section className="py-12 bg-muted">
           <div className="container mx-auto px-6">
@@ -120,8 +119,7 @@ r:shadow-lg transition-all duration-300 flex flex-col h-full">                  
                   <ConstructionCarousel images={constructionImages.map((i) => i.src)} onSelect={(src) => openImage(src)} />                                                     </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
-                    <h3 className="font-display text-xl font-bold mb-2">Construction Projects</h3>                                                                                  <p className="text-muted-foreground mb-4">Civil works, earth
-works, structures and finishing — executed safely and on schedule.</p>                            </div>
+                    <h3 className="font-display text-xl font-bold mb-2">Construction Projects</h3>                                                                                  <p className="text-muted-foreground mb-4">Civil works, earthworks, structures and finishing executed safely and on schedule.</p>                            </div>
                 </div>
               </div>
 
