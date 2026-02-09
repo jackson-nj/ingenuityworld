@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.ingenuityworld.com/sitemap.xml
+# Sitemap updated to your production domain https://www.ingenuityworld.com/

@@ -161,7 +161,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Navigation (sliding from left) */}
-          <div className={`fixed inset-0 z-40 lg:hidden ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`} aria-hidden={!isMobileMenuOpen}>
+          <div className={`fixed inset-0 z-40 lg:hidden ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
             {/* Overlay */}
             <div
               onClick={() => setIsMobileMenuOpen(false)}

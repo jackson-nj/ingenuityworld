@@ -7,8 +7,14 @@ import BrandsSection from "@/components/BrandsSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import useSeo from "@/hooks/useSeo";
 
 const Index = () => {
+  useSeo({
+    title: "Ingenuity — Mining Services Zambia | PPE supplier & Industrial Hardware",
+    description: "Ingenuity Specialized Engineering Works Ltd — mining services Zambia, PPE supplier Zambia, industrial hardware Zambia, construction company Zambia, mining supply Copperbelt. Heavy equipment hire, fabrication, and procurement."
+  });
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />

@@ -1,6 +1,7 @@
  import { useState, useEffect } from "react";
  import Header from "@/components/Header";
  import Footer from "@/components/Footer";
+ import useSeo from "@/hooks/useSeo";
  import { Award, CheckCircle, Loader2 } from "lucide-react";
  import { supabase } from "@/integrations/supabase/client";
  
@@ -35,6 +36,11 @@ const compliancePoints = [
 ];
 
 const Certifications = () => {
+  useSeo({
+    title: "Certifications — Ingenuity | Verified PPE Supplier & Industrial Hardware",
+    description: "Our certifications demonstrate compliance and reliability — PPE supplier Zambia, industrial hardware Zambia, mining services Zambia, construction company Zambia, mining supply Copperbelt."
+  });
+
    const [certifications, setCertifications] = useState<Certification[]>([]);
    const [loading, setLoading] = useState(true);
  
@@ -68,8 +74,10 @@ const Certifications = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
-            Certifications
+            Certifications — PPE Supplier & Industrial Hardware Zambia
           </h1>
+          <h2 className="text-base text-white/80 mt-2">Verified compliance for mining services Zambia and industrial supply across the Copperbelt</h2>
+          <h3 className="text-sm text-white/70 mt-2">Our certifications demonstrate eligibility for government and industrial contracts in Zambia</h3>
         </div>
       </section>
 
@@ -109,7 +117,8 @@ const Certifications = () => {
                 <div className="h-32 flex items-center justify-center mb-6 bg-gray-50 p-4">
                   <img
                        src={cert.image_url || "/placeholder.svg"}
-                    alt={cert.name}
+                    alt={`${cert.name} — certification for PPE supplier Zambia`}
+                    loading="lazy"
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>

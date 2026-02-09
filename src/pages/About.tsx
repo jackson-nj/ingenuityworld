@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import useSeo from "@/hooks/useSeo";
 import { CheckCircle, Building2, Truck, Home, Factory, Trees, Landmark, Shield, Award, Users } from "lucide-react";
 import { useEffect, useRef } from "react";
 const aboutUs1 = new URL("../assets/services/about us1.jpg", import.meta.url).href;
@@ -51,6 +52,11 @@ const industries = [
 ];
 
 const About = () => {
+  useSeo({
+    title: "About Ingenuity — Mining services Zambia & Construction Company Zambia",
+    description: "Learn about Ingenuity Specialized Engineering Works Ltd — mining services Zambia, PPE supplier Zambia, industrial hardware Zambia, construction company Zambia, mining supply Copperbelt. Experienced engineers and trusted partners."
+  });
+
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -72,8 +78,9 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
+      <main className="flex-1">
       
       {/* Hero removed - About heading moved into content */}
 
@@ -85,10 +92,11 @@ const About = () => {
             <div className="relative z-10 lg:w-[55%] w-full lg:mr-auto lg:mt-10">
               <div className="bg-white p-6 lg:p-12 lg:pr-16">
                 <span className="fade-up text-primary font-bold uppercase tracking-[0.2em] text-sm">Who We Are</span>
-                <h1 className="fade-up fade-up-delay-1 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-4 leading-tight">About Us</h1>
+                <h1 className="fade-up fade-up-delay-1 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-4 leading-tight">About Ingenuity — Mining services Zambia & Construction Company</h1>
                 <h2 className="fade-up fade-up-delay-2 font-display text-xl md:text-2xl font-semibold text-foreground mb-4">
-                  Ingenuity Specialized Engineering Works Ltd
+                  Ingenuity Specialized Engineering Works Ltd — PPE supplier Zambia & Industrial hardware Copperbelt
                 </h2>
+                <h3 className="fade-up fade-up-delay-3 text-base text-muted-foreground mb-6">Experienced mining services, construction, and industrial supply across Zambia and the Copperbelt</h3>
                 <p className="fade-up fade-up-delay-3 text-muted-foreground mb-6 text-base leading-relaxed">
                   Ingenuity Specialized Engineering Works Ltd (ISEW) delivers engineering, construction and industrial supply solutions across Zambia. We specialise in mechanical engineering, fabrication, maintenance, civil construction and procurement — prioritising safety, quality and sustainability.
                 </p>
@@ -123,7 +131,8 @@ const About = () => {
               <div className="img-reveal-container relative h-[300px] sm:h-[380px] lg:h-[560px]">
                 <img
                   src={aboutUsImage}
-                  alt="About Us"
+                  alt="about Ingenuity — mining services Zambia"
+                  loading="lazy"
                   className="img-color w-full h-full object-cover rounded-md"
                 />
                 {/* Paint drops overlay */}
@@ -157,7 +166,8 @@ const About = () => {
               <div className="img-reveal-container relative h-[400px] lg:h-[650px]">
                 <img
                   src={aboutUs1}
-                  alt="Industries We Serve"
+                  alt="industrial supply Copperbelt — industries we serve"
+                  loading="lazy"
                   className="img-color w-full h-full object-cover"
                 />
                 {/* Paint drops overlay */}
@@ -210,6 +220,9 @@ const About = () => {
           </div>
         </div>
       </section>
+      </main>
+
+      <Footer />
 
     </div>
   );

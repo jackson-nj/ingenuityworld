@@ -72,7 +72,8 @@ const WhyChooseUsSection = () => {
             <div className="relative">
               <img
                 src={whyChooseUsImg}
-                alt="Heavy equipment at work"
+                alt="construction services Zambia — heavy equipment at work"
+                loading="lazy"
                 className="w-full h-[400px] lg:h-[600px] object-cover"
               />
               {/* Thick border on right side and small bottom portion */}

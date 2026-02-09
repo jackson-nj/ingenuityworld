@@ -91,14 +91,16 @@ const HowItWorksSection = () => {
             <div className="relative">
               <img
                 src={howItWorksImg1}
-                alt="How it works - step 1"
+                alt="how it works - mining services Zambia"
+                loading="lazy"
                 className="w-full h-auto object-contain"
               />
             </div>
             <div className="relative">
               <img
                 src={howItWorksImg2}
-                alt="How it works - step 2"
+                alt="how it works - construction services Zambia"
+                loading="lazy"
                 className="w-full h-auto object-contain"
               />
               {/* Orange accent */}

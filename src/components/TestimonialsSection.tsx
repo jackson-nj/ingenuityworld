@@ -27,7 +27,8 @@ const TestimonialsSection = () => {
             <div className="relative overflow-hidden rounded-md shadow-2xl h-[320px] lg:h-[600px]">
               <img
                 src={testimonialImg}
-                alt="Happy client"
+                alt="client testimonial — mining and construction services Zambia"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
               {/* Thick accent border on right and bottom */}

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import useSeo from "@/hooks/useSeo";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -49,6 +50,11 @@ const faqData = [
 ];
 
 const FAQ = () => {
+  useSeo({
+    title: "FAQ — Ingenuity | Mining Services Zambia & Industrial Hardware",
+    description: "Find answers about our mining services Zambia, PPE supplier Zambia, industrial hardware Zambia, construction company Zambia, and mining supply Copperbelt offerings."
+  });
+
   const [openItems, setOpenItems] = useState<string[]>([]);
 
   const toggleItem = (id: string) => {
@@ -68,8 +74,10 @@ const FAQ = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
-            FAQ
+            FAQ — Mining services Zambia & Industrial Hardware
           </h1>
+          <h2 className="text-base text-white/80 mt-2">Questions about PPE supplier Zambia, construction company services, and supply across the Copperbelt</h2>
+          <h3 className="text-sm text-white/70 mt-2">Find answers related to mining, equipment hire, and procurement in Zambia</h3>
         </div>
       </section>
 

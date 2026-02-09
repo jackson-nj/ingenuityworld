@@ -37,6 +37,10 @@ const Footer = () => {
             <p className="text-white/60 mb-6 leading-relaxed">
               Your trusted partner for heavy equipment hire. We go beyond construction to provide reliable, well-maintained machinery with experienced operators for all your project needs.
             </p>
+
+            <p className="text-white/60 mb-4 leading-relaxed text-sm">
+              Serving Zambia and the Copperbelt with mining, construction, and industrial supply — including PPE supplier Zambia and industrial hardware for mines and sites.
+            </p>
             
             <a
               href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27d%20like%20to%20request%20a%20quote."
@@ -118,16 +122,16 @@ const Footer = () => {
       {/* Social icons (centered) */}
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-center gap-6">
-          <a href="https://web.facebook.com/profile.php?id=100085097660946" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+          <a href="https://web.facebook.com/profile.php?id=100085097660946" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
             <Facebook className="h-4 w-4 text-white" />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=260975078766" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+          <a href="https://api.whatsapp.com/send?phone=260975078766" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
             <Instagram className="h-4 w-4 text-white" />
           </a>
-          <a href="tel:+260975078766" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+          <a href="tel:+260975078766" aria-label="Phone" title="Phone" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
             <Phone className="h-4 w-4 text-white" />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=260975078766" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+          <a href="https://api.whatsapp.com/send?phone=260975078766" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-primary transition-colors">
             <Twitter className="h-4 w-4 text-white" />
           </a>
         </div>

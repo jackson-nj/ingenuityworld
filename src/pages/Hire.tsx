@@ -1,6 +1,7 @@
  import { useState, useEffect } from "react";
  import Header from "@/components/Header";
  import Footer from "@/components/Footer";
+ import useSeo from "@/hooks/useSeo";
  import { Phone, Loader2 } from "lucide-react";
  import { supabase } from "@/integrations/supabase/client";
  
@@ -41,6 +42,11 @@
  ];
 
 const Hire = () => {
+  useSeo({
+    title: "Hire Equipment — Ingenuity | Equipment Hire & Mining Services Zambia",
+    description: "Hire heavy equipment and operators for mining services Zambia and construction company Zambia projects. We also supply PPE and industrial hardware in Zambia and the Copperbelt."
+  });
+
    const [equipment, setEquipment] = useState<HireItem[]>([]);
    const [loading, setLoading] = useState(true);
  
@@ -74,8 +80,10 @@ const Hire = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
-            Equipment Hire
+            Equipment Hire — Heavy Equipment for Mining & Construction Zambia
           </h1>
+          <h2 className="text-base text-white/80 mt-2">Hire excavators, crane trucks, rollers — mining services Zambia and construction company support across the Copperbelt</h2>
+          <h3 className="text-sm text-white/70 mt-2">We also supply PPE and industrial hardware in Zambia</h3>
         </div>
       </section>
 
@@ -110,7 +118,8 @@ const Hire = () => {
                 <div className="relative h-56 overflow-hidden bg-zinc-100 flex items-center justify-center">
                   <img
                        src={item.image_url || "/placeholder.svg"}
-                    alt={item.name}
+                    alt={`${item.name} — construction services Zambia`}
+                    loading="lazy"
                     className="w-full h-full object-contain"
                   />
                 </div>

@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import Header from "@/components/Header";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import useSeo from "@/hooks/useSeo";
 
 const mechanicalImages = [
   { id: "m1", src: new URL("../assets/services/mechanical1.jpeg", import.meta.url).href, alt: "Mechanical work 1" },
@@ -17,6 +18,11 @@ const constructionImages = [
 const suppliesImage = new URL("../assets/services/card3.jpg", import.meta.url).href;
 
 const Services = () => {
+  useSeo({
+    title: "Services — Mining & Industrial Services Zambia | PPE supplier & Industrial Hardware",
+    description: "Offering mechanical, construction, and logistics services — mining services Zambia, PPE supplier Zambia, industrial hardware Zambia, construction company Zambia, mining supply Copperbelt. Equipment hire & maintenance."
+  });
+
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
@@ -64,7 +70,7 @@ const Services = () => {
               className="flex-shrink-0 w-56 h-40 rounded-md overflow-hidden bg-gray-50 focus:outline-none"
               aria-label={`Open construction ${ (i % images.length) + 1 }`}
             >
-              <img src={src} alt={`Construction ${ (i % images.length) + 1 }`} className="w-full h-full object-cover" />
+                  <img src={src} alt={`construction services Zambia ${ (i % images.length) + 1 }`} loading="lazy" className="w-full h-full object-cover" />
             </button>
           ))}
         </div>
@@ -91,7 +97,9 @@ const Services = () => {
       <main className="flex-1">
         <section className="pt-20 pb-8 bg-white">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Our Services</h1>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Our Services — Mining Services Zambia & PPE Supplier</h1>
+            <h2 className="text-xl text-muted-foreground mb-2">Mechanical, construction, logistics, and industrial supply — mining supply Copperbelt</h2>
+            <h3 className="text-base text-muted-foreground max-w-3xl mx-auto mb-6">We provide PPE supplier Zambia, industrial hardware Zambia, and construction company services across the region.</h3>
             <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
               End-to-end mechanical, civil and logistics services — delivered with safety and quality.
             </p>
@@ -105,7 +113,7 @@ const Services = () => {
               {/* Mechanical Card */}
               <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full">
                 <div className="aspect-[16/9] bg-gray-50">
-                  <img src={mechanicalImages[0].src} alt="Mechanical Engineering" className="w-full h-full object-cover" />
+                  <img src={mechanicalImages[0].src} alt="mechanical services Zambia" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
@@ -131,7 +139,7 @@ const Services = () => {
               {/* Supplies Card */}
               <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full">
                 <div className="aspect-[16/9] bg-gray-50">
-                  <img src={suppliesImage} alt="Supplies and logistics" className="w-full h-full object-cover" />
+                  <img src={suppliesImage} alt="industrial supply Copperbelt" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
@@ -162,7 +170,7 @@ const Services = () => {
                 Close
               </button>
               <div className="rounded-md overflow-hidden bg-gray-900">
-                <img src={activeImage} alt="Enlarged" className="w-full h-[70vh] object-contain bg-black" />
+                <img src={activeImage} alt="construction services Zambia - enlarged" loading="lazy" className="w-full h-[70vh] object-contain bg-black" />
               </div>
             </div>
           </div>

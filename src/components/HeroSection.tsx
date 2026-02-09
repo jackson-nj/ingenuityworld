@@ -21,12 +21,12 @@ const HeroSection = () => {
           {heroImages.length > 0 ? (
             heroImages.map((src, i) => (
               <div key={src} className={`hero-slide ${i === 0 ? 'active' : ''}`}>
-                <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={src} alt={i === 0 ? "mining services Zambia hero" : "mining and construction services Zambia"} loading={i === 0 ? "eager" : "lazy"} className="absolute inset-0 w-full h-full object-cover" />
               </div>
             ))
           ) : (
             <div className="hero-slide active">
-              <img src="/src/assets/equipment/hero.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/src/assets/equipment/hero.jpg" alt="mining services Zambia hero" loading="eager" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           )}
         </div>
@@ -40,10 +40,11 @@ const HeroSection = () => {
         <div className="max-w-3xl">
           <span className="inline-block bg-black/40 text-white/90 px-3 py-1 rounded-full text-xs mb-4">Trusted</span>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
-            providing best industry <TextScramble text={"solutions"} revealSpeed={100} />
+            Mining services Zambia — Reliable mining and construction solutions <TextScramble text={"for industry"} revealSpeed={100} />
           </h1>
 
-          <p className="text-lg text-white/80 mb-6 max-w-xl">Reliable industrial solutions for mining, construction, and mechanical projects</p>
+          <h2 className="text-xl text-white/90 mb-3">PPE supplier Zambia · Industrial hardware Zambia · Construction company Zambia</h2>
+          <p className="text-lg text-white/80 mb-6 max-w-xl">Reliable industrial solutions for mining, construction, and mechanical projects across Zambia and the Copperbelt</p>
 
           <div className="flex gap-4">
             <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
