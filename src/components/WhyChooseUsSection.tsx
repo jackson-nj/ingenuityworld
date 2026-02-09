@@ -44,7 +44,7 @@ const WhyChooseUsSection = () => {
             <div className="bg-white p-10 lg:p-12 lg:pr-16">
               <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Why Choose Us</span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
-                YOUR TRUSTED PARTNER IN <span className="text-primary">CONSTRUCTION</span>
+                YOUR TRUSTED PARTNER
               </h2>
                 <p className="text-muted-foreground mb-8 text-base leading-relaxed">
                 With nearly three decades of experience, Ingenuity Specialized Engineering Works Ltd (ISEW) has become the go-to choice for 
