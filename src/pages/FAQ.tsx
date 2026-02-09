@@ -70,14 +70,14 @@ const FAQ = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[40vh] min-h-[300px] flex items-end justify-center pb-16 bg-black">
+      <section className="relative h-[40vh] min-h-[300px] flex items-center md:items-end justify-center pb-20 bg-black">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black" />
         <div className="relative z-10 text-center px-6">
-          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
-            FAQ Mining services Zambia & Industrial Hardware
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest z-20 whitespace-normal max-w-4xl mx-auto">
+            FAQ services & Industrial Hardware in Zambia
           </h1>
-          <h2 className="text-base text-white/80 mt-2">Questions about PPE supplier Zambia, construction company services, and supply across the Copperbelt</h2>
-          <h3 className="text-sm text-white/70 mt-2">Find answers related to mining, equipment hire, and procurement in Zambia</h3>
+          <h2 className="text-base text-white/80 mt-2">Questions about PPE supplier Zambia, construction company services, and supply</h2>
+    
         </div>
       </section>
 
@@ -91,9 +91,7 @@ const FAQ = () => {
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               FREQUENTLY ASKED <span className="text-primary">QUESTIONS</span>
             </h2>
-            <p className="text-muted-foreground max-w-3xl mx-auto">
-              Find answers to common questions about our equipment hire services, booking process, and more.
-            </p>
+          
           </div>
 
           {/* FAQ Categories */}
