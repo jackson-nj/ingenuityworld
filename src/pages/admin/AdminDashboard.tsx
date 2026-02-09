@@ -3,15 +3,12 @@
 import { Image, Settings, ArrowRight } from "lucide-react";
 import AdminLayout from "@/components/admin/AdminLayout";
 import { supabase } from "@/integrations/supabase/client";
-// project upload helpers removed (Projects form deleted)
 
 const AdminDashboard = () => {
   const [counts, setCounts] = useState({
     projects: 0,
     services: 0,
   });
-
-  // no local project form state (Projects form removed)
 
   const fetchCounts = useCallback(async () => {
     // We only need counts for projects (stored in `gallery`) and services
@@ -95,11 +92,7 @@ const AdminDashboard = () => {
           ))}
         </div>
 
-        {/* Quick Actions removed - keeping only main sections above */}
 
-        {/* Projects form removed per user request */}
-
-        {/* Supabase info removed per request */}
       </div>
     </AdminLayout>
   );

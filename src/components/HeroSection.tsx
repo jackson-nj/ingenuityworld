@@ -40,14 +40,12 @@ const HeroSection = () => {
         <div className="max-w-3xl">
           <span className="inline-block bg-black/40 text-white/90 px-3 py-1 rounded-full text-xs mb-4">Trusted</span>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
-            Mining services Zambia — Reliable mining and construction solutions <TextScramble text={"for industry"} revealSpeed={100} />
+            providing best industry <TextScramble text={"solutions"} revealSpeed={100} />
           </h1>
 
-          <h2 className="text-xl text-white/90 mb-3">PPE supplier Zambia · Industrial hardware Zambia · Construction company Zambia</h2>
-          <p className="text-lg text-white/80 mb-6 max-w-xl">Reliable industrial solutions for mining, construction, and mechanical projects across Zambia and the Copperbelt</p>
-
+          <p className="text-lg text-white/80 mb-6 max-w-xl">Reliable industrial solutions for mining, construction, and mechanical projects</p>
           <div className="flex gap-4">
-            <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
+            <a href="https://wa.me/260971688888?text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noreferrer noopener" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
           </div>
         </div>
       </div>

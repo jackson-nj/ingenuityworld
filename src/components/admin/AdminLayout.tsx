@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { LayoutDashboard, Image, Settings, LogOut, Menu, X, ChevronRight } from "lucide-react";
+import { Image, Settings, LogOut, Menu, X, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logomain from "@/assets/services/Neelkanth-lime-1.png";
 
@@ -9,7 +9,6 @@ interface AdminLayoutProps {
 }
 
 const menuItems = [
-  { icon: LayoutDashboard, label: "Dashboard", path: "/admin/dashboard" },
   { icon: Image, label: "Projects", path: "/admin/gallery" },
   { icon: Settings, label: "Services", path: "/admin/services" },
 ];
