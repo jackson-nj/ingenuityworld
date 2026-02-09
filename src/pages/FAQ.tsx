@@ -72,12 +72,10 @@ const FAQ = () => {
       {/* Hero Section */}
       <section className="relative h-[40vh] min-h-[300px] flex items-center md:items-end justify-center pb-20 bg-black">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black" />
-        <div className="relative z-10 text-center px-6">
+        <div className="relative z-10 text-center px-6 pt-8 md:pt-0">
           <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest z-20 whitespace-normal max-w-4xl mx-auto">
             FAQ services & Industrial Hardware in Zambia
           </h1>
-          <h2 data-animate="fade-up" data-animate-delay="170ms" className="text-base text-white/80 mt-2">Questions about PPE supplier Zambia, construction company services, and supply</h2>
-    
         </div>
       </section>
 
