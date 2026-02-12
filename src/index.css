@@ -11,9 +11,9 @@
 @layer base {
   :root {
     /* Premium Palette - base and accents */
-    /* Primary base (dark steel) - #0A0A0A */
-    --primary: 0 0% 3.9%;
-    --primary-foreground: 0 0% 98%;
+    /* Primary brand color (bright orange/yellow) - #FFB100 */
+    --primary: 38 92% 50%;
+    --primary-foreground: 220 14% 10%;
 
     /* Secondary (deep midnight blue) - #111827 */
     --secondary: 222 30% 11%;

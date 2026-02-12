@@ -166,7 +166,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-8">
-          <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">What We Offer</span>
+          <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm">What We Offer</span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4">Our Services</h2>
         </div>
 
@@ -174,7 +174,7 @@ const ServicesSection = () => {
 
          {loading ? (
            <div className="flex items-center justify-center py-12">
-             <Loader2 className="h-8 w-8 animate-spin text-primary" />
+             <Loader2 className="h-8 w-8 animate-spin text-accent-2" />
            </div>
          ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

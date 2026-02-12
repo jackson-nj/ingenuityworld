@@ -50,7 +50,7 @@ const fallbackEquipment = [
         <div className="text-center mb-20">
           
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-2">
-            TARGET <span className="text-primary">SERVICES</span>
+            TARGET <span className="text-accent-2">SERVICES</span>
           </h2>
           <div className="text-sm text-muted-foreground mb-4">Mining Operations</div>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
@@ -60,7 +60,7 @@ const fallbackEquipment = [
 
          {loading ? (
            <div className="flex items-center justify-center py-20">
-             <Loader2 className="h-8 w-8 animate-spin text-primary" />
+             <Loader2 className="h-8 w-8 animate-spin text-accent-2" />
            </div>
          ) : (
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -99,7 +99,7 @@ const fallbackEquipment = [
         <div className="text-center mt-12">
           <Link
             to="/services"
-            className="inline-block bg-primary text-white font-bold px-10 py-4 text-sm uppercase tracking-wider transition-colors duration-300 hover:bg-charcoal hover:text-white"
+            className="inline-block btn-accent-2 text-white font-bold px-10 py-4 text-sm uppercase tracking-wider transition-colors duration-300 hover:bg-charcoal hover:text-white"
           >
             View All Services
           </Link>

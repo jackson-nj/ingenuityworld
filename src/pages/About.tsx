@@ -84,7 +84,7 @@ const About = () => {
             {/* Content Side - on the left */}
             <div className="relative z-10 lg:w-[55%] w-full lg:mr-auto lg:mt-10">
               <div className="bg-white p-6 lg:p-12 lg:pr-16">
-                <span className="fade-up text-primary font-bold uppercase tracking-[0.2em] text-sm">Who We Are</span>
+                <span className="fade-up text-foreground font-bold uppercase tracking-[0.2em] text-sm">Who We Are</span>
                 <h1 className="fade-up fade-up-delay-1 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-4 leading-tight">About Us</h1>
                 <h2 className="fade-up fade-up-delay-2 font-display text-xl md:text-2xl font-semibold text-foreground mb-4">
                   Ingenuity Specialized Engineering Works Ltd
@@ -108,7 +108,7 @@ const About = () => {
                     "Safety-first operations and compliance",
                   ].map((feature, index) => (
                     <div key={index} className="flex items-start gap-3 group">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
                       <span className="text-foreground text-sm font-medium">{feature}</span>
                     </div>
                   ))}
@@ -128,8 +128,8 @@ const About = () => {
                   <div className="paint-drop paint-drop4" />
                 </div>
                 {/* Thick border on right side and small bottom portion */}
-                <div className="absolute top-0 -right-3 w-6 h-full bg-primary" />
-                <div className="absolute -bottom-3 right-0 w-24 h-6 bg-primary" />
+                <div className="absolute top-0 -right-3 w-6 h-full bg-foreground/10" />
+                <div className="absolute -bottom-3 right-0 w-24 h-6 bg-foreground/10" />
               </div>
             </div>
           </div>
@@ -160,17 +160,17 @@ const About = () => {
                   <div className="paint-drop paint-drop16" />
                 </div>
                 {/* Thick border on left side and small bottom portion */}
-                <div className="absolute top-0 -left-3 w-6 h-full bg-primary" />
-                <div className="absolute -bottom-3 left-0 w-24 h-6 bg-primary" />
+                <div className="absolute top-0 -left-3 w-6 h-full bg-foreground/10" />
+                <div className="absolute -bottom-3 left-0 w-24 h-6 bg-foreground/10" />
               </div>
             </div>
 
             {/* Content Side - on the right */}
             <div className="relative z-10 lg:w-[55%] w-full lg:ml-auto lg:mt-16">
               <div className="bg-white p-10 lg:p-12 lg:pl-16">
-                <span className="fade-up text-primary font-bold uppercase tracking-[0.2em] text-sm">Our Reach</span>
+                <span className="fade-up text-foreground font-bold uppercase tracking-[0.2em] text-sm">Our Reach</span>
                 <h2 className="fade-up fade-up-delay-1 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
-                  INDUSTRIES <span className="text-primary">WE SUPPORT</span>
+                  INDUSTRIES <span className="text-foreground">WE SUPPORT</span>
                 </h2>
                 <p className="fade-up fade-up-delay-2 text-muted-foreground mb-10 text-base leading-relaxed">
                   Our engineering, supply, and industrial services support operations across key sectors, delivering reliable solutions for demanding environments.
@@ -182,8 +182,8 @@ const About = () => {
                     const Icon = industry.icon;
                     return (
                       <div key={index} className={`fade-up fade-up-delay-${(index % 4) + 1} flex items-start gap-4 group`}>
-                        <div className="w-12 h-12 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
-                          <Icon className="h-6 w-6 text-primary group-hover:text-white transition-colors" />
+                        <div className="w-12 h-12 bg-foreground/10 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-foreground/20 transition-colors">
+                          <Icon className="h-6 w-6 text-foreground group-hover:text-white transition-colors" />
                         </div>
                         <div>
                           <h4 className="font-display font-bold text-foreground mb-1 text-base">{industry.title}</h4>

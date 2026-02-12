@@ -26,9 +26,9 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span data-animate="fade-up" data-animate-delay="40ms" className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Simple Process</span>
+          <span data-animate="fade-up" data-animate-delay="40ms" className="text-foreground font-bold uppercase tracking-[0.2em] text-sm">Simple Process</span>
           <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4">
-            HOW IT <span className="text-primary">WORKS</span>
+            HOW IT <span className="text-foreground">WORKS</span>
           </h2>
         </div>
 
@@ -41,8 +41,8 @@ const HowItWorksSection = () => {
                 <div className="flex items-start gap-8 py-10">
                   {/* Large Number */}
                   <div className="flex-shrink-0">
-                    <div className="w-20 h-20 lg:w-24 lg:h-24 bg-primary flex items-center justify-center">
-                      <span className="font-display text-4xl lg:text-5xl font-bold text-black">
+                    <div className="w-20 h-20 lg:w-24 lg:h-24 bg-foreground/10 flex items-center justify-center">
+                      <span className="font-display text-4xl lg:text-5xl font-bold text-foreground">
                         {step.number}
                       </span>
                     </div>
@@ -66,7 +66,7 @@ const HowItWorksSection = () => {
                       width="60" 
                       height="60" 
                       viewBox="0 0 60 60" 
-                      className="text-primary"
+                      className="text-foreground"
                     >
                       <path
                         d="M10 5 Q 10 30, 30 40 Q 50 50, 50 55"
@@ -104,7 +104,7 @@ const HowItWorksSection = () => {
                 className="w-full h-auto object-contain"
               />
               {/* Orange accent */}
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/20 -z-10" />
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-foreground/10 -z-10" />
             </div>
           </div>
         </div>

@@ -42,16 +42,15 @@ const ProjectsSection = () => {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-16">
           <div>
-            <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Our Portfolio</span>
+            <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm">Our Portfolio</span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4">
-              FEATURED <span className="text-primary">PROJECTS</span>
+              FEATURED <span className="text-accent-2">PROJECTS</span>
             </h2>
           </div>
           <div className="flex flex-wrap gap-6">
             {highlights.map((highlight) => (
               <div key={highlight} className="flex items-center gap-3 text-muted-foreground">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                <span className="text-sm font-semibold uppercase tracking-wider">{highlight}</span>
+                <CheckCircle className="h-5 w-5 text-accent-2" />
               </div>
             ))}
           </div>
@@ -111,7 +110,7 @@ const ProjectsSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <button className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded font-bold uppercase tracking-wider hover:bg-accent transition-colors group shadow-lg hover:shadow-primary/30">
+          <button className="inline-flex items-center gap-3 btn-accent-2 px-10 py-5 rounded font-bold uppercase tracking-wider hover:bg-accent transition-colors group shadow-lg">
             View All Projects
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </button>

@@ -42,7 +42,7 @@ const WhyChooseUsSection = () => {
           {/* Content Side - white card on the left */}
           <div className="relative z-10 lg:w-[55%] w-full lg:mt-16">
             <div className="bg-white p-10 lg:p-12 lg:pr-16">
-              <span data-animate="fade-up" data-animate-delay="40ms" className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Why Choose Us</span>
+              <span data-animate="fade-up" data-animate-delay="40ms" className="text-foreground font-bold uppercase tracking-[0.2em] text-sm">Why Choose Us</span>
               <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
                 YOUR TRUSTED PARTNER
               </h2>
@@ -77,8 +77,8 @@ const WhyChooseUsSection = () => {
                 className="w-full h-[400px] lg:h-[600px] object-cover"
               />
               {/* Thick border on right side and small bottom portion */}
-              <div className="absolute top-0 -right-3 w-6 h-full bg-primary" />
-              <div className="absolute -bottom-3 right-0 w-24 h-6 bg-primary" />
+              <div className="absolute top-0 -right-3 w-6 h-full bg-foreground/10" />
+              <div className="absolute -bottom-3 right-0 w-24 h-6 bg-foreground/10" />
             </div>
           </div>
         </div>

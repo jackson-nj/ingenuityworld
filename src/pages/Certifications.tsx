@@ -85,11 +85,11 @@ const Certifications = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+            <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
               Our Credentials
             </span>
             <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              LICENSED & <span className="text-primary">CERTIFIED</span>
+              LICENSED & <span className="text-accent-2">CERTIFIED</span>
             </h2>
             <p data-animate="fade-up" data-animate-delay="170ms" className="text-muted-foreground text-lg leading-relaxed">
               Ingenuity Specialized Engineering Works Ltd (ISEW) is a fully registered and compliant company, meeting all regulatory requirements 
@@ -105,7 +105,7 @@ const Certifications = () => {
         <div className="container mx-auto px-6">
            {loading ? (
              <div className="flex items-center justify-center py-20">
-               <Loader2 className="h-8 w-8 animate-spin text-primary" />
+               <Loader2 className="h-8 w-8 animate-spin text-accent-2" />
              </div>
            ) : (
              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -122,7 +122,7 @@ const Certifications = () => {
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                <h3 className="font-display text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="font-display text-lg font-bold text-foreground mb-3 group-hover:text-accent-2 transition-colors">
                   {cert.name}
                 </h3>
               </div>
@@ -138,15 +138,15 @@ const Certifications = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-primary rounded flex items-center justify-center">
+                <div className="w-16 h-16 bg-accent-2 rounded flex items-center justify-center">
                   <Award className="h-8 w-8 text-black" />
                 </div>
-                <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">
+                <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm">
                   Why It Matters
                 </span>
               </div>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
-                OUR COMMITMENT TO <span className="text-primary">COMPLIANCE</span>
+                OUR COMMITMENT TO <span className="text-accent-2">COMPLIANCE</span>
               </h2>
                 <p className="text-white/70 leading-relaxed mb-8">
                 We believe in doing business the right way. Our certifications and registrations 
@@ -160,7 +160,7 @@ const Certifications = () => {
               <div className="grid sm:grid-cols-2 gap-4">
                 {compliancePoints.map((point, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-accent-2 flex-shrink-0" />
                     <span className="text-white font-medium">{point}</span>
                   </div>
                 ))}
@@ -171,7 +171,7 @@ const Certifications = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-accent-2">
         <div className="container mx-auto px-6 text-center">
           <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Work With a Trusted Partner?

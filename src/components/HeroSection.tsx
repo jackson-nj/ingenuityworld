@@ -39,7 +39,7 @@ const HeroSection = () => {
         <div className="max-w-3xl">
           <span data-animate="fade-up" data-animate-delay="40ms" className="inline-block bg-black/40 text-white/90 px-3 py-1 rounded-full text-xs mb-4">Trusted</span>
           <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
-            providing best industry <span className="text-primary">solutions</span>
+            providing best industry <span className="text-white">solutions</span>
           </h1>
 
           <p data-animate="fade-up" data-animate-delay="170ms" className="text-lg text-white/80 mb-6 max-w-xl">Reliable industrial solutions for mining, construction, and mechanical projects</p>

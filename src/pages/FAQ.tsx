@@ -83,11 +83,11 @@ const FAQ = () => {
       <section className="py-20 lg:py-28 bg-zinc-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+            <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
               Got Questions?
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              FREQUENTLY ASKED <span className="text-primary">QUESTIONS</span>
+              FREQUENTLY ASKED <span className="text-accent-2">QUESTIONS</span>
             </h2>
           
           </div>
@@ -96,7 +96,7 @@ const FAQ = () => {
           <div className="max-w-4xl mx-auto space-y-10">
             {faqData.map((category, catIndex) => (
               <div key={catIndex}>
-                <h3 className="font-display text-xl font-bold text-foreground mb-6 pb-2 border-b-2 border-primary inline-block">
+                <h3 className="font-display text-xl font-bold text-foreground mb-6 pb-2 border-b-2 border-accent-2 inline-block">
                   {category.category}
                 </h3>
                 <div className="space-y-4">
@@ -116,7 +116,7 @@ const FAQ = () => {
                             {item.question}
                           </span>
                           <ChevronDown 
-                            className={`h-5 w-5 text-primary flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                            className={`h-5 w-5 text-accent-2 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                           />
                         </button>
                         <div 

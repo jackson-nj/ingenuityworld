@@ -91,11 +91,11 @@ const Hire = () => {
       <section className="py-20 lg:py-28 bg-zinc-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+            <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
               Our Fleet
             </span>
             <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              AVAILABLE <span className="text-primary">EQUIPMENT</span>
+              AVAILABLE <span className="text-accent-2">EQUIPMENT</span>
             </h2>
             <p data-animate="fade-up" data-animate-delay="170ms" className="text-muted-foreground max-w-3xl mx-auto">
               From excavators to water bowsers, we have the right equipment for every job. 
@@ -105,7 +105,7 @@ const Hire = () => {
 
            {loading ? (
              <div className="flex items-center justify-center py-20">
-               <Loader2 className="h-8 w-8 animate-spin text-primary" />
+               <Loader2 className="h-8 w-8 animate-spin text-accent-2" />
              </div>
            ) : (
              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">

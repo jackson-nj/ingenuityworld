@@ -14,9 +14,9 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Testimonials</span>
+          <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm">Testimonials</span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4">
-            WHAT OUR <span className="text-primary">CLIENTS SAY</span>
+            WHAT OUR <span className="text-accent-2">CLIENTS SAY</span>
           </h2>
         </div>
 
@@ -32,8 +32,8 @@ const TestimonialsSection = () => {
                 className="w-full h-full object-cover"
               />
               {/* Thick accent border on right and bottom */}
-              <div className="absolute top-0 -right-3 w-6 h-full bg-primary" />
-              <div className="absolute -bottom-3 right-0 w-24 h-6 bg-primary" />
+              <div className="absolute top-0 -right-3 w-6 h-full bg-accent-2" />
+              <div className="absolute -bottom-3 right-0 w-24 h-6 bg-accent-2" />
             </div>
           </div>
 
