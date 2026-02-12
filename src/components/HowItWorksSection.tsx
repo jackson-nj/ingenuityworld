@@ -26,7 +26,7 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Simple Process</span>
+          <span data-animate="fade-up" data-animate-delay="40ms" className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Simple Process</span>
           <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4">
             HOW IT <span className="text-primary">WORKS</span>
           </h2>

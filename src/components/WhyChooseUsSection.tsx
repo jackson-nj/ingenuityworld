@@ -42,7 +42,7 @@ const WhyChooseUsSection = () => {
           {/* Content Side - white card on the left */}
           <div className="relative z-10 lg:w-[55%] w-full lg:mt-16">
             <div className="bg-white p-10 lg:p-12 lg:pr-16">
-              <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Why Choose Us</span>
+              <span data-animate="fade-up" data-animate-delay="40ms" className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Why Choose Us</span>
               <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
                 YOUR TRUSTED PARTNER
               </h2>
