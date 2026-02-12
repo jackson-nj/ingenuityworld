@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import useSeo from "@/hooks/useSeo";
 import { CheckCircle, Building2, Truck, Home, Factory, Trees, Landmark, Shield, Award, Users } from "lucide-react";
 import { useEffect, useRef } from "react";
@@ -199,8 +198,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
