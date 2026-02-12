@@ -20,12 +20,12 @@ const HeroSection = () => {
           {heroImages.length > 0 ? (
             heroImages.map((src, i) => (
               <div key={src} className={`hero-slide ${i === 0 ? 'active' : ''}`}>
-                <img src={src} alt={i === 0 ? "mining services Zambia hero" : "mining and construction services Zambia"} loading={i === 0 ? "eager" : "lazy"} className="absolute inset-0 w-full h-full object-cover" />
+                <img src={src} alt={i === 0 ? "services hero" : "mining and construction services"} loading={i === 0 ? "eager" : "lazy"} className="absolute inset-0 w-full h-full object-cover" />
               </div>
             ))
           ) : (
             <div className="hero-slide active">
-              <img src="/src/assets/equipment/hero.jpg" alt="mining services Zambia hero" loading="eager" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/src/assets/equipment/hero.jpg" alt="services hero" loading="eager" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           )}
         </div>

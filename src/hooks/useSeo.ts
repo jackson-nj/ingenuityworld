@@ -24,7 +24,7 @@ function buildLocalBusinessJsonLd() {
       addressRegion: "Lusaka",
       addressCountry: "Zambia"
     },
-    description: "Mining services Zambia, PPE supplier Zambia, industrial hardware Zambia, construction company Zambia, mining supply Copperbelt.",
+    description: "Specialized engineering, fabrication and industrial supply across Zambia.",
     areaServed: ["Zambia", "Copperbelt"],
     sameAs: [
       "https://web.facebook.com/profile.php?id=100085097660946"

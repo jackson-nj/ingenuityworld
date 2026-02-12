@@ -91,7 +91,7 @@ const HowItWorksSection = () => {
             <div className="relative">
               <img
                 src={howItWorksImg1}
-                alt="how it works - mining services Zambia"
+                alt="how it works - services"
                 loading="lazy"
                 className="w-full h-auto object-contain"
               />

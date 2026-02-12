@@ -12,7 +12,7 @@ import useSeo from "@/hooks/useSeo";
 const Index = () => {
   useSeo({
     title: "Ingenuity Specialized Engineering Works Ltd",
-    description: "Ingenuity Specialized Engineering Works Ltd mining services Zambia, PPE supplier Zambia, industrial hardware Zambia, construction company Zambia, mining supply Copperbelt. Heavy equipment hire, fabrication, and procurement."
+    description: "Ingenuity Specialized Engineering Works Ltd — specialized engineering, equipment hire, fabrication and procurement across Zambia."
   });
 
   return (

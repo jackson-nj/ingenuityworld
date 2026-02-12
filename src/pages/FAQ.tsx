@@ -51,8 +51,8 @@ const faqData = [
 
 const FAQ = () => {
   useSeo({
-    title: "FAQ Ingenuity | Mining Services Zambia & Industrial Hardware",
-    description: "Find answers about our mining services Zambia, PPE supplier Zambia, industrial hardware Zambia, construction company Zambia, and mining supply Copperbelt offerings."
+    title: "FAQ Ingenuity",
+    description: "Find answers about our industrial hardware, construction services, and supply offerings across Zambia and the Copperbelt."
   });
 
   const [openItems, setOpenItems] = useState<string[]>([]);

@@ -43,8 +43,8 @@
 
 const Hire = () => {
   useSeo({
-    title: "Hire Equipment Ingenuity | Equipment Hire & Mining Services Zambia",
-    description: "Hire heavy equipment and operators for mining services Zambia and construction company Zambia projects. We also supply PPE and industrial hardware in Zambia and the Copperbelt."
+    title: "Hire Equipment Ingenuity | Equipment Hire",
+    description: "Hire heavy equipment and operators for construction and site projects. We also supply industrial hardware across Zambia and the Copperbelt."
   });
 
    const [equipment, setEquipment] = useState<HireItem[]>([]);
@@ -82,7 +82,7 @@ const Hire = () => {
           <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
             Equipment Hire Heavy Equipment for Mining & Construction Zambia
           </h1>
-          <h2 data-animate="fade-up" data-animate-delay="170ms" className="text-base text-white/80 mt-2">Hire excavators, crane trucks, rollers mining services Zambia and construction company support across the Copperbelt</h2>
+          <h2 data-animate="fade-up" data-animate-delay="170ms" className="text-base text-white/80 mt-2">Hire excavators, crane trucks and rollers for construction and site support across the Copperbelt</h2>
           <h3 data-animate="fade-up" data-animate-delay="240ms" className="text-sm text-white/70 mt-2">We also supply PPE and industrial hardware in Zambia</h3>
         </div>
       </section>

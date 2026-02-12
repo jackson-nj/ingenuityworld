@@ -6,8 +6,8 @@ const bgImage = new URL("../assets/services/construction1.jpg", import.meta.url)
 
 const Gallery = () => {
   useSeo({
-    title: "Projects & Gallery Ingenuity | Mining Services Zambia",
-    description: "Our portfolio showcasing mining services Zambia, construction company Zambia, and mining supply Copperbelt. Ingenuity offers PPE supplier Zambia and industrial hardware Zambia for project needs."
+    title: "Projects & Gallery Ingenuity",
+    description: "Our portfolio showcasing construction company Zambia and mining supply Copperbelt. Ingenuity offers industrial hardware and project support across the Copperbelt."
   });
 
   return (
@@ -16,7 +16,7 @@ const Gallery = () => {
 
       <main className="flex-1 flex items-center justify-center">
         <div className="absolute inset-0 -z-10">
-          <img src={bgImage} alt="projects mining services Zambia" className="w-full h-full object-cover" loading="lazy" />
+          <img src={bgImage} alt="projects" className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="bg-black/65 p-6 rounded-md text-center mx-4 pt-20">
           <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-4xl md:text-5xl font-bold mb-4">Projects</h1>

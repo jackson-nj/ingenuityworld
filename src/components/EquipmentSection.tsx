@@ -79,7 +79,7 @@ const fallbackEquipment = [
               <div className="relative aspect-[4/3] overflow-hidden bg-white">
                 <img
                   src={item.image_url || "/placeholder.svg"}
-                  alt={`${item.name} — mining services Zambia and construction`}
+                  alt={`${item.name}` }
                   loading="lazy"
                   className="w-full h-full object-cover"
                 />

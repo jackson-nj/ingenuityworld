@@ -37,8 +37,8 @@ const compliancePoints = [
 
 const Certifications = () => {
   useSeo({
-    title: "Certifications Ingenuity | Verified PPE Supplier & Industrial Hardware",
-    description: "Our certifications demonstrate compliance and reliability PPE supplier Zambia, industrial hardware Zambia, mining services Zambia, construction company Zambia, mining supply Copperbelt."
+    title: "Certifications Ingenuity",
+    description: "Our certifications demonstrate compliance and reliability for industrial supply and services across the Copperbelt."
   });
 
    const [certifications, setCertifications] = useState<Certification[]>([]);
@@ -74,9 +74,9 @@ const Certifications = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black" />
         <div className="relative z-10 text-center px-6">
           <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
-            Certifications PPE Supplier & Industrial Hardware Zambia
+            Certifications — Zambia
           </h1>
-          <h2 data-animate="fade-up" data-animate-delay="170ms" className="text-base text-white/80 mt-2">Verified compliance for mining services Zambia and industrial supply across the Copperbelt</h2>
+          <h2 data-animate="fade-up" data-animate-delay="170ms" className="text-base text-white/80 mt-2">Verified compliance for industrial supply across the Copperbelt</h2>
           <h3 data-animate="fade-up" data-animate-delay="240ms" className="text-sm text-white/70 mt-2">Our certifications demonstrate eligibility for government and industrial contracts in Zambia</h3>
         </div>
       </section>
@@ -117,7 +117,7 @@ const Certifications = () => {
                 <div className="h-32 flex items-center justify-center mb-6 bg-gray-50 p-4">
                   <img
                        src={cert.image_url || "/placeholder.svg"}
-                    alt={`${cert.name} certification for PPE supplier Zambia`}
+                    alt={`${cert.name} certification`} 
                     loading="lazy"
                     className="max-h-full max-w-full object-contain"
                   />

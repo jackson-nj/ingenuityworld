@@ -6,7 +6,7 @@ import useSeo from "@/hooks/useSeo";
 const NotFound = () => {
   useSeo({
     title: "404 Page Not Found Ingenuity",
-    description: "Page not found. Ingenuity Specialized Engineering Works Ltd mining services Zambia, PPE supplier Zambia, industrial hardware Zambia, construction company Zambia, mining supply Copperbelt."
+    description: "Page not found. Ingenuity Specialized Engineering Works Ltd — specialized engineering and industrial services in Zambia."
   });
 
   return (
@@ -18,7 +18,7 @@ const NotFound = () => {
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
             Page Not Found Ingenuity Specialized Engineering Works Ltd
           </h2>
-          <h3 className="text-sm text-muted-foreground mb-4">Find mining services Zambia, PPE supplier Zambia and industrial hardware in our main menu.</h3>
+          <h3 className="text-sm text-muted-foreground mb-4">Find industrial services and supplies in our main menu.</h3>
           <p className="text-muted-foreground mb-8 max-w-md mx-auto">
             The page you're looking for doesn't exist or has been moved.
           </p>

@@ -39,7 +39,7 @@ const Footer = () => {
             </p>
 
             <p className="text-white/60 mb-4 leading-relaxed text-sm">
-              Serving Zambia and the Copperbelt with mining, construction, and industrial supply — including PPE supplier Zambia and industrial hardware for mines and sites.
+              Serving Zambia and the Copperbelt with mining, construction, and industrial supply — including industrial hardware for mines and sites.
             </p>
             
             <a
