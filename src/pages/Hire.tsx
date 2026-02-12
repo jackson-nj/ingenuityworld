@@ -79,11 +79,11 @@ const Hire = () => {
       <section className="relative h-[40vh] min-h-[300px] flex items-end justify-center pb-16 bg-black">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black" />
         <div className="relative z-10 text-center px-6">
-          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
+          <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
             Equipment Hire Heavy Equipment for Mining & Construction Zambia
           </h1>
-          <h2 className="text-base text-white/80 mt-2">Hire excavators, crane trucks, rollers mining services Zambia and construction company support across the Copperbelt</h2>
-          <h3 className="text-sm text-white/70 mt-2">We also supply PPE and industrial hardware in Zambia</h3>
+          <h2 data-animate="fade-up" data-animate-delay="170ms" className="text-base text-white/80 mt-2">Hire excavators, crane trucks, rollers mining services Zambia and construction company support across the Copperbelt</h2>
+          <h3 data-animate="fade-up" data-animate-delay="240ms" className="text-sm text-white/70 mt-2">We also supply PPE and industrial hardware in Zambia</h3>
         </div>
       </section>
 
@@ -94,10 +94,10 @@ const Hire = () => {
             <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
               Our Fleet
             </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               AVAILABLE <span className="text-primary">EQUIPMENT</span>
             </h2>
-            <p className="text-muted-foreground max-w-3xl mx-auto">
+            <p data-animate="fade-up" data-animate-delay="170ms" className="text-muted-foreground max-w-3xl mx-auto">
               From excavators to water bowsers, we have the right equipment for every job. 
               All machines are regularly serviced and maintained to ensure optimal performance.
             </p>
@@ -126,7 +126,7 @@ const Hire = () => {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                  <h3 data-animate="fade-up" data-animate-delay="200ms" className="font-display text-lg font-bold text-foreground mb-2">
                     {item.name}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
@@ -143,10 +143,10 @@ const Hire = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
             Need Equipment for Your Project?
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto mb-8">
+          <p data-animate="fade-up" data-animate-delay="170ms" className="text-white/80 max-w-2xl mx-auto mb-8">
             Contact us today to discuss your requirements. We offer competitive rates, 
             flexible hire terms, and delivery across the region.
           </p>

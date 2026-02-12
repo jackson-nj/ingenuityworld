@@ -91,8 +91,8 @@ const Services = () => {
       <main className="flex-1">
         <section className="pt-20 pb-8 bg-white">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Our Services</h1>
-            <p className="text-muted-foreground max-w-3xl mx-auto text-lg">     
+            <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Our Services</h1>
+            <p data-animate="fade-up" data-animate-delay="170ms" className="text-muted-foreground max-w-3xl mx-auto text-lg">     
               End-to-end mechanical, civil and logistics services delivered with safety and quality.                                                                      </p>
           </div>
         </section>
@@ -108,7 +108,7 @@ r:shadow-lg transition-all duration-300 flex flex-col h-full">                  
                   <img src={mechanicalImages[0].src} alt="Mechanical Engineering" className="w-full h-full object-cover" />                                                     </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
-                    <h3 className="font-display text-xl font-bold mb-2">Mechanical Engineering</h3>                                                                                 <p className="text-muted-foreground mb-4">Welding, fabricati
+                    <h3 data-animate="fade-up" data-animate-delay="200ms" className="font-display text-xl font-bold mb-2">Mechanical Engineering</h3>                                                                                 <p className="text-muted-foreground mb-4">Welding, fabricati
 on, hydraulics, pumps and industrial maintenance performed by certified technicians.</p>                                                                                          </div>
                 </div>
               </div>
@@ -119,7 +119,7 @@ r:shadow-lg transition-all duration-300 flex flex-col h-full">                  
                   <ConstructionCarousel images={constructionImages.map((i) => i.src)} onSelect={(src) => openImage(src)} />                                                     </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
-                    <h3 className="font-display text-xl font-bold mb-2">Construction Projects</h3>                                                                                  <p className="text-muted-foreground mb-4">Civil works, earthworks, structures and finishing executed safely and on schedule.</p>                            </div>
+                    <h3 data-animate="fade-up" data-animate-delay="220ms" className="font-display text-xl font-bold mb-2">Construction Projects</h3>                                                                                  <p className="text-muted-foreground mb-4">Civil works, earthworks, structures and finishing executed safely and on schedule.</p>                            </div>
                 </div>
               </div>
 
@@ -129,7 +129,7 @@ r:shadow-lg transition-all duration-300 flex flex-col h-full">                  
                   <img src={suppliesImage} alt="Supplies and logistics" className="w-full h-full object-cover" />                                                               </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
-                    <h3 className="font-display text-xl font-bold mb-2">Supplies
+                    <h3 data-animate="fade-up" data-animate-delay="240ms" className="font-display text-xl font-bold mb-2">Supplies
  & Logistics</h3>                                                                                   <p className="text-muted-foreground mb-4">Procurement, wareh
 ousing, and transport services to keep your projects supplied and on schedule.</p>                                                                                                </div>
                 </div>

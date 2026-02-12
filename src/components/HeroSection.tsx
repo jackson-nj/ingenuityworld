@@ -1,5 +1,4 @@
 import { Phone, ArrowRight } from "lucide-react";
-import TextScramble from "./ui/TextScramble";
 
 // Dynamically import all hero images from src/assets/hero (place your hero images there)
 const heroModules = import.meta.glob('../assets/hero/*.{jpg,jpeg,png,webp}', { eager: true });
@@ -39,13 +38,13 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6">
         <div className="max-w-3xl">
           <span className="inline-block bg-black/40 text-white/90 px-3 py-1 rounded-full text-xs mb-4">Trusted</span>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
-            providing best industry <TextScramble text={"solutions"} revealSpeed={100} />
+          <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
+            providing best industry <span className="text-primary">solutions</span>
           </h1>
 
-          <p className="text-lg text-white/80 mb-6 max-w-xl">Reliable industrial solutions for mining, construction, and mechanical projects</p>
+          <p data-animate="fade-up" data-animate-delay="170ms" className="text-lg text-white/80 mb-6 max-w-xl">Reliable industrial solutions for mining, construction, and mechanical projects</p>
           <div className="flex gap-4">
-            <a href="https://wa.me/260971688888?text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noreferrer noopener" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
+            <a data-animate="fade-up" data-animate-delay="240ms" href="https://wa.me/260971688888?text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noreferrer noopener" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@ const WhyChooseUsSection = () => {
           <div className="relative z-10 lg:w-[55%] w-full lg:mt-16">
             <div className="bg-white p-10 lg:p-12 lg:pr-16">
               <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Why Choose Us</span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
+              <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
                 YOUR TRUSTED PARTNER
               </h2>
                 <p className="text-muted-foreground mb-8 text-base leading-relaxed">
@@ -59,7 +59,7 @@ const WhyChooseUsSection = () => {
                     key={benefit.title}
                     className="group"
                   >
-                    <h4 className="font-display font-bold text-foreground mb-2 text-base">{benefit.title}</h4>
+                    <h4 data-animate="fade-up" data-animate-delay="120ms" className="font-display font-bold text-foreground mb-2 text-base">{benefit.title}</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
                   </div>
                 ))}

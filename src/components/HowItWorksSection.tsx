@@ -27,7 +27,7 @@ const HowItWorksSection = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Simple Process</span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4">
+          <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4">
             HOW IT <span className="text-primary">WORKS</span>
           </h2>
         </div>
@@ -50,7 +50,7 @@ const HowItWorksSection = () => {
                   
                   {/* Text Content */}
                   <div className="flex-1 pt-2">
-                    <h3 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-3">
+                    <h3 data-animate="fade-up" data-animate-delay="120ms" className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-3">
                       {step.title}
                     </h3>
                     <p className="text-muted-foreground text-lg leading-relaxed max-w-md">

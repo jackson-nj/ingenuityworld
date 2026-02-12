@@ -73,11 +73,11 @@ const Certifications = () => {
       <section className="relative h-[40vh] min-h-[300px] flex items-end justify-center pb-16 bg-black">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black" />
         <div className="relative z-10 text-center px-6">
-          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
+          <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-widest">
             Certifications PPE Supplier & Industrial Hardware Zambia
           </h1>
-          <h2 className="text-base text-white/80 mt-2">Verified compliance for mining services Zambia and industrial supply across the Copperbelt</h2>
-          <h3 className="text-sm text-white/70 mt-2">Our certifications demonstrate eligibility for government and industrial contracts in Zambia</h3>
+          <h2 data-animate="fade-up" data-animate-delay="170ms" className="text-base text-white/80 mt-2">Verified compliance for mining services Zambia and industrial supply across the Copperbelt</h2>
+          <h3 data-animate="fade-up" data-animate-delay="240ms" className="text-sm text-white/70 mt-2">Our certifications demonstrate eligibility for government and industrial contracts in Zambia</h3>
         </div>
       </section>
 
@@ -88,10 +88,10 @@ const Certifications = () => {
             <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
               Our Credentials
             </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               LICENSED & <span className="text-primary">CERTIFIED</span>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p data-animate="fade-up" data-animate-delay="170ms" className="text-muted-foreground text-lg leading-relaxed">
               Ingenuity Specialized Engineering Works Ltd (ISEW) is a fully registered and compliant company, meeting all regulatory requirements 
               in Zambia. Our certifications demonstrate our commitment to operating with integrity, transparency, 
               and adherence to all legal and industry standards.
@@ -173,10 +173,10 @@ const Certifications = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Work With a Trusted Partner?
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto mb-8">
+          <p data-animate="fade-up" data-animate-delay="170ms" className="text-white/80 max-w-2xl mx-auto mb-8">
             Partner with a certified, compliant, and professional engineering and supply company. Contact us to discuss your project requirements.
           </p>
           <a
