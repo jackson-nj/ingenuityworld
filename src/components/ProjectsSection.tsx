@@ -37,13 +37,13 @@ const highlights = [
 
 const ProjectsSection = () => {
   return (
-    <section className="py-24 lg:py-32 bg-white">
+    <section className="py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-16">
           <div>
             <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm">Our Portfolio</span>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-4">
               FEATURED <span className="text-accent-2">PROJECTS</span>
             </h2>
           </div>
@@ -61,7 +61,7 @@ const ProjectsSection = () => {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group bg-white rounded overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-border hover:border-primary/30"
+              className="group bg-white rounded overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-border hover:border-accent-2"
             >
               {/* Image */}
               <div className="relative h-72 overflow-hidden">
@@ -71,16 +71,16 @@ const ProjectsSection = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-5 left-5">
-                  <span className="bg-primary text-primary-foreground text-xs font-bold px-4 py-2 rounded uppercase tracking-wider">
+                  <span className="bg-accent-2 text-accent-2-foreground text-xs font-bold px-4 py-2 rounded uppercase tracking-wider">
                     {project.category}
                   </span>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
               </div>
 
               {/* Content */}
               <div className="p-8">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-3 group-hover:text-accent-2 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -99,7 +99,7 @@ const ProjectsSection = () => {
                   </div>
                 </div>
 
-                <button className="flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wider group-hover:gap-4 transition-all">
+                <button className="flex items-center gap-2 text-accent-2 font-bold text-sm uppercase tracking-wider group-hover:gap-4 transition-all">
                   <span>View Project</span>
                   <ArrowRight className="h-4 w-4" />
                 </button>

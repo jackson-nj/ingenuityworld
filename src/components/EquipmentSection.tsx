@@ -44,7 +44,7 @@ const fallbackEquipment = [
    }, []);
 
   return (
-    <section id="services" className="py-24 lg:py-32 bg-white">
+    <section id="services" className="py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -73,7 +73,7 @@ const fallbackEquipment = [
             ].map((item) => (
               <div
                 key={item.id}
-                className="bg-white border-2 border-gray-100 overflow-hidden transition-all duration-300 shadow-sm"
+                className="bg-white border-2 border-gray-100 overflow-hidden transition-all duration-200 shadow-sm"
               >
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden bg-white">
@@ -99,7 +99,7 @@ const fallbackEquipment = [
         <div className="text-center mt-12">
           <Link
             to="/services"
-            className="inline-block btn-accent-2 text-white font-bold px-10 py-4 text-sm uppercase tracking-wider transition-colors duration-300 hover:bg-charcoal hover:text-white"
+            className="inline-block btn-accent-2 text-white font-bold px-10 py-4 text-sm uppercase tracking-wider transition-colors duration-200 hover:bg-charcoal hover:text-white"
           >
             View All Services
           </Link>

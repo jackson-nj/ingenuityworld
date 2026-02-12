@@ -10,7 +10,7 @@ const testimonial = {
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-24 lg:py-32 bg-surface-dark overflow-hidden">
+    <section id="testimonials" className="py-16 lg:py-20 bg-surface-dark overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -39,14 +39,14 @@ const TestimonialsSection = () => {
 
           {/* Card Side - Right */}
           <div className="relative">
-            <div className="bg-charcoal p-10 relative shadow-2xl">
+            <div className="bg-charcoal p-6 relative shadow-2xl">
               {/* Quote Icon */}
-              <Quote className="h-12 w-12 text-primary/30 absolute top-6 right-6" />
+              <Quote className="h-12 w-12 text-accent-2 opacity-30 absolute top-6 right-6" />
 
               {/* Rating */}
               <div className="flex gap-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                  <Star key={i} className="h-5 w-5 fill-accent-2 text-accent-2" />
                 ))}
               </div>
 
@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-primary flex items-center justify-center">
+                <div className="w-14 h-14 bg-accent-2 flex items-center justify-center">
                   <span className="font-display font-bold text-black text-lg">
                     {testimonial.name.split(" ").map((n) => n[0]).join("")}
                   </span>
@@ -69,7 +69,7 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Bottom accent line */}
-              <div className="absolute bottom-0 left-0 w-20 h-1 bg-primary" />
+              <div className="absolute bottom-0 left-0 w-20 h-1 bg-accent-2" />
             </div>
           </div>
         </div>

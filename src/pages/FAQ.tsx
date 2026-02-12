@@ -80,13 +80,13 @@ const FAQ = () => {
       </section>
 
       {/* FAQ Content */}
-      <section className="py-20 lg:py-28 bg-zinc-50">
+      <section className="py-16 lg:py-20 bg-zinc-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
               Got Questions?
             </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
               FREQUENTLY ASKED <span className="text-accent-2">QUESTIONS</span>
             </h2>
           
@@ -96,7 +96,7 @@ const FAQ = () => {
           <div className="max-w-4xl mx-auto space-y-10">
             {faqData.map((category, catIndex) => (
               <div key={catIndex}>
-                <h3 className="font-display text-xl font-bold text-foreground mb-6 pb-2 border-b-2 border-accent-2 inline-block">
+                <h3 className="font-display text-xl font-bold text-foreground mb-4 pb-2 border-b-2 border-accent-2 inline-block">
                   {category.category}
                 </h3>
                 <div className="space-y-4">
@@ -135,7 +135,7 @@ const FAQ = () => {
           </div>
 
           {/* Contact CTA */}
-          <div className="text-center mt-16 p-10 bg-charcoal">
+          <div className="text-center mt-16 p-6 bg-charcoal">
             <h3 className="font-display text-2xl font-bold text-white mb-4">
               Still Have Questions?
             </h3>

@@ -11,9 +11,9 @@
 @layer base {
   :root {
     /* Premium Palette - base and accents */
-    /* Primary brand color (bright orange/yellow) - #FFB100 */
-    --primary: 38 92% 50%;
-    --primary-foreground: 220 14% 10%;
+    /* Primary base (dark steel) - restored (no golden yellow) */
+    --primary: 0 0% 3.9%;
+    --primary-foreground: 0 0% 98%;
 
     /* Secondary (deep midnight blue) - #111827 */
     --secondary: 222 30% 11%;
@@ -53,7 +53,7 @@
     /* Borders and inputs */
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 38 92% 50%;
+    --ring: 221 83% 53%;
 
     --radius: 0.5rem;
 
@@ -77,9 +77,9 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 38 92% 50%;
-    /* Estimated combined header height (top contact bar + nav). Adjust if needed. */
-    --header-height: 112px;
+    --sidebar-ring: 221 83% 53%;
+    /* Estimated combined header height (top contact bar + nav). Use 80px per 8-pt system */
+    --header-height: 80px;
   }
 
   .dark {
@@ -89,8 +89,8 @@
     --card-foreground: 0 0% 98%;
     --popover: 220 14% 14%;
     --popover-foreground: 0 0% 98%;
-    --primary: 38 92% 50%;
-    --primary-foreground: 220 14% 10%;
+    --primary: 0 0% 3.9%;
+    --primary-foreground: 0 0% 98%;
     --secondary: 220 14% 20%;
     --secondary-foreground: 0 0% 98%;
     --muted: 220 14% 20%;
@@ -101,15 +101,15 @@
     --destructive-foreground: 0 0% 98%;
     --border: 220 14% 20%;
     --input: 220 14% 20%;
-    --ring: 38 92% 50%;
+    --ring: 221 83% 53%;
     --sidebar-background: 220 14% 10%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 38 92% 50%;
-    --sidebar-primary-foreground: 220 14% 10%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 220 14% 20%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 220 14% 20%;
-    --sidebar-ring: 38 92% 50%;
+    --sidebar-ring: 221 83% 53%;
     --header-height: 112px;
   }
 }
@@ -131,6 +131,11 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+  }
+
+  /* Site header height helper (driven by --header-height) */
+  .site-header {
+    height: var(--header-height);
   }
 }
 
@@ -155,12 +160,12 @@
 
   /* Equipment card hover effect */
   .equipment-card {
-    @apply relative overflow-hidden transition-all duration-300;
+    @apply relative overflow-hidden transition-all duration-200;
   }
 
   .equipment-card::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent opacity-60 transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent opacity-60 transition-opacity duration-200;
   }
 
   .equipment-card:hover::before {
@@ -174,7 +179,7 @@
 
   .stripe-accent::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-16 h-1 bg-primary;
+    @apply absolute bottom-0 left-0 w-16 h-1 bg-accent-2;
   }
 
   /* Industrial divider */
@@ -184,7 +189,7 @@
 
   .industrial-divider::before {
     content: '';
-    @apply absolute left-1/2 -translate-x-1/2 w-24 h-1 bg-primary;
+    @apply absolute left-1/2 -translate-x-1/2 w-24 h-1 bg-accent-2;
   }
 
   /* Cinematic hero overlay: layered vignette + color wash with subtle orange rim */

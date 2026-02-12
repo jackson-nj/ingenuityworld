@@ -78,7 +78,7 @@ const About = () => {
       {/* Hero removed - About heading moved into content */}
 
       {/* About Us Section - two cards: text (left) + image (right) */}
-      <section className="py-12 lg:py-16 bg-white overflow-hidden">
+      <section className="py-16 lg:py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="relative flex flex-col-reverse lg:flex-row">
             {/* Content Side - on the left */}
@@ -141,7 +141,7 @@ const About = () => {
       {/* 'We Are The Best' section removed by request */}
 
       {/* Industries We Serve Section */}
-      <section className="py-24 lg:py-32 bg-white overflow-hidden">
+      <section className="py-16 lg:py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="relative flex flex-col-reverse lg:flex-row">
             {/* Image Side - on the left */}
@@ -167,9 +167,9 @@ const About = () => {
 
             {/* Content Side - on the right */}
             <div className="relative z-10 lg:w-[55%] w-full lg:ml-auto lg:mt-16">
-              <div className="bg-white p-10 lg:p-12 lg:pl-16">
+              <div className="bg-white p-6 lg:p-8 lg:pl-16">
                 <span className="fade-up text-foreground font-bold uppercase tracking-[0.2em] text-sm">Our Reach</span>
-                <h2 className="fade-up fade-up-delay-1 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
+                <h2 className="fade-up fade-up-delay-1 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-4 leading-tight">
                   INDUSTRIES <span className="text-foreground">WE SUPPORT</span>
                 </h2>
                 <p className="fade-up fade-up-delay-2 text-muted-foreground mb-10 text-base leading-relaxed">

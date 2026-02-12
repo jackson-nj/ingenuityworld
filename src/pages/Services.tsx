@@ -115,7 +115,7 @@ on, hydraulics, pumps and industrial maintenance performed by certified technici
 
               {/* Construction Card with auto-scroll carousel */}
               <div className="bg-white rounded-lg overflow-hidden shadow-sm hove
-r:shadow-lg transition-all duration-300 flex flex-col h-full">                                  <div className="px-6 pt-6">
+r:shadow-lg transition-all duration-200 flex flex-col h-full">                                  <div className="px-6 pt-6">
                   <ConstructionCarousel images={constructionImages.map((i) => i.src)} onSelect={(src) => openImage(src)} />                                                     </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>

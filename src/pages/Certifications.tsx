@@ -82,16 +82,16 @@ const Certifications = () => {
       </section>
 
       {/* Intro Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
               Our Credentials
             </span>
-            <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
               LICENSED & <span className="text-accent-2">CERTIFIED</span>
             </h2>
-            <p data-animate="fade-up" data-animate-delay="170ms" className="text-muted-foreground text-lg leading-relaxed">
+            <p data-animate="fade-up" data-animate-delay="170ms" className="text-muted-foreground text-lg leading-relaxed mb-6">
               Ingenuity Specialized Engineering Works Ltd (ISEW) is a fully registered and compliant company, meeting all regulatory requirements 
               in Zambia. Our certifications demonstrate our commitment to operating with integrity, transparency, 
               and adherence to all legal and industry standards.
@@ -112,7 +112,7 @@ const Certifications = () => {
                {certifications.map((cert) => (
               <div
                    key={cert.id}
-                className="bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 group"
+                className="bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-200 group"
               >
                 <div className="h-32 flex items-center justify-center mb-6 bg-gray-50 p-4">
                   <img
@@ -176,7 +176,7 @@ const Certifications = () => {
           <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Work With a Trusted Partner?
           </h2>
-          <p data-animate="fade-up" data-animate-delay="170ms" className="text-white/80 max-w-2xl mx-auto mb-8">
+          <p data-animate="fade-up" data-animate-delay="170ms" className="text-white/80 max-w-2xl mx-auto mb-6">
             Partner with a certified, compliant, and professional engineering and supply company. Contact us to discuss your project requirements.
           </p>
           <a

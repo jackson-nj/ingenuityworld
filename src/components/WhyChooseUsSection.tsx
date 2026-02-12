@@ -36,24 +36,24 @@ const benefits = [
 
 const WhyChooseUsSection = () => {
   return (
-    <section id="why-choose-us" className="py-24 lg:py-32 bg-white overflow-hidden">
+    <section id="why-choose-us" className="py-12 lg:py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="relative flex flex-col lg:flex-row">
           {/* Content Side - white card on the left */}
-          <div className="relative z-10 lg:w-[55%] w-full lg:mt-16">
-            <div className="bg-white p-10 lg:p-12 lg:pr-16">
+          <div className="relative z-10 lg:w-[55%] w-full lg:mt-8">
+            <div className="bg-white p-6 lg:p-8 lg:pr-16">
               <span data-animate="fade-up" data-animate-delay="40ms" className="text-foreground font-bold uppercase tracking-[0.2em] text-sm">Why Choose Us</span>
-              <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight">
+              <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-4 leading-tight">
                 YOUR TRUSTED PARTNER
               </h2>
-                <p className="text-muted-foreground mb-8 text-base leading-relaxed">
+                <p className="text-muted-foreground mb-6 text-base leading-relaxed">
                 With nearly three decades of experience, Ingenuity Specialized Engineering Works Ltd (ISEW) has become the go-to choice for 
                 construction companies, contractors, and developers. We don't just 
                 rent equipment — we go beyond engineering to deliver complete solutions.
               </p>
 
               {/* Benefits Grid - 2 columns */}
-              <div className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+              <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
                 {benefits.map((benefit) => (
                   <div
                     key={benefit.title}

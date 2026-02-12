@@ -59,7 +59,7 @@ const Hire = () => {
            .order("created_at", { ascending: false });
  
          if (error) throw error;
-         setEquipment(data && data.length > 0 ? data : fallbackEquipment);
+        setEquipment(data && data.length > 0 ? (data as unknown as HireItem[]) : fallbackEquipment);
        } catch (err) {
          console.error("Error fetching hire data:", err);
          setEquipment(fallbackEquipment);
@@ -88,13 +88,13 @@ const Hire = () => {
       </section>
 
       {/* Equipment Grid */}
-      <section className="py-20 lg:py-28 bg-zinc-50">
+      <section className="py-16 lg:py-20 bg-zinc-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-accent-2 font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
               Our Fleet
             </span>
-            <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
               AVAILABLE <span className="text-accent-2">EQUIPMENT</span>
             </h2>
             <p data-animate="fade-up" data-animate-delay="170ms" className="text-muted-foreground max-w-3xl mx-auto">
@@ -112,7 +112,7 @@ const Hire = () => {
                {equipment.map((item) => (
               <div
                    key={item.id}
-                className="bg-white overflow-hidden shadow-sm transition-all duration-300"
+                className="bg-white overflow-hidden shadow-sm transition-all duration-200"
               >
                 {/* Image Container */}
                 <div className="relative h-56 overflow-hidden bg-zinc-100 flex items-center justify-center">
@@ -141,12 +141,12 @@ const Hire = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-accent-2">
         <div className="container mx-auto px-6 text-center">
           <h2 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
             Need Equipment for Your Project?
           </h2>
-          <p data-animate="fade-up" data-animate-delay="170ms" className="text-white/80 max-w-2xl mx-auto mb-8">
+          <p data-animate="fade-up" data-animate-delay="170ms" className="text-white/80 max-w-2xl mx-auto mb-6">
             Contact us today to discuss your requirements. We offer competitive rates, 
             flexible hire terms, and delivery across the region.
           </p>
@@ -154,7 +154,7 @@ const Hire = () => {
             href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20hiring%20heavy%20equipment.%20Please%20advise%20on%20availability%20and%20next%20steps."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-white text-primary hover:bg-charcoal hover:text-white font-bold px-8 py-3 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer rounded-none text-lg"
+            className="inline-block bg-white text-accent-2 hover:bg-charcoal hover:text-white font-bold px-8 py-3 transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer rounded-none text-lg"
           >
             Get a Quote
           </a>

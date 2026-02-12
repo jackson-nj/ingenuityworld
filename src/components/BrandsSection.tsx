@@ -23,12 +23,12 @@ const BrandsSection = () => {
               key={`${service.name}-${index}`}
               className="flex-shrink-0 mx-6 flex items-center justify-center group"
             >
-              <div className="w-14 h-14 bg-zinc-100 rounded-none flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+              <div className="w-14 h-14 bg-zinc-100 rounded-none flex items-center justify-center group-hover:bg-accent-2 transition-all duration-200">
                 <span className="font-display text-lg font-bold text-zinc-700 group-hover:text-white transition-colors">
                   {service.initials}
                 </span>
               </div>
-              <span className="ml-2 text-xs text-zinc-500 font-semibold uppercase tracking-wider group-hover:text-primary transition-colors">
+              <span className="ml-2 text-xs text-zinc-500 font-semibold uppercase tracking-wider group-hover:text-accent-2 transition-colors">
                 {service.name}
               </span>
             </div>

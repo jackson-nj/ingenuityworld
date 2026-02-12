@@ -18,10 +18,10 @@ const Gallery = () => {
         <div className="absolute inset-0 -z-10">
           <img src={bgImage} alt="projects mining services Zambia" className="w-full h-full object-cover" loading="lazy" />
         </div>
-        <div className="bg-black/65 p-10 rounded-md text-center mx-4">
-          <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-4xl md:text-5xl font-bold mb-4">Projects & Mining Supply Copperbelt Projects</h1>
-          <h2 data-animate="fade-up" data-animate-delay="170ms" className="text-lg text-white/80 mb-2">Construction services Zambia · Industrial supply Copperbelt</h2>
-          <p data-animate="fade-up" data-animate-delay="240ms" className="text-white/80 max-w-xl mx-auto">We're preparing a portfolio of our fabrication, construction and maintenance work. Check back soon or contact us to request samples.</p>
+        <div className="bg-black/65 p-6 rounded-md text-center mx-4 pt-20">
+          <h1 data-animate="fade-up" data-animate-delay="100ms" className="font-display text-4xl md:text-5xl font-bold mb-4">Projects</h1>
+          <h2 data-animate="fade-up" data-animate-delay="170ms" className="text-lg text-white/80 mb-2">Construction services Zambia and Industrial supply </h2>
+          <p data-animate="fade-up" data-animate-delay="240ms" className="text-white/80 max-w-xl mx-auto">Check back soon </p>
         </div>
       </main>
 

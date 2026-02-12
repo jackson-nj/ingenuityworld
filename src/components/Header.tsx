@@ -9,16 +9,16 @@ const TopContactBar = () => (
     <div className="container mx-auto px-6 text-sm">
       {/* Mobile: phone (left) and socials (right) */}
       <div className="flex items-center justify-between sm:hidden">
-        <a href="tel:+260975078766" className="flex items-center gap-2 hover:text-primary transition-colors">
-          <Phone className="h-4 w-4 text-primary" />
+        <a href="tel:+260975078766" className="flex items-center gap-2 hover:text-accent-2 transition-colors">
+          <Phone className="h-4 w-4 text-accent-2" />
           <span className="font-medium">+260 975 078 766</span>
         </a>
         <div className="flex items-center gap-3">
-          <a href="https://web.facebook.com/profile.php?id=100085097660946" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
-            <Facebook className="h-4 w-4" />
+          <a href="https://web.facebook.com/profile.php?id=100085097660946" target="_blank" rel="noopener noreferrer" className="hover:text-accent-2 transition-colors" aria-label="Facebook">
+            <Facebook className="h-4 w-4 text-accent-2" />
           </a>
-          <a href="#" className="hover:text-primary transition-colors" aria-label="Instagram">
-            <Instagram className="h-4 w-4" />
+          <a href="#" className="hover:text-accent-2 transition-colors" aria-label="Instagram">
+            <Instagram className="h-4 w-4 text-accent-2" />
           </a>
         </div>
       </div>
@@ -26,27 +26,27 @@ const TopContactBar = () => (
       {/* Desktop/tablet: original full bar */}
       <div className="hidden sm:flex flex-row justify-between items-center gap-3">
           <div className="flex items-center gap-8">
-          <a href="tel:+260975078766" className="flex items-center gap-2 hover:text-primary transition-colors group">
-            <Phone className="h-4 w-4 text-primary" />
+          <a href="tel:+260975078766" className="flex items-center gap-2 hover:text-accent-2 transition-colors group">
+            <Phone className="h-4 w-4 text-accent-2" />
             <span className="font-medium">+260 975 078 766</span>
           </a>
-          <a href="mailto:ingenuity.engltd@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors group">
-            <Mail className="h-4 w-4 text-primary" />
+          <a href="mailto:ingenuity.engltd@gmail.com" className="flex items-center gap-2 hover:text-accent-2 transition-colors group">
+            <Mail className="h-4 w-4 text-accent-2" />
             <span className="font-medium">ingenuity.engltd@gmail.com</span>
           </a>
         </div>
         <div className="flex items-center gap-5">
-          <a href="https://web.facebook.com/profile.php?id=100085097660946" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
-            <Facebook className="h-4 w-4" />
+          <a href="https://web.facebook.com/profile.php?id=100085097660946" target="_blank" rel="noopener noreferrer" className="hover:text-accent-2 transition-colors" aria-label="Facebook">
+            <Facebook className="h-4 w-4 text-accent-2" />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="WhatsApp">
-            <Instagram className="h-4 w-4" />
+          <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." target="_blank" rel="noopener noreferrer" className="hover:text-accent-2 transition-colors" aria-label="WhatsApp">
+            <Instagram className="h-4 w-4 text-accent-2" />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="WhatsApp">
-            <Phone className="h-4 w-4" />
+          <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." target="_blank" rel="noopener noreferrer" className="hover:text-accent-2 transition-colors" aria-label="WhatsApp">
+            <Phone className="h-4 w-4 text-accent-2" />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="WhatsApp">
-            <Youtube className="h-4 w-4" />
+          <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Please%20advise%20on%20availability%20and%20next%20steps." target="_blank" rel="noopener noreferrer" className="hover:text-accent-2 transition-colors" aria-label="WhatsApp">
+            <Youtube className="h-4 w-4 text-accent-2" />
           </a>
         </div>
       </div>
@@ -79,9 +79,9 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="w-full absolute top-0 left-0 right-0 z-50">
+    <header className="w-full absolute top-0 left-0 right-0 z-50 site-header">
       <TopContactBar />
-      <nav className={`w-full transition-all duration-300 ${isScrolled ? 'fixed top-0 left-0 right-0 z-50' : 'relative'}`}>
+      <nav className={`w-full transition-all duration-200 ${isScrolled ? 'fixed top-0 left-0 right-0 z-50' : 'relative'}`}>
         <div className="w-full">
           <div className="site-header-card">
             <div className="container mx-auto px-4 flex items-center gap-3">
@@ -165,14 +165,14 @@ const Header = () => {
             {/* Overlay */}
             <div
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`}
+              className={`absolute inset-0 bg-black/40 transition-opacity duration-200 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`}
             />
 
             {/* Sliding panel */}
             <aside
               role="dialog"
               aria-modal="true"
-              className={`fixed inset-y-0 left-0 w-72 max-w-full bg-white shadow-lg transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+              className={`fixed inset-y-0 left-0 w-72 max-w-full bg-white shadow-lg transform transition-transform duration-200 ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
             >
               <div className="p-4 h-full overflow-y-auto">
                 <div className="flex items-center justify-between mb-4">

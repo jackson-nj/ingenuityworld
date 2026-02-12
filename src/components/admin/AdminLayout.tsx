@@ -29,7 +29,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
     <div className="min-h-screen bg-background flex">
       {/* Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-surface-dark transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-surface-dark transform transition-transform duration-200 ease-in-out lg:translate-x-0 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -56,7 +56,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
                   onClick={() => setSidebarOpen(false)}
                   className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                     isActive
-                      ? "bg-primary text-primary-foreground"
+                      ? "bg-accent-2 text-accent-2-foreground"
                       : "text-white/70 hover:bg-white/10 hover:text-white"
                   }`}
                 >
@@ -109,7 +109,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
               </span>
             </div>
           </div>
-          <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+          <Link to="/" className="text-sm text-muted-foreground hover:text-accent-2 transition-colors">
             View Website →
           </Link>
         </header>

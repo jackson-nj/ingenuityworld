@@ -162,7 +162,7 @@ const ServicesSection = () => {
   }
 
   return (
-    <section id="services" className="py-20 lg:py-28 bg-white">
+    <section id="services" className="py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-8">
@@ -185,7 +185,7 @@ const ServicesSection = () => {
                   key={service.id}
                   data-animate="fade-up"
                   data-animate-delay={`${index * 120}ms`}
-                  className="bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 group overflow-hidden flex flex-col"
+                  className="bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-200 group overflow-hidden flex flex-col"
                 >
                   {/* Image on top */}
                   <div className="relative h-40 overflow-hidden bg-gray-50">

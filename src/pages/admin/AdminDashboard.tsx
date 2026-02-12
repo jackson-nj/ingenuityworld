@@ -68,11 +68,11 @@ const AdminDashboard = () => {
             <Link
               key={section.path}
               to={section.path}
-              className="bg-card border border-border rounded-lg p-6 hover:shadow-lg hover:border-primary/50 transition-all group"
+              className="bg-card border border-border rounded-lg p-6 hover:shadow-lg hover:border-accent-2/50 transition-all group"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <section.icon className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 bg-accent-2/10 rounded-lg flex items-center justify-center group-hover:bg-accent-2/20 transition-colors">
+                  <section.icon className="h-6 w-6 text-accent-2" />
                 </div>
                 <span className="text-3xl font-bold text-foreground">
                   {section.count}
@@ -84,7 +84,7 @@ const AdminDashboard = () => {
               <p className="text-muted-foreground text-sm line-clamp-2">
                 {section.description}
               </p>
-              <div className="flex items-center gap-1 mt-4 text-primary text-sm font-medium">
+              <div className="flex items-center gap-1 mt-4 text-accent-2 text-sm font-medium">
                 Manage
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </div>
