@@ -88,7 +88,16 @@ const Header = () => {
             <div className="container mx-auto px-4 flex items-center gap-3">
               {/* Logo + text: show logo and large text; ensure visible */}
               <Link to="/" className="flex items-center gap-4 mr-auto">
-                <div className={`w-16 h-16 overflow-hidden rounded-sm bg-gray-100 flex items-center justify-center ${logoLoaded ? '' : 'animate-pulse'}`}>
+                <div className={`w-16 h-16 overflow-hidden rounded-sm bg-gray-100 flex items-center justify-center ${logoLoaded ? '' : ''}`}>
+                  {/* SVG placeholder (instant) shown until the bitmap logo finishes loading */}
+                  {!logoLoaded && (
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="block">
+                      <rect width="100" height="100" rx="8" fill="#FF5A1F" opacity="0.08" />
+                      <circle cx="50" cy="34" r="18" fill="#FF5A1F" opacity="0.18" />
+                      <text x="50%" y="72%" textAnchor="middle" fontFamily="Oswald, Inter, sans-serif" fontWeight="700" fontSize="34" fill="#111827">I</text>
+                    </svg>
+                  )}
+
                   <img
                     src={logo}
                     alt="Ingenuity logo"
@@ -98,7 +107,7 @@ const Header = () => {
                     fetchPriority="high"
                     decoding="async"
                     onLoad={() => setLogoLoaded(true)}
-                    className="w-16 h-16 object-contain shrink-0 block"
+                    className={`w-16 h-16 object-contain shrink-0 block transition-opacity duration-200 ${logoLoaded ? 'opacity-100' : 'opacity-0'}`}
                   />
                 </div>
                 <div className="flex flex-col items-start w-min">
