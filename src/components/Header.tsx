@@ -112,7 +112,6 @@ const Header = () => {
                     decoding="async"
                     onLoad={() => setLogoLoaded(true)}
                     className={`w-16 h-16 object-contain shrink-0 block transition-opacity duration-300 ${logoLoaded ? 'opacity-100' : 'opacity-0'}`}
-                    style={{ display: 'block' }}
                   />
                 </div>
                 <div className="flex flex-col items-start w-min">
