@@ -7,7 +7,7 @@ type SeoProps = {
 };
 
 const SITE_URL = "https://www.ingenuityworld.com";
-const TITLE_SUFFIX = " | Ingenuity Specialized Engineering Works Ltd";
+const TITLE_SUFFIX = " | Ingenuity Engineering";
 
 function buildLocalBusinessJsonLd() {
   const jsonLd = {

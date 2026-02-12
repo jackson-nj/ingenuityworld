@@ -11,8 +11,8 @@ import useSeo from "@/hooks/useSeo";
 
 const Index = () => {
   useSeo({
-    title: "Ingenuity Specialized Engineering Works Ltd",
-    description: "Ingenuity Specialized Engineering Works Ltd — specialized engineering, equipment hire, fabrication and procurement across Zambia."
+    title: "Ingenuity Engineering",
+    description: "Ingenuity Engineering — specialized engineering, equipment hire, fabrication and procurement across Zambia."
   });
 
   return (
