@@ -69,6 +69,7 @@ const navItems = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [logoLoaded, setLogoLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,7 +88,19 @@ const Header = () => {
             <div className="container mx-auto px-4 flex items-center gap-3">
               {/* Logo + text: show logo and large text; ensure visible */}
               <Link to="/" className="flex items-center gap-4 mr-auto">
-                <img src={logo} alt="Ingenuity logo" className="w-16 h-16 object-contain shrink-0" />
+                <div className={`w-16 h-16 overflow-hidden rounded-sm bg-gray-100 flex items-center justify-center ${logoLoaded ? '' : 'animate-pulse'}`}>
+                  <img
+                    src={logo}
+                    alt="Ingenuity logo"
+                    width={64}
+                    height={64}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    onLoad={() => setLogoLoaded(true)}
+                    className="w-16 h-16 object-contain shrink-0 block"
+                  />
+                </div>
                 <div className="flex flex-col items-start w-min">
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                     INGENUITY

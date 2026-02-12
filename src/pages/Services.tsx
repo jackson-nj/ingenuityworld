@@ -64,7 +64,7 @@ const Services = () => {
               className="flex-shrink-0 w-56 h-40 rounded-md overflow-hidden bg-gray-50 focus:outline-none"
               aria-label={`Open construction ${ (i % images.length) + 1 }`}
             >
-              <img src={src} alt={`Construction ${ (i % images.length) + 1 }`} className="w-full h-full object-cover" />
+              <img src={src} alt={`Construction ${ (i % images.length) + 1 }`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </button>
           ))}
         </div>
@@ -105,7 +105,7 @@ esktop */}
               {/* Mechanical Card */}
               <div className="bg-white rounded-lg overflow-hidden shadow-sm hove
 r:shadow-lg transition-all duration-300 flex flex-col h-full">                                  <div className="aspect-[16/9] bg-gray-50">
-                  <img src={mechanicalImages[0].src} alt="Mechanical Engineering" className="w-full h-full object-cover" />                                                     </div>
+                  <img src={mechanicalImages[0].src} alt="Mechanical Engineering" loading="lazy" decoding="async" className="w-full h-full object-cover" />                                                     </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
                     <h3 data-animate="fade-up" data-animate-delay="200ms" className="font-display text-xl font-bold mb-2">Mechanical Engineering</h3>                                                                                 <p className="text-muted-foreground mb-4">Welding, fabricati
@@ -126,7 +126,7 @@ r:shadow-lg transition-all duration-200 flex flex-col h-full">                  
               {/* Supplies Card */}
               <div className="bg-white rounded-lg overflow-hidden shadow-sm hove
 r:shadow-lg transition-all duration-300 flex flex-col h-full">                                  <div className="aspect-[16/9] bg-gray-50">
-                  <img src={suppliesImage} alt="Supplies and logistics" className="w-full h-full object-cover" />                                                               </div>
+                  <img src={suppliesImage} alt="Supplies and logistics" loading="lazy" decoding="async" className="w-full h-full object-cover" />                                                               </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
                     <h3 data-animate="fade-up" data-animate-delay="240ms" className="font-display text-xl font-bold mb-2">Supplies

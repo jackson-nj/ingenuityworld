@@ -119,7 +119,7 @@ const About = () => {
             {/* Image Side - on the right for large screens */}
             <div className="lg:absolute lg:right-0 lg:top-0 lg:w-[45%] w-full mt-8 lg:mt-0">
               <div className="img-reveal-container relative h-[300px] sm:h-[380px] lg:h-[560px]">
-                <img src={aboutUsImage} alt="About Us" className="img-color w-full h-full object-cover rounded-md" />
+                <img src={aboutUsImage} alt="About Us" loading="lazy" decoding="async" className="img-color w-full h-full object-cover rounded-md" />
                 {/* Paint drops overlay */}
                 <div className="paint-overlay">
                   <div className="paint-drop paint-drop1" />
@@ -147,7 +147,7 @@ const About = () => {
             {/* Image Side - on the left */}
             <div className="lg:absolute lg:left-0 lg:top-0 lg:w-[45%] w-full mt-10 lg:mt-0">
               <div className="img-reveal-container relative h-[400px] lg:h-[650px]">
-                <img src={aboutUs1} alt="Industries We Serve" className="img-color w-full h-full object-cover" />
+                <img src={aboutUs1} alt="Industries We Serve" loading="lazy" decoding="async" className="img-color w-full h-full object-cover" />
                 {/* Paint drops overlay */}
                 <div className="paint-overlay">
                   <div className="paint-drop paint-drop9" />
@@ -167,7 +167,7 @@ const About = () => {
 
             {/* Content Side - on the right */}
             <div className="relative z-10 lg:w-[55%] w-full lg:ml-auto lg:mt-16">
-              <div className="bg-white p-6 lg:p-8 lg:pl-16">
+              <div className="bg-white p-10 lg:p-12 lg:pl-16">
                 <span className="fade-up text-foreground font-bold uppercase tracking-[0.2em] text-sm">Our Reach</span>
                 <h2 className="fade-up fade-up-delay-1 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-4 leading-tight">
                   INDUSTRIES <span className="text-foreground">WE SUPPORT</span>
