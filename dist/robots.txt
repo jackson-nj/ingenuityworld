@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.ingenuityworld.com/sitemap.xml
+# Sitemap located at public/sitemap.xml and served at site root
+# Updated to production domain https://www.ingenuityworld.com/
