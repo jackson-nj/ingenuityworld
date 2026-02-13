@@ -44,7 +44,7 @@ const HeroSection = () => {
 
           <p data-animate="fade-up" data-animate-delay="170ms" className="text-lg text-white/80 mb-6 max-w-xl">Reliable industrial solutions for mining, construction, and mechanical projects</p>
           <div className="flex gap-4">
-            <a data-animate="fade-up" data-animate-delay="240ms" href="https://wa.me/260971688888?text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noreferrer noopener" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
+            <a data-animate="fade-up" data-animate-delay="240ms" href="https://wa.me/260975078766?text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noreferrer noopener" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
           </div>
         </div>
       </div>
