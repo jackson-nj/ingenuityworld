@@ -7,7 +7,7 @@ type SeoProps = {
 };
 
 const SITE_URL = "https://www.ingenuityworld.com";
-const TITLE_SUFFIX = " | Ingenuity Engineering";
+const TITLE_SUFFIX = " | Ingenuity Specialized Engineering Works Ltd Zambia";
 
 function buildLocalBusinessJsonLd() {
   const jsonLd = {
@@ -91,7 +91,7 @@ export default function useSeo({ title, description, ogImage }: SeoProps) {
     upsertMetaAttr('og:type', 'property', 'website');
     upsertMetaAttr('og:url', 'property', `${SITE_URL}${window.location.pathname}${window.location.search}`);
     upsertMetaAttr('og:image', 'property', ogImageUrl);
-    upsertMetaAttr('og:site_name', 'property', 'Ingenuity Specialized Engineering Works Ltd');
+    upsertMetaAttr('og:site_name', 'property', 'Ingenuity Specialized Engineering Works Ltd Zambia');
 
     upsertMetaAttr('twitter:card', 'name', 'summary_large_image');
     upsertMetaAttr('twitter:title', 'name', document.title);

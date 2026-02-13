@@ -92,7 +92,7 @@ const Footer = () => {
               </div>
 
               <a
-                href="tel:+260975078766"
+                href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27d%20like%20to%20request%20a%20quote."
                 className="flex items-center gap-4 text-white/60 hover:text-accent-2 transition-colors group"
               >
                 <div className="w-10 h-10 bg-charcoal rounded flex items-center justify-center flex-shrink-0 group-hover:bg-accent-2 transition-colors">
@@ -101,13 +101,31 @@ const Footer = () => {
                 <span className="font-medium">+260 975 078 766</span>
               </a>
               <a
-                href="mailto:ingenuity.engltd@gmail.com"
+                href="mailto:info@ingenuityworld.com"
                 className="flex items-center gap-4 text-white/60 hover:text-accent-2 transition-colors group"
               >
                 <div className="w-10 h-10 bg-charcoal rounded flex items-center justify-center flex-shrink-0 group-hover:bg-accent-2 transition-colors">
                   <Mail className="h-5 w-5 text-accent-2 group-hover:text-accent-2-foreground transition-colors" />
                 </div>
-                <span className="font-medium">ingenuity.engltd@gmail.com</span>
+                <span className="font-medium">info@ingenuityworld.com</span>
+              </a>
+              <a
+                href="mailto:sales@ingenuityworld.com"
+                className="flex items-center gap-4 text-white/60 hover:text-accent-2 transition-colors group"
+              >
+                <div className="w-10 h-10 bg-charcoal rounded flex items-center justify-center flex-shrink-0 group-hover:bg-accent-2 transition-colors">
+                  <Mail className="h-5 w-5 text-accent-2 group-hover:text-accent-2-foreground transition-colors" />
+                </div>
+                <span className="font-medium">sales@ingenuityworld.com</span>
+              </a>
+              <a
+                href="mailto:admin@ingenuityworld.com"
+                className="flex items-center gap-4 text-white/60 hover:text-accent-2 transition-colors group"
+              >
+                <div className="w-10 h-10 bg-charcoal rounded flex items-center justify-center flex-shrink-0 group-hover:bg-accent-2 transition-colors">
+                  <Mail className="h-5 w-5 text-accent-2 group-hover:text-accent-2-foreground transition-colors" />
+                </div>
+                <span className="font-medium">admin@ingenuityworld.com</span>
               </a>
               <div className="flex items-center gap-4 text-white/60">
                 <div className="w-10 h-10 bg-charcoal rounded flex items-center justify-center flex-shrink-0">
@@ -128,7 +146,7 @@ const Footer = () => {
           <a href="https://api.whatsapp.com/send?phone=260975078766" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-accent-2 transition-colors">
             <Instagram className="h-4 w-4 text-white" />
           </a>
-          <a href="tel:+260975078766" aria-label="Phone" title="Phone" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-accent-2 transition-colors">
+          <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27d%20like%20to%20request%20a%20quote." aria-label="Phone" title="Phone" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-accent-2 transition-colors">
             <Phone className="h-4 w-4 text-white" />
           </a>
           <a href="https://api.whatsapp.com/send?phone=260975078766" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp" className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center hover:bg-accent-2 transition-colors">
