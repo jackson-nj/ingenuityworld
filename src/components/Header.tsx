@@ -57,7 +57,16 @@ const TopContactBar = () => (
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services" },
+  {
+    label: "Services",
+    dropdown: [
+      { label: "All Services", href: "/services" },
+      { label: "Repair & Maintenance", href: "/services/repair-and-maintenance" },
+      { label: "Mechanical Engineering", href: "/services/mechanical-engineering" },
+      { label: "Construction Works", href: "/services/construction-works" },
+      { label: "Supplies & Logistics", href: "/services/supplies-and-logistics" },
+    ],
+  },
   { label: "Pages", dropdown: [
       { label: "Projects", href: "/gallery" },
       { label: "Certifications", href: "/certifications" },

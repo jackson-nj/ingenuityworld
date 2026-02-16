@@ -210,6 +210,29 @@
     height: 100%;
   }
 
+  /* Horizontal auto-scroll track (new): each .hero-item is 100% width, the track translates */
+  .hero-track {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 1s cubic-bezier(.22,.9,.36,1);
+    will-change: transform;
+  }
+
+  .hero-item {
+    flex: 0 0 100%;
+    position: relative;
+    height: 100%;
+    min-width: 100%;
+  }
+
+  /* Indicator (dot/pill) — smooth width and color transitions, fully rounded */
+  .hero-indicator {
+    border-radius: 9999px;
+    transition: background-color .28s cubic-bezier(.22,.9,.36,1), width .28s cubic-bezier(.22,.9,.36,1), transform .28s ease;
+    will-change: width, background-color, transform;
+  }
+
   .hero-slide {
     position: absolute;
     inset: 0;

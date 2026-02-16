@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from "react";
 import { Phone, ArrowRight } from "lucide-react";
 
 // Dynamically import all hero images from src/assets/hero (place your hero images there)
@@ -11,20 +12,77 @@ const heroImages: string[] = Object.values(heroModules)
   })
   .filter(Boolean) as string[];
 
+// Import Repair & Maintenance images first
+const repairModules = import.meta.glob('../assets/services/Repair and Maintenance/*.{jpg,jpeg,png,webp}', { eager: true });
+const repairImages: string[] = Object.values(repairModules)
+  .map((m) => {
+    const mm = m as { default?: string } | string | undefined;
+    if (mm && typeof mm === 'object' && 'default' in mm) return (mm as { default: string }).default;
+    if (typeof mm === 'string') return mm;
+    return '';
+  })
+  .filter(Boolean) as string[];
+
 const HeroSection = () => {
+  const slides = [...repairImages, ...heroImages];
+  const total = slides.length || 1;
+  const [index, setIndex] = useState(0);
+
+  // Pre-defined Tailwind translate classes to avoid inline styles (supports up to 12 slides)
+  const translateClasses = [
+    'translate-x-0',
+    '-translate-x-full',
+    '-translate-x-[200%]',
+    '-translate-x-[300%]',
+    '-translate-x-[400%]',
+    '-translate-x-[500%]',
+    '-translate-x-[600%]',
+    '-translate-x-[700%]',
+    '-translate-x-[800%]',
+    '-translate-x-[900%]',
+    '-translate-x-[1000%]',
+    '-translate-x-[1100%]',
+  ];
+
+  const paused = useRef(false);
+  const intervalRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const start = () => {
+      if (intervalRef.current) return;
+      intervalRef.current = window.setInterval(() => {
+        if (!paused.current) setIndex((i) => (i + 1) % total);
+      }, 4500);
+    };
+
+    const stop = () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+
+    start();
+    return () => stop();
+  }, [total]);
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center">
-      {/* Full-bleed slideshow container */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="hero-slides">
-          {heroImages.length > 0 ? (
-            heroImages.map((src, i) => (
-              <div key={src} className={`hero-slide ${i === 0 ? 'active' : ''}`}>
-                <img src={src} alt={i === 0 ? "services hero" : "mining and construction services"} loading={i === 0 ? "eager" : "lazy"} className="absolute inset-0 w-full h-full object-cover" />
+      {/* Full-bleed slideshow container (horizontal auto-scroll) */}
+      <div
+        className="absolute inset-0 overflow-hidden"
+        onMouseEnter={() => (paused.current = true)}
+        onMouseLeave={() => (paused.current = false)}
+      >
+        <div className={`hero-track h-full flex ${translateClasses[index] ?? 'translate-x-0'}`}>
+          {slides.length > 0 ? (
+            slides.map((src, i) => (
+              <div key={`${src}-${i}`} className="hero-item relative w-full h-full flex-shrink-0">
+                <img src={src} alt={`hero ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'} className="absolute inset-0 w-full h-full object-cover" />
               </div>
             ))
           ) : (
-            <div className="hero-slide active">
+            <div className="hero-item relative w-full h-full flex-shrink-0">
               <img src="/src/assets/equipment/hero.jpg" alt="services hero" loading="eager" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           )}
@@ -48,63 +106,20 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Slide indicators */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            aria-label={`Go to slide ${i + 1}`}
+            onClick={() => setIndex(i)}
+            className={`hero-indicator h-2 ${i === index ? 'w-10 bg-accent-2 scale-105' : 'w-6 bg-white/40'} rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-accent-2/30`}
+          />
+        ))}
+      </div>
     </section>
   );
 };
 
 export default HeroSection;
-
-// Auto-advance slideshow script (runs in browser)
-if (typeof window !== 'undefined') {
-  // Wait a tick for DOM to render
-    setTimeout(() => {
-      const slides = Array.from(document.querySelectorAll('.hero-slide')) as HTMLElement[];
-      if (!slides || slides.length <= 1) return;
-      // Only loop the first N slides in order, then repeat
-      const LOOP_COUNT = Math.min(4, slides.length);
-      let idx = 0;
-
-      // Ensure only the first slide in the loop is active initially
-      slides.forEach((s, i) => s.classList.toggle('active', i === 0));
-
-      let intervalId: number | null = null;
-      const CROSSFADE_MS = 1250; // slightly longer than opacity transition (1.2s)
-      const SLIDE_MS = 6000;
-
-      const start = () => {
-        if (intervalId) return;
-        intervalId = window.setInterval(() => {
-          const prev = slides[idx];
-          const nextIdx = (idx + 1) % LOOP_COUNT; // cycle within first LOOP_COUNT slides
-          const next = slides[nextIdx];
-
-          // Add active to next immediately so it fades in while prev is still visible
-          next.classList.add('active');
-
-          // Remove active from previous after crossfade time to avoid visual glitch
-          setTimeout(() => {
-            prev.classList.remove('active');
-          }, CROSSFADE_MS);
-
-          idx = nextIdx;
-        }, SLIDE_MS);
-      };
-
-      const stop = () => {
-        if (intervalId) {
-          clearInterval(intervalId);
-          intervalId = null;
-        }
-      };
-
-      // Start auto-advance
-      start();
-
-      // Pause on hover over slides area
-      const container = document.querySelector('.hero-slides');
-      if (container) {
-        container.addEventListener('mouseenter', stop);
-        container.addEventListener('mouseleave', start);
-      }
-    }, 250);
-}

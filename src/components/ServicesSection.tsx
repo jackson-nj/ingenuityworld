@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
- import { Loader2 } from "lucide-react";
+import { Link } from "react-router-dom";
+ import { Loader2, ChevronLeft, ChevronRight } from "lucide-react";
  import { supabase } from "@/integrations/supabase/client";
 import equipmentHireImg from "@/assets/services/card3.jpg";
 import construction2Img from "@/assets/services/card2.jpg";
@@ -18,6 +19,13 @@ import deliveryImg from "@/assets/services/card3.jpg";
  }
  
 const fallbackServices: ServiceItem[] = [
+  {
+    id: "repair",
+    title: "Repair & Maintenance",
+    description:
+      "Preventative and corrective maintenance, onsite repairs and plant & equipment servicing.",
+    image_url: new URL("../assets/services/Repair and Maintenance/1.jpeg", import.meta.url).href,
+  },
   {
     id: "1",
     title: "Mechanical Engineering",
@@ -45,6 +53,7 @@ const ServicesSection = () => {
   const [services, setServices] = useState<ServiceItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [isAluminiumOpen, setIsAluminiumOpen] = useState(false);
 
   const constructionImages = [
     new URL("../assets/services/construction1.jpg", import.meta.url).href,
@@ -52,10 +61,23 @@ const ServicesSection = () => {
     new URL("../assets/services/construction3.jpg", import.meta.url).href,
     new URL("../assets/services/construction4.jpg", import.meta.url).href,
   ];
+
+  const aluminiumImages = [
+    new URL("../assets/services/aluminium/aluminuimdoor.jpeg", import.meta.url).href,
+    new URL("../assets/services/aluminium/aluminuimbath.jpeg", import.meta.url).href,
+    new URL("../assets/services/aluminium/aluminiumbath2.jpeg", import.meta.url).href,
+    new URL("../assets/services/aluminium/aluminiumbath3.jpeg", import.meta.url).href,
+  ];
  
    useEffect(() => {
      // Force the three primary service cards to the exact content and local assets requested
      const primaryServices: ServiceItem[] = [
+       {
+         id: "repair",
+         title: "Repair & Maintenance",
+         description: "Preventative and corrective maintenance, onsite repairs and plant & equipment servicing.",
+         image_url: new URL("../assets/services/Repair and Maintenance/1.jpeg", import.meta.url).href,
+       },
        {
          id: "mechanical",
          title: "Mechanical Engineering",
@@ -76,6 +98,12 @@ const ServicesSection = () => {
          description:
            "Procurement, transport, warehousing and logistics support to ensure your project runs smoothly.",
          image_url: new URL("../assets/services/card3.jpg", import.meta.url).href,
+       },
+       {
+         id: "aluminium",
+         title: "Aluminium Works",
+         description: "Fabrication of doors, windows and sanitary fittings.",
+         image_url: aluminiumImages[0],
        },
      ];
 
@@ -161,6 +189,60 @@ const ServicesSection = () => {
     );
   }
 
+  // Modal carousel for Aluminium Works (larger, fully visible images)
+  function AluminiumCarousel({ images }: { images: string[] }) {
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+      const el = containerRef.current;
+      if (!el) return;
+      el.scrollTo({ left: index * el.clientWidth, behavior: "smooth" });
+    }, [index]);
+
+    const prev = () => setIndex((i) => (i === 0 ? images.length - 1 : i - 1));
+    const next = () => setIndex((i) => (i === images.length - 1 ? 0 : i + 1));
+
+    return (
+      <div className="relative">
+        <div ref={containerRef} className="flex overflow-hidden rounded-lg">
+          {images.map((src, i) => (
+            <div key={i} className="flex-shrink-0 w-full h-56 md:h-72 lg:h-96 flex items-center justify-center bg-gray-50 overflow-hidden">
+              <img src={src} alt={`Aluminium ${i + 1}`} className="max-h-full w-auto object-contain" />
+            </div>
+          ))}
+        </div>
+
+        <button
+          aria-label="Previous aluminium image"
+          onClick={prev}
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-sm"
+        >
+          <ChevronLeft className="h-6 w-6 text-foreground" />
+        </button>
+
+        <button
+          aria-label="Next aluminium image"
+          onClick={next}
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-sm"
+        >
+          <ChevronRight className="h-6 w-6 text-foreground" />
+        </button>
+
+        <div className="flex items-center justify-center gap-2 mt-3">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-2 w-8 rounded-full ${i === index ? "bg-accent-2" : "bg-gray-200"}`}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <section id="services" className="py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -177,9 +259,9 @@ const ServicesSection = () => {
              <Loader2 className="h-8 w-8 animate-spin text-accent-2" />
            </div>
          ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services
-              .slice(0, 3)
+              .slice(0, 4)
               .map((service, index) => (
                 <div
                   key={service.id}
@@ -187,12 +269,12 @@ const ServicesSection = () => {
                   data-animate-delay={`${index * 120}ms`}
                   className="bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-200 group overflow-hidden flex flex-col"
                 >
-                  {/* Image on top */}
+                  {/* Image on top (fill card without overlap) */}
                   <div className="relative h-40 overflow-hidden bg-gray-50">
                     <img
                       src={service.title.toLowerCase().includes("construction") ? constructionImages[0] : (service.image_url || "/placeholder.svg")}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover transition-all duration-300"
                     />
                   </div>
                   {/* Content below image */}
@@ -203,10 +285,22 @@ const ServicesSection = () => {
                     <p className="text-muted-foreground text-base leading-relaxed mb-0">
                       {getDescription(service)}
                     </p>
+                    {/* Repair card: link to dedicated page */}
+                    {service.title.toLowerCase().includes("repair") && (
+                      <div className="mt-4">
+                        <Link to="/services/repair-and-maintenance" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                      </div>
+                    )}
                     {/* If this is the Construction card, show small thumbnails + See More */}
                     {service.title.toLowerCase().includes("construction") && (
                       <div className="mt-4">
                         <button onClick={() => setIsGalleryOpen(true)} className="inline-block btn-accent-2 font-bold px-4 py-2">See More</button>
+                      </div>
+                    )}
+                    {/* Aluminium card: match other cards and show modal carousel on See More */}
+                    {service.title.toLowerCase().includes("aluminium") && (
+                      <div className="mt-4">
+                        <button onClick={() => setIsAluminiumOpen(true)} className="inline-block btn-accent-2 font-bold px-4 py-2">See More</button>
                       </div>
                     )}
                   </div>
@@ -214,6 +308,7 @@ const ServicesSection = () => {
               ))}
           </div>
          )}
+
 
         {/* Gallery modal for Construction images */}
         {isGalleryOpen && (
@@ -226,6 +321,21 @@ const ServicesSection = () => {
               </div>
               <div>
                 <ConstructionCarousel images={constructionImages} />
+              </div>
+            </div>
+          </div>
+        )}
+
+        {isAluminiumOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
+            <div className="absolute inset-0 bg-black/60" onClick={() => setIsAluminiumOpen(false)} />
+            <div className="relative bg-white rounded-lg max-w-4xl w-full p-4 z-10">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="font-display text-xl font-bold">Aluminium Works</h3>
+                <button onClick={() => setIsAluminiumOpen(false)} className="text-muted-foreground">Close</button>
+              </div>
+              <div>
+                <AluminiumCarousel images={aluminiumImages} />
               </div>
             </div>
           </div>
