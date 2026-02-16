@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -101,15 +102,36 @@ const Services = () => {
 esktop */}
         <section className="py-12 bg-muted">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Mechanical Card */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-sm hove
-r:shadow-lg transition-all duration-300 flex flex-col h-full">                                  <div className="aspect-[16/9] bg-gray-50">
-                  <img src={mechanicalImages[0].src} alt="Mechanical Engineering" loading="lazy" decoding="async" className="w-full h-full object-cover" />                                                     </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {/* Repair & Maintenance (NEW — first card) */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+                <div className="aspect-[16/9] bg-gray-50">
+                  <img src={new URL("../assets/services/Repair and Maintenance/1.jpeg", import.meta.url).href} alt="Repair & Maintenance" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
-                    <h3 data-animate="fade-up" data-animate-delay="200ms" className="font-display text-xl font-bold mb-2">Mechanical Engineering</h3>                                                                                 <p className="text-muted-foreground mb-4">Welding, fabricati
-on, hydraulics, pumps and industrial maintenance performed by certified technicians.</p>                                                                                          </div>
+                    <h3 data-animate="fade-up" data-animate-delay="180ms" className="font-display text-xl font-bold mb-2">Repair & Maintenance</h3>
+                    <p className="text-muted-foreground mb-4">Preventative and corrective maintenance, onsite repairs and plant & equipment servicing.</p>
+                    <div className="mt-4">
+                      <Link to="/services/repair-and-maintenance" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mechanical Card */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+                <div className="aspect-[16/9] bg-gray-50">
+                  <img src={mechanicalImages[0].src} alt="Mechanical Engineering" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <div>
+                    <h3 data-animate="fade-up" data-animate-delay="220ms" className="font-display text-xl font-bold mb-2">Mechanical Engineering</h3>
+                    <p className="text-muted-foreground mb-4">Welding, fabrication, hydraulics, pumps and industrial maintenance performed by certified technicians.</p>
+                    <div className="mt-4">
+                      <Link to="/services/mechanical-engineering" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -119,7 +141,11 @@ r:shadow-lg transition-all duration-200 flex flex-col h-full">                  
                   <ConstructionCarousel images={constructionImages.map((i) => i.src)} onSelect={(src) => openImage(src)} />                                                     </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
-                    <h3 data-animate="fade-up" data-animate-delay="220ms" className="font-display text-xl font-bold mb-2">Construction Projects</h3>                                                                                  <p className="text-muted-foreground mb-4">Civil works, earthworks, structures and finishing executed safely and on schedule.</p>                            </div>
+                    <h3 data-animate="fade-up" data-animate-delay="220ms" className="font-display text-xl font-bold mb-2">Construction Projects</h3>                                                                                  <p className="text-muted-foreground mb-4">Civil works, earthworks, structures and finishing executed safely and on schedule.</p>
+                    <div className="mt-4">
+                      <Link to="/services/construction-works" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -130,8 +156,11 @@ r:shadow-lg transition-all duration-300 flex flex-col h-full">                  
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
                     <h3 data-animate="fade-up" data-animate-delay="240ms" className="font-display text-xl font-bold mb-2">Supplies
- & Logistics</h3>                                                                                   <p className="text-muted-foreground mb-4">Procurement, wareh
-ousing, and transport services to keep your projects supplied and on schedule.</p>                                                                                                </div>
+ & Logistics</h3>                                                                                   <p className="text-muted-foreground mb-4">Procurement, warehousing, and transport services to keep your projects supplied and on schedule.</p>
+                    <div className="mt-4">
+                      <Link to="/services/supplies-and-logistics" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

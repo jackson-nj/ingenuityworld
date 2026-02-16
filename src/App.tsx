@@ -6,6 +6,10 @@ import Index from "./pages/Index";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import RepairAndMaintenance from "./pages/RepairAndMaintenance";
+import MechanicalEngineering from "./pages/MechanicalEngineering";
+import ConstructionWorks from "./pages/ConstructionWorks";
+import SuppliesLogistics from "./pages/SuppliesLogistics";
 import Certifications from "./pages/Certifications";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
@@ -30,6 +34,10 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/repair-and-maintenance" element={<RepairAndMaintenance />} />
+          <Route path="/services/mechanical-engineering" element={<MechanicalEngineering />} />
+          <Route path="/services/construction-works" element={<ConstructionWorks />} />
+          <Route path="/services/supplies-and-logistics" element={<SuppliesLogistics />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/faq" element={<FAQ />} />
           {/* Admin Routes */}
