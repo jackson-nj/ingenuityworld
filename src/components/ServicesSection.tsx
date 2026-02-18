@@ -225,7 +225,7 @@ const ServicesSection = () => {
                     {/* Supply Chain card: hide detailed list on the card — link to full section */}
                     {service.id === "supply-chain" && (
                       <div className="mt-4">
-                        <Link to="/services#supply-chain" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                        <Link to="/services/supplies-and-logistics" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
                       </div>
                     )}
 
