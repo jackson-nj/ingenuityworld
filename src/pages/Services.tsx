@@ -15,7 +15,7 @@ const constructionImages = [
   { id: "c4", src: new URL("../assets/services/construction4.jpg", import.meta.url).href, alt: "Construction site 4" },
 ];
 
-const suppliesImage = new URL("../assets/services/card3.jpg", import.meta.url).href;
+const suppliesImage = new URL("../assets/services/PPE/SAFTYVEST2.jpeg", import.meta.url).href;
 
 const Services = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -152,11 +152,11 @@ r:shadow-lg transition-all duration-200 flex flex-col h-full">                  
               {/* Supplies Card */}
               <div className="bg-white rounded-lg overflow-hidden shadow-sm hove
 r:shadow-lg transition-all duration-300 flex flex-col h-full">                                  <div className="aspect-[16/9] bg-gray-50">
-                  <img src={suppliesImage} alt="Supplies and logistics" loading="lazy" decoding="async" className="w-full h-full object-cover" />                                                               </div>
+                  <img src={suppliesImage} alt="PPE supply" loading="lazy" decoding="async" className="w-full h-full object-cover" />                                                               </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
-                    <h3 data-animate="fade-up" data-animate-delay="240ms" className="font-display text-xl font-bold mb-2">Supplies
- & Logistics</h3>                                                                                   <p className="text-muted-foreground mb-4">Procurement, warehousing, and transport services to keep your projects supplied and on schedule.</p>
+                    <h3 data-animate="fade-up" data-animate-delay="240ms" className="font-display text-xl font-bold mb-2">PPE Supply</h3>
+                    <p className="text-muted-foreground mb-4">Supply of quality PPE — helmets, gloves, vests and suits; available for single or bulk orders.</p>
                     <div className="mt-4">
                       <Link to="/services/supplies-and-logistics" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
                     </div>

@@ -26,7 +26,9 @@ const repairImages: string[] = Object.values(repairModules)
 const HeroSection = () => {
   const slides = [...repairImages, ...heroImages];
   const total = slides.length || 1;
-  const [index, setIndex] = useState(0);
+  // default to the Repair & Maintenance image named "2.jpeg" when present
+  const defaultIndex = slides.findIndex((s) => s.endsWith('/2.jpeg') || s.endsWith('/2.jpg') || s.endsWith('/2.png') || s.endsWith('/2.webp'));
+  const [index, setIndex] = useState(defaultIndex >= 0 ? defaultIndex : 0);
 
   // Pre-defined Tailwind translate classes to avoid inline styles (supports up to 12 slides)
   const translateClasses = [

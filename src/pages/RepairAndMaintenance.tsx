@@ -24,8 +24,8 @@ const RepairAndMaintenance = () => {
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
   // Hero carousel state (auto-advance, pause on hover)
-  // start on the 3rd image (index 2) as requested
-  const [heroIndex, setHeroIndex] = useState(2);
+  // start on the 2nd image (index 1) so 2.jpeg appears first
+  const [heroIndex, setHeroIndex] = useState(1);
   const [heroPaused, setHeroPaused] = useState(false);
 
   useEffect(() => {
@@ -124,7 +124,7 @@ const RepairAndMaintenance = () => {
             )}
 
             <div className="mt-8 text-center">
-              <a href="/contact" className="inline-block btn-accent-2 font-bold px-6 py-3 rounded-md">contact us</a>
+              <a href="https://api.whatsapp.com/send?phone=260975078766&text=Hello%2C%20I%27m%20interested%20in%20Repair%20%26%20Maintenance%20services." target="_blank" rel="noopener noreferrer" className="inline-block btn-accent-2 font-bold px-6 py-3 rounded-md">contact us</a>
             </div>
           </div>
         </section>

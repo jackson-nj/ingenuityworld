@@ -42,10 +42,10 @@ const fallbackServices: ServiceItem[] = [
   },
   {
     id: "3",
-    title: "Supplies & Logistics",
+    title: "PPE Supply",
     description:
-      "Procurement, transport, warehousing and logistics support to ensure your project runs smoothly.",
-    image_url: dryHireImg,
+      "High-quality personal protective equipment — helmets, gloves, vests and suits for site safety.",
+    image_url: new URL("../assets/services/PPE/SAFTYVEST2.jpeg", import.meta.url).href,
   },
 ];
 
@@ -94,10 +94,10 @@ const ServicesSection = () => {
        },
        {
          id: "supplies",
-         title: "Supplies & Logistics",
+         title: "PPE Supply",
          description:
-           "Procurement, transport, warehousing and logistics support to ensure your project runs smoothly.",
-         image_url: new URL("../assets/services/card3.jpg", import.meta.url).href,
+           "High-quality personal protective equipment — helmets, gloves, vests and suits for site safety.",
+         image_url: new URL("../assets/services/PPE/SAFTYVEST2.jpeg", import.meta.url).href,
        },
        {
          id: "aluminium",
@@ -289,6 +289,12 @@ const ServicesSection = () => {
                     {service.title.toLowerCase().includes("repair") && (
                       <div className="mt-4">
                         <Link to="/services/repair-and-maintenance" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                      </div>
+                    )}
+                    {/* PPE card: link to supplies page */}
+                    {(service.title.toLowerCase().includes("ppe") || service.id === "supplies") && (
+                      <div className="mt-4">
+                        <Link to="/services/supplies-and-logistics" className="inline-block btn-accent-2 font-bold px-4 py-2">See More</Link>
                       </div>
                     )}
                     {/* If this is the Construction card, show small thumbnails + See More */}

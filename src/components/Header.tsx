@@ -64,7 +64,7 @@ const navItems = [
       { label: "Repair & Maintenance", href: "/services/repair-and-maintenance" },
       { label: "Mechanical Engineering", href: "/services/mechanical-engineering" },
       { label: "Construction Works", href: "/services/construction-works" },
-      { label: "Supplies & Logistics", href: "/services/supplies-and-logistics" },
+      { label: "PPE Supply", href: "/services/supplies-and-logistics" },
     ],
   },
   { label: "Pages", dropdown: [
@@ -79,6 +79,11 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [logoLoaded, setLogoLoaded] = useState(false);
+  const [openMobileDropdowns, setOpenMobileDropdowns] = useState<Record<string, boolean>>({});
+
+  const toggleMobileDropdown = (label: string) => {
+    setOpenMobileDropdowns((prev) => ({ ...prev, [label]: !prev[label] }));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -220,16 +225,47 @@ const Header = () => {
                 <div className="flex flex-col gap-4">
                   {navItems.map((item) => {
                     if (item.dropdown) {
+                      const isOpen: boolean = !!openMobileDropdowns[item.label];
+
                       return (
                         <div key={item.label} className="flex flex-col gap-2">
-                          <span className="font-semibold text-secondary text-base">{item.label}</span>
-                          <div className="pl-4 flex flex-col gap-1">
+                          {isOpen ? (
+                            <button
+                              type="button"
+                              onClick={() => toggleMobileDropdown(item.label)}
+                              aria-expanded="true"
+                              aria-controls={`mobile-dropdown-${item.label}`}
+                              className="flex items-center justify-between w-full font-semibold text-secondary text-base"
+                            >
+                              <span>{item.label}</span>
+                              <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : 'rotate-0'}`} />
+                            </button>
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={() => toggleMobileDropdown(item.label)}
+                              aria-expanded="false"
+                              aria-controls={`mobile-dropdown-${item.label}`}
+                              className="flex items-center justify-between w-full font-semibold text-secondary text-base"
+                            >
+                              <span>{item.label}</span>
+                              <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : 'rotate-0'}`} />
+                            </button>
+                          )}
+
+                          <div
+                            id={`mobile-dropdown-${item.label}`}
+                            className={`${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-200 pl-4 flex flex-col gap-1`}
+                          >
                             {item.dropdown.map((subItem) => (
                               <Link
                                 key={subItem.label}
                                 to={subItem.href}
-                                className="text-secondary/90 hover:text-accent"
-                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-secondary/90 hover:text-accent py-2 block"
+                                onClick={() => {
+                                  setIsMobileMenuOpen(false);
+                                  setOpenMobileDropdowns({});
+                                }}
                               >
                                 {subItem.label}
                               </Link>
