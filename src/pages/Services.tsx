@@ -171,6 +171,30 @@ r:shadow-lg transition-all duration-300 flex flex-col h-full">                  
           </div>
         </section>
 
+        <section id="supply-chain" className="py-12 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-6">
+              <h2 className="font-display text-2xl md:text-3xl font-bold">Supply Chain & Logistics Services</h2>
+              <p className="text-muted-foreground mt-4">End-to-end supply chain and logistics support including procurement, warehousing and transport.</p>
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+              <ul className="list-disc list-inside text-left space-y-2 text-muted-foreground">
+                <li>Procurement</li>
+                <li>Inventory Control</li>
+                <li>Stores & Warehousing</li>
+                <li>Clearing & Forwarding</li>
+                <li>Transport & Logistics</li>
+                <li>Supply Chain Management</li>
+              </ul>
+
+              <div className="mt-6 text-center">
+                <a href="/contact" className="inline-block btn-accent-2 font-bold px-6 py-3 rounded-md">Get in touch</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <CTASection />
 
 {/* Lightbox */}

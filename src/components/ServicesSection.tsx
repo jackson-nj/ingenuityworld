@@ -47,87 +47,23 @@ const fallbackServices: ServiceItem[] = [
       "High-quality personal protective equipment — helmets, gloves, vests and suits for site safety.",
     image_url: new URL("../assets/services/PPE/SAFTYVEST2.jpeg", import.meta.url).href,
   },
+  {
+    id: "supply-chain",
+    title: "Supply Chain & Logistics Services",
+    description:
+      "Procurement; Inventory Control; Stores & Warehousing; Clearing & Forwarding; Transport & Logistics; Supply Chain Management.",
+    image_url: deliveryImg,
+  },
 ];
 
+const constructionImages = [construction2Img, construction3Img, construction4Img];
+const aluminiumImages = [mechanical1Img];
+
 const ServicesSection = () => {
-  const [services, setServices] = useState<ServiceItem[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [services, setServices] = useState<ServiceItem[]>(fallbackServices);
+  const [loading, setLoading] = useState(false);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [isAluminiumOpen, setIsAluminiumOpen] = useState(false);
-
-  const constructionImages = [
-    new URL("../assets/services/construction1.jpg", import.meta.url).href,
-    new URL("../assets/services/construction2.jpg", import.meta.url).href,
-    new URL("../assets/services/construction3.jpg", import.meta.url).href,
-    new URL("../assets/services/construction4.jpg", import.meta.url).href,
-  ];
-
-  const aluminiumImages = [
-    new URL("../assets/services/aluminium/aluminuimdoor.jpeg", import.meta.url).href,
-    new URL("../assets/services/aluminium/aluminuimbath.jpeg", import.meta.url).href,
-    new URL("../assets/services/aluminium/aluminiumbath2.jpeg", import.meta.url).href,
-    new URL("../assets/services/aluminium/aluminiumbath3.jpeg", import.meta.url).href,
-  ];
- 
-   useEffect(() => {
-     // Force the three primary service cards to the exact content and local assets requested
-     const primaryServices: ServiceItem[] = [
-       {
-         id: "repair",
-         title: "Repair & Maintenance",
-         description: "Preventative and corrective maintenance, onsite repairs and plant & equipment servicing.",
-         image_url: new URL("../assets/services/Repair and Maintenance/1.jpeg", import.meta.url).href,
-       },
-       {
-         id: "mechanical",
-         title: "Mechanical Engineering",
-         description:
-           "Welding, fabrication, boiler making, hydraulics, and industrial maintenance delivered by skilled technicians.",
-         image_url: new URL("../assets/services/mechanical1.jpeg", import.meta.url).href,
-       },
-       {
-         id: "construction",
-         title: "Construction Works",
-         description:
-           "Civil works, earthworks, structural and finishing works delivered with safety and quality at the forefront.",
-         image_url: constructionImages[0],
-       },
-       {
-         id: "supplies",
-         title: "PPE Supply",
-         description:
-           "High-quality personal protective equipment — helmets, gloves, vests and suits for site safety.",
-         image_url: new URL("../assets/services/PPE/SAFTYVEST2.jpeg", import.meta.url).href,
-       },
-       {
-         id: "aluminium",
-         title: "Aluminium Works",
-         description: "Fabrication of doors, windows and sanitary fittings.",
-         image_url: aluminiumImages[0],
-       },
-     ];
-
-     // Immediately render the primary services (do not show remote/heavy images)
-     setServices(primaryServices);
-     setLoading(false);
-
-     // Fetch from Supabase in background for Admin sync, but do not override primary services
-     const fetchServices = async () => {
-       try {
-         const { data, error } = await supabase
-           .from("services")
-           .select("*")
-           .order("created_at", { ascending: false });
-
-         if (error) throw error;
-         // keep data for admin sync / future features; don't overwrite the primary cards
-       } catch (err) {
-         console.error("Error fetching services:", err);
-       }
-     };
-
-     fetchServices();
-   }, []);
 
   // Animation handled globally in `main.tsx` via `initAutoAnimate()`
   // Cards below provide `data-animate` and `data-animate-delay` attributes.
@@ -261,7 +197,7 @@ const ServicesSection = () => {
          ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services
-              .slice(0, 4)
+              .slice(0, 5)
               .map((service, index) => (
                 <div
                   key={service.id}
@@ -285,6 +221,14 @@ const ServicesSection = () => {
                     <p className="text-muted-foreground text-base leading-relaxed mb-0">
                       {getDescription(service)}
                     </p>
+
+                    {/* Supply Chain card: hide detailed list on the card — link to full section */}
+                    {service.id === "supply-chain" && (
+                      <div className="mt-4">
+                        <Link to="/services#supply-chain" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                      </div>
+                    )}
+
                     {/* Repair card: link to dedicated page */}
                     {service.title.toLowerCase().includes("repair") && (
                       <div className="mt-4">
