@@ -178,15 +178,56 @@ r:shadow-lg transition-all duration-300 flex flex-col h-full">                  
               <p className="text-muted-foreground mt-4">End-to-end supply chain and logistics support including procurement, warehousing and transport.</p>
             </div>
 
-            <div className="max-w-3xl mx-auto">
-              <ul className="list-disc list-inside text-left space-y-2 text-muted-foreground">
-                <li>Procurement</li>
-                <li>Inventory Control</li>
-                <li>Stores & Warehousing</li>
-                <li>Clearing & Forwarding</li>
-                <li>Transport & Logistics</li>
-                <li>Supply Chain Management</li>
-              </ul>
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <article className="bg-white border rounded-lg overflow-hidden shadow-sm p-4 flex flex-col items-center text-center">
+                  <div className="w-full h-40 overflow-hidden rounded-md bg-gray-50">
+                    <img src={new URL("../assets/services/supply and logistics/procurement.jpg", import.meta.url).href} alt="Procurement" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="mt-4 font-semibold">Procurement</h4>
+                  <p className="text-muted-foreground text-sm mt-2">Sourcing, vendor management and purchase orders.</p>
+                </article>
+
+                <article className="bg-white border rounded-lg overflow-hidden shadow-sm p-4 flex flex-col items-center text-center">
+                  <div className="w-full h-40 overflow-hidden rounded-md bg-gray-50">
+                    <img src={new URL("../assets/services/supply and logistics/invetory control.jpg", import.meta.url).href} alt="Inventory Control" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="mt-4 font-semibold">Inventory Control</h4>
+                  <p className="text-muted-foreground text-sm mt-2">Stock monitoring, cycle counts and reporting.</p>
+                </article>
+
+                <article className="bg-white border rounded-lg overflow-hidden shadow-sm p-4 flex flex-col items-center text-center">
+                  <div className="w-full h-40 overflow-hidden rounded-md bg-gray-50">
+                    <img src={new URL("../assets/services/supply and logistics/stores and warehousing.jpg", import.meta.url).href} alt="Stores & Warehousing" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="mt-4 font-semibold">Stores & Warehousing</h4>
+                  <p className="text-muted-foreground text-sm mt-2">Secure storage, picking & packing, and inventory optimisation.</p>
+                </article>
+
+                <article className="bg-white border rounded-lg overflow-hidden shadow-sm p-4 flex flex-col items-center text-center">
+                  <div className="w-full h-40 overflow-hidden rounded-md bg-gray-50">
+                    <img src={new URL("../assets/services/supply and logistics/clearing and forwading.jpg", import.meta.url).href} alt="Clearing & Forwarding" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="mt-4 font-semibold">Clearing & Forwarding</h4>
+                  <p className="text-muted-foreground text-sm mt-2">Customs clearance and international freight coordination.</p>
+                </article>
+
+                <article className="bg-white border rounded-lg overflow-hidden shadow-sm p-4 flex flex-col items-center text-center">
+                  <div className="w-full h-40 overflow-hidden rounded-md bg-gray-50">
+                    <img src={new URL("../assets/services/supply and logistics/transport and logistics.jpg", import.meta.url).href} alt="Transport & Logistics" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="mt-4 font-semibold">Transport & Logistics</h4>
+                  <p className="text-muted-foreground text-sm mt-2">Fleet management, regional transport and last-mile delivery.</p>
+                </article>
+
+                <article className="bg-white border rounded-lg overflow-hidden shadow-sm p-4 flex flex-col items-center text-center">
+                  <div className="w-full h-40 overflow-hidden rounded-md bg-gray-50">
+                    <img src={new URL("../assets/services/supply and logistics/supply chain managememnt.jpg", import.meta.url).href} alt="Supply Chain Management" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="mt-4 font-semibold">Supply Chain Management</h4>
+                  <p className="text-muted-foreground text-sm mt-2">End-to-end planning and optimisation across your supply chain.</p>
+                </article>
+              </div>
 
               <div className="mt-6 text-center">
                 <a href="/contact" className="inline-block btn-accent-2 font-bold px-6 py-3 rounded-md">Get in touch</a>
