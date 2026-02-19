@@ -256,7 +256,7 @@ const ServicesSection = () => {
                     {/* Aluminium card: match other cards and show modal carousel on See More */}
                     {service.title.toLowerCase().includes("aluminium") && (
                       <div className="mt-4">
-                        <button onClick={() => setIsAluminiumOpen(true)} className="inline-block btn-accent-2 font-bold px-4 py-2">See More</button>
+                        <Link to="/services/construction-works" className="inline-block btn-accent-2 font-bold px-4 py-2">See More</Link>
                       </div>
                     )}
                   </div>
