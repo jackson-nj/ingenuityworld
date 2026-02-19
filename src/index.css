@@ -143,6 +143,15 @@
   :where(section[id], [id], h1, h2, h3) {
     scroll-margin-top: calc(var(--header-height) + 0.5rem);
   }
+
+  /* Global hero offset: ensure the first section (site hero/title) is visually
+     offset from the fixed header so service page headings are fully visible. */
+  main > section:first-child,
+  main > section:first-child .container {
+    /* Add an inner offset so hero/title don't sit under the navbar on load */
+    scroll-margin-top: calc(var(--header-height) + 0.5rem);
+    padding-top: calc(var(--header-height) + 0.5rem);
+  }
 }
 
 @layer components {
