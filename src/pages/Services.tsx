@@ -141,7 +141,8 @@ r:shadow-lg transition-all duration-200 flex flex-col h-full">                  
                   <ConstructionCarousel images={constructionImages.map((i) => i.src)} onSelect={(src) => openImage(src)} />                                                     </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div>
-                    <h3 data-animate="fade-up" data-animate-delay="220ms" className="font-display text-xl font-bold mb-2">Construction Projects</h3>                                                                                  <p className="text-muted-foreground mb-4">Civil works, earthworks, structures and finishing executed safely and on schedule.</p>
+                    <h3 data-animate="fade-up" data-animate-delay="220ms" className="font-display text-xl font-bold mb-2">Aluminium Works</h3>
+                    <p className="text-muted-foreground mb-4">Fabrication of doors, windows and sanitary fittings — custom aluminium fabrication to specification.</p>
                     <div className="mt-4">
                       <Link to="/services/construction-works" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
                     </div>

@@ -35,10 +35,10 @@ const fallbackServices: ServiceItem[] = [
   },
   {
     id: "2",
-    title: "Construction Works",
+    title: "Aluminium Works",
     description:
-      "Civil works, earthworks, structural and finishing works delivered with safety and quality at the forefront.",
-    image_url: equipmentHireImg,
+      "Fabrication of doors, windows and sanitary fittings.",
+    image_url: new URL("../assets/services/aluminium/aluminuimdoor.jpeg", import.meta.url).href,
   },
   {
     id: "3",
@@ -241,8 +241,8 @@ const ServicesSection = () => {
                         <Link to="/services/ppe" className="inline-block btn-accent-2 font-bold px-4 py-2">See More</Link>
                       </div>
                     )} 
-                    {/* If this is the Construction card, show small thumbnails + See More */}
-                    {service.title.toLowerCase().includes("construction") && (
+                    {/* If this is the Construction or Aluminium card, show small thumbnails + See More */}
+                    {(service.title.toLowerCase().includes("construction") || service.title.toLowerCase().includes("aluminium")) && (
                       <div className="mt-4">
                         <button onClick={() => setIsGalleryOpen(true)} className="inline-block btn-accent-2 font-bold px-4 py-2">See More</button>
                       </div>
@@ -266,7 +266,7 @@ const ServicesSection = () => {
             <div className="absolute inset-0 bg-black/60" onClick={() => setIsGalleryOpen(false)} />
             <div className="relative bg-white rounded-lg max-w-4xl w-full p-4 z-10">
               <div className="flex justify-between items-center mb-4">
-                <h3 className="font-display text-xl font-bold">Construction Projects</h3>
+                <h3 className="font-display text-xl font-bold">Aluminium Projects</h3>
                 <button onClick={() => setIsGalleryOpen(false)} className="text-muted-foreground">Close</button>
               </div>
               <div>

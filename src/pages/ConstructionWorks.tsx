@@ -4,10 +4,10 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 const constructionImages = [
-  new URL("../assets/services/construction1.jpg", import.meta.url).href,
-  new URL("../assets/services/construction2.jpg", import.meta.url).href,
-  new URL("../assets/services/construction3.jpg", import.meta.url).href,
-  new URL("../assets/services/construction4.jpg", import.meta.url).href,
+  new URL("../assets/services/aluminium/aluminuimdoor.jpeg", import.meta.url).href,
+  new URL("../assets/services/aluminium/aluminuimbath.jpeg", import.meta.url).href,
+  new URL("../assets/services/aluminium/aluminiumbath2.jpeg", import.meta.url).href,
+  new URL("../assets/services/aluminium/aluminiumbath3.jpeg", import.meta.url).href,
 ];
 
 const ConstructionWorks = () => {
@@ -33,10 +33,10 @@ const ConstructionWorks = () => {
 
       <main className="flex-1">
         <section className="relative h-[36vh] md:h-[44vh] lg:h-[56vh] flex items-end justify-center text-center bg-gray-900/10">
-          <img src={constructionImages[0]} alt="Construction Works" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+          <img src={constructionImages[0]} alt="Aluminium Works" className="absolute inset-0 w-full h-full object-cover opacity-80" />
           <div className="relative z-10 container mx-auto px-6 py-20 text-white">
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold">Construction Works</h1>
-            <p className="mt-4 text-white/80 max-w-2xl mx-auto">Civil works, earthworks, structural and finishing works delivered with safety and quality.</p>
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold">Aluminium Works</h1>
+            <p className="mt-4 text-white/80 max-w-2xl mx-auto">Fabrication of doors, windows and sanitary fittings — custom aluminium fabrication to specification.</p>
           </div>
         </section>
 
@@ -45,13 +45,13 @@ const ConstructionWorks = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {constructionImages.map((src, idx) => (
                 <button key={idx} onClick={() => openImage(src)} className="rounded-md overflow-hidden bg-gray-50 shadow-sm focus:outline-none">
-                  <img src={src} alt={`Construction ${idx + 1}`} className="w-full h-40 object-cover" />
+                  <img src={src} alt={`Aluminium ${idx + 1}`} className="w-full h-40 object-cover" />
                 </button>
               ))}
             </div>
 
             <div className="mt-8 text-center">
-              <a href="/contact" className="inline-block btn-accent-2 font-bold px-6 py-3 rounded-md">Talk to our team</a>
+              <a href="https://api.whatsapp.com/send?phone=260974124358&text=Hello%2C%20I%27m%20interested%20in%20your%20Aluminium%20Works%20services." className="inline-block btn-accent-2 font-bold px-6 py-3 rounded-md" target="_blank" rel="noreferrer noopener">Talk to our team</a>
             </div>
           </div>
         </section>

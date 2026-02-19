@@ -63,7 +63,7 @@ const navItems = [
       { label: "All Services", href: "/services" },
       { label: "Repair & Maintenance", href: "/services/repair-and-maintenance" },
       { label: "Mechanical Engineering", href: "/services/mechanical-engineering" },
-      { label: "Construction Works", href: "/services/construction-works" },
+      { label: "Aluminium Works", href: "/services/construction-works" },
       { label: "PPE Supply", href: "/services/ppe" },
       { label: "Supply Chain & Logistics Services", href: "/services/supplies-and-logistics" },
     ],
