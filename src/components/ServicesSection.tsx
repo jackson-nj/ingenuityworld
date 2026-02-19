@@ -225,15 +225,20 @@ const ServicesSection = () => {
                     {/* Supply Chain card: hide detailed list on the card — link to full section */}
                     {service.id === "supply-chain" && (
                       <div className="mt-4">
-                        <Link to="/services/supplies-and-logistics" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                        <Link to="/services/supplies-and-logistics" className="inline-block btn-accent-2 font-bold px-4 py-2">See More</Link>
                       </div>
                     )}
 
                     {/* Repair card: link to dedicated page */}
                     {service.title.toLowerCase().includes("repair") && (
-                      <div className="mt-4 flex gap-3">
-                        <Link to="/services/repair-and-maintenance" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
-                        <a href="https://api.whatsapp.com/send?phone=260975189800&text=Hello%2C%20I%27m%20interested%20in%20Repair%20%26%20Maintenance%20services." target="_blank" rel="noopener noreferrer" className="inline-block btn-accent-2 font-bold px-4 py-2">Contact</a>
+                      <div className="mt-4">
+                        <Link to="/services/repair-and-maintenance" className="inline-block btn-accent-2 font-bold px-4 py-2">See More</Link>
+                      </div>
+                    )}
+
+                    {service.title.toLowerCase().includes("mechanical") && (
+                      <div className="mt-4">
+                        <a href="https://api.whatsapp.com/send?phone=260975189800&text=Hello%2C%20I%27m%20interested%20in%20Mechanical%20Engineering%20services." target="_blank" rel="noopener noreferrer" className="inline-block btn-accent-2 font-bold px-4 py-2">Contact us</a>
                       </div>
                     )}
                     {/* PPE card: link to supplies page */}
