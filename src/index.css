@@ -137,6 +137,12 @@
   .site-header {
     height: var(--header-height);
   }
+
+  /* Prevent fixed header from overlapping anchored headings/sections.
+     Applies a scroll offset equal to the header height plus a small gap. */
+  :where(section[id], [id], h1, h2, h3) {
+    scroll-margin-top: calc(var(--header-height) + 0.5rem);
+  }
 }
 
 @layer components {
