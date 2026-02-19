@@ -26,8 +26,13 @@ const repairImages: string[] = Object.values(repairModules)
 const HeroSection = () => {
   const slides = [...repairImages, ...heroImages];
   const total = slides.length || 1;
-  // default to the Repair & Maintenance image named "2.jpeg" when present
-  const defaultIndex = slides.findIndex((s) => s.endsWith('/2.jpeg') || s.endsWith('/2.jpg') || s.endsWith('/2.png') || s.endsWith('/2.webp'));
+  // default to the Repair & Maintenance image named "2.jpeg" when present (robust check)
+  let defaultIndex = slides.findIndex((s) => /\/2\.(jpe?g|png|webp)(?:$|[?#])/i.test(s));
+  if (defaultIndex < 0) {
+    // fallback: prefer second repair image if available, otherwise first repair image
+    const fallbackRepair = repairImages[1] || repairImages[0];
+    defaultIndex = fallbackRepair ? slides.findIndex((s) => s === fallbackRepair) : 0;
+  }
   const [index, setIndex] = useState(defaultIndex >= 0 ? defaultIndex : 0);
 
   // Pre-defined Tailwind translate classes to avoid inline styles (supports up to 12 slides)
