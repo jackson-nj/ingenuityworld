@@ -52,7 +52,7 @@ const fallbackServices: ServiceItem[] = [
     title: "Supply Chain & Logistics Services",
     description:
       "Procurement; Inventory Control; Stores & Warehousing; Clearing & Forwarding; Transport & Logistics; Supply Chain Management.",
-    image_url: deliveryImg,
+    image_url: new URL("../assets/services/supply and logistics/clearing and forwading.jpg", import.meta.url).href,
   },
 ];
 

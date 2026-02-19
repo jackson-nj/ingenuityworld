@@ -69,7 +69,7 @@ const HeroSection = () => {
   }, [total]);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center">
+    <section id="hero" className="relative min-h-[80vh] md:min-h-screen flex items-center">
       {/* Full-bleed slideshow container (horizontal auto-scroll) */}
       <div
         className="absolute inset-0 overflow-hidden"
@@ -106,17 +106,18 @@ const HeroSection = () => {
           <div className="flex gap-4">
             <a data-animate="fade-up" data-animate-delay="240ms" href="https://wa.me/260975078766?text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noreferrer noopener" className="btn-accent-2 font-bold px-6 py-3">Get In Touch</a>
           </div>
+          {/* mobile indicators (duplicate for visibility on small screens) */}
         </div>
       </div>
 
-      {/* Slide indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      {/* Slide indicators — positioned at bottom of the hero for all screens */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {slides.map((_, i) => (
           <button
             key={i}
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => setIndex(i)}
-            className={`hero-indicator h-2 ${i === index ? 'w-10 bg-accent-2 scale-105' : 'w-6 bg-white/40'} rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-accent-2/30`}
+            className={`h-2 ${i === index ? 'w-8 sm:w-10 bg-accent-2' : 'w-4 sm:w-6 bg-white/40'} rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-accent-2/30`}
           />
         ))}
       </div>
