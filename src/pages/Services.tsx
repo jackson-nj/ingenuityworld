@@ -112,8 +112,9 @@ esktop */}
                   <div>
                     <h3 data-animate="fade-up" data-animate-delay="180ms" className="font-display text-xl font-bold mb-2">Repair & Maintenance</h3>
                     <p className="text-muted-foreground mb-4">Preventative and corrective maintenance, onsite repairs and plant & equipment servicing.</p>
-                    <div className="mt-4">
+                    <div className="mt-4 flex gap-3">
                       <Link to="/services/repair-and-maintenance" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                      <a href="https://api.whatsapp.com/send?phone=260975189800&text=Hello%2C%20I%27m%20interested%20in%20Repair%20%26%20Maintenance%20services." target="_blank" rel="noopener noreferrer" className="inline-block btn-accent-2 font-bold px-4 py-2">Contact</a>
                     </div>
                   </div>
                 </div>

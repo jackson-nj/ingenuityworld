@@ -231,8 +231,9 @@ const ServicesSection = () => {
 
                     {/* Repair card: link to dedicated page */}
                     {service.title.toLowerCase().includes("repair") && (
-                      <div className="mt-4">
+                      <div className="mt-4 flex gap-3">
                         <Link to="/services/repair-and-maintenance" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                        <a href="https://api.whatsapp.com/send?phone=260975189800&text=Hello%2C%20I%27m%20interested%20in%20Repair%20%26%20Maintenance%20services." target="_blank" rel="noopener noreferrer" className="inline-block btn-accent-2 font-bold px-4 py-2">Contact</a>
                       </div>
                     )}
                     {/* PPE card: link to supplies page */}
@@ -241,8 +242,8 @@ const ServicesSection = () => {
                         <Link to="/services/ppe" className="inline-block btn-accent-2 font-bold px-4 py-2">See More</Link>
                       </div>
                     )} 
-                    {/* If this is the Construction or Aluminium card, show small thumbnails + See More */}
-                    {(service.title.toLowerCase().includes("construction") || service.title.toLowerCase().includes("aluminium")) && (
+                    {/* If this is the Construction card, show small thumbnails + See More */}
+                    {service.title.toLowerCase().includes("construction") && (
                       <div className="mt-4">
                         <button onClick={() => setIsGalleryOpen(true)} className="inline-block btn-accent-2 font-bold px-4 py-2">See More</button>
                       </div>
