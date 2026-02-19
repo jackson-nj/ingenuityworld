@@ -60,7 +60,6 @@ const navItems = [
   {
     label: "Services",
     dropdown: [
-      { label: "All Services", href: "/services" },
       { label: "Repair & Maintenance", href: "/services/repair-and-maintenance" },
       { label: "Mechanical Engineering", href: "/services/mechanical-engineering" },
       { label: "Aluminium Works", href: "/services/construction-works" },

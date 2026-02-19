@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, ArrowRight, Clock, KeyRound } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, ArrowRight, Clock } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -161,13 +161,6 @@ const Footer = () => {
           <p className="text-white/50 text-sm">
             © {currentYear} Ingenuity Specialized Engineering Works Ltd (ISEW). All rights reserved.
           </p>
-          <Link
-            to="/admin"
-            className="text-white/30 hover:text-accent-2 transition-colors p-2"
-            aria-label="Admin Login"
-          >
-            <KeyRound className="h-4 w-4" />
-          </Link>
         </div>
       </div>
     </footer>

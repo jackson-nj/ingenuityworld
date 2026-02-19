@@ -94,16 +94,6 @@ const fallbackEquipment = [
           ))}
         </div>
          )}
-
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <Link
-            to="/services"
-            className="inline-block btn-accent-2 text-white font-bold px-10 py-4 text-sm uppercase tracking-wider transition-colors duration-200 hover:bg-charcoal hover:text-white"
-          >
-            View All Services
-          </Link>
-        </div>
       </div>
     </section>
   );
