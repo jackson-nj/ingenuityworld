@@ -10,6 +10,7 @@ import RepairAndMaintenance from "./pages/RepairAndMaintenance";
 import MechanicalEngineering from "./pages/MechanicalEngineering";
 import ConstructionWorks from "./pages/ConstructionWorks";
 import SuppliesLogistics from "./pages/SuppliesLogistics";
+import PPE from "./pages/PPE";
 import Certifications from "./pages/Certifications";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/services/repair-and-maintenance" element={<RepairAndMaintenance />} />
           <Route path="/services/mechanical-engineering" element={<MechanicalEngineering />} />
           <Route path="/services/construction-works" element={<ConstructionWorks />} />
+          <Route path="/services/ppe" element={<PPE />} />
           <Route path="/services/supplies-and-logistics" element={<SuppliesLogistics />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/faq" element={<FAQ />} />

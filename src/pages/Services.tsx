@@ -158,7 +158,7 @@ r:shadow-lg transition-all duration-300 flex flex-col h-full">                  
                     <h3 data-animate="fade-up" data-animate-delay="240ms" className="font-display text-xl font-bold mb-2">PPE Supply</h3>
                     <p className="text-muted-foreground mb-4">Supply of quality PPE — helmets, gloves, vests and suits; available for single or bulk orders.</p>
                     <div className="mt-4">
-                      <Link to="/services/supplies-and-logistics" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
+                      <Link to="/services/ppe" className="inline-block btn-accent-2 font-bold px-4 py-2">View details</Link>
                     </div>
                   </div>
                 </div>

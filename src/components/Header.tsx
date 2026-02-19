@@ -64,7 +64,7 @@ const navItems = [
       { label: "Repair & Maintenance", href: "/services/repair-and-maintenance" },
       { label: "Mechanical Engineering", href: "/services/mechanical-engineering" },
       { label: "Construction Works", href: "/services/construction-works" },
-      { label: "PPE Supply", href: "/services/supplies-and-logistics" },
+      { label: "PPE Supply", href: "/services/ppe" },
       { label: "Supply Chain & Logistics Services", href: "/services/supplies-and-logistics" },
     ],
   },
@@ -83,7 +83,11 @@ const Header = () => {
   const [openMobileDropdowns, setOpenMobileDropdowns] = useState<Record<string, boolean>>({});
 
   const toggleMobileDropdown = (label: string) => {
-    setOpenMobileDropdowns((prev) => ({ ...prev, [label]: !prev[label] }));
+    setOpenMobileDropdowns((prev) => {
+      const isOpen = !!prev[label];
+      // accordion behaviour: open the clicked item and close others
+      return { [label]: !isOpen };
+    });
   };
 
   useEffect(() => {
@@ -92,6 +96,17 @@ const Header = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        setOpenMobileDropdowns({});
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
 
   return (
@@ -193,7 +208,11 @@ const Header = () => {
               {/* Mobile Menu Toggle */}
               <button
                 className="lg:hidden text-secondary"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                onClick={() => {
+                  const willOpen = !isMobileMenuOpen;
+                  setIsMobileMenuOpen(willOpen);
+                  if (willOpen) setOpenMobileDropdowns({});
+                }}
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
@@ -205,7 +224,10 @@ const Header = () => {
           <div className={`fixed inset-0 z-40 lg:hidden ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
             {/* Overlay */}
             <div
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setOpenMobileDropdowns({});
+              }}
               className={`absolute inset-0 bg-black/40 transition-opacity duration-200 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`}
             />
 
@@ -218,7 +240,7 @@ const Header = () => {
               <div className="p-4 h-full overflow-y-auto">
                 <div className="flex items-center justify-between mb-4">
                   <div className="font-display font-bold text-lg">Menu</div>
-                  <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu" className="p-2">
+                  <button onClick={() => { setIsMobileMenuOpen(false); setOpenMobileDropdowns({}); }} aria-label="Close menu" className="p-2">
                     <X className="h-6 w-6" />
                   </button>
                 </div>
@@ -281,7 +303,7 @@ const Header = () => {
                         key={item.label}
                         to={item.href}
                         className="font-semibold text-secondary text-base"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={() => { setIsMobileMenuOpen(false); setOpenMobileDropdowns({}); }}
                       >
                         {item.label}
                       </Link>

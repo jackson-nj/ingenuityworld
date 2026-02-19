@@ -238,9 +238,9 @@ const ServicesSection = () => {
                     {/* PPE card: link to supplies page */}
                     {(service.title.toLowerCase().includes("ppe") || service.id === "supplies") && (
                       <div className="mt-4">
-                        <Link to="/services/supplies-and-logistics" className="inline-block btn-accent-2 font-bold px-4 py-2">See More</Link>
+                        <Link to="/services/ppe" className="inline-block btn-accent-2 font-bold px-4 py-2">See More</Link>
                       </div>
-                    )}
+                    )} 
                     {/* If this is the Construction card, show small thumbnails + See More */}
                     {service.title.toLowerCase().includes("construction") && (
                       <div className="mt-4">
