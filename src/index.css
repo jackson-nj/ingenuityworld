@@ -466,4 +466,25 @@
       transform: translateX(0);
     }
   }
+
+  /* PPE carousel scrolling -------------------------------------------------- */
+  /* container hides overflow, track flexes horizontally and animates leftwards */
+  .ppe-carousel {
+    overflow: hidden;
+    position: relative;
+    /* ensure the element doesn't contribute to layout height unnecessarily */
+  }
+
+  .ppe-track {
+    display: flex;
+    animation: ppeScroll 25s linear infinite;
+    /* slightly faster for a more engaging pace */
+    will-change: transform;
+  }
+
+  @keyframes ppeScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
 }
