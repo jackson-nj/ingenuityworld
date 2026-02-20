@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Header from "@/components/Header";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -22,13 +22,13 @@ const PPE = () => {
   }, []);
 
   const ppeProducts = [
+    { id: "safety-shoes", name: "Safety Shoes", img: new URL("../assets/services/PPE/shoe1.jpeg", import.meta.url).href, alt: "Safety Shoes", desc: "Steel-toe, slip-resistant safety shoes multiple styles available" },
     { id: "safety-helmet", name: "Safety Helmet", img: new URL("../assets/services/PPE/SAFYEUR JHELMET.jpeg", import.meta.url).href, alt: "Safety Helmet", desc: "Certified industrial hard hat" },
     { id: "protective-gloves", name: "Protective Gloves", img: new URL("../assets/services/PPE/GLOVES.jpeg", import.meta.url).href, alt: "Protective Gloves", desc: "Grip and cut-resistant gloves" },
     { id: "hi-vis-vest", name: "High-Visibility Vest", img: new URL("../assets/services/PPE/SAFTYVEST2.jpeg", import.meta.url).href, alt: "High-visibility vest", desc: "Reflective vest for on-site visibility" },
     { id: "safety-jacket-1", name: "Safety Jacket", img: new URL("../assets/services/PPE/JERSY.jpeg", import.meta.url).href, alt: "Safety Jacket", desc: "Breathable hi‑vis safety jacket with reflective trims" },
     { id: "safety-jacket-2", name: "Safety Jacket", img: new URL("../assets/services/PPE/WORKING JERSEY.jpeg", import.meta.url).href, alt: "Safety Jacket (variant)", desc: "Comfortable safety jacket" },
     { id: "safety-jacket-3", name: "Safety Jacket", img: new URL("../assets/services/PPE/WORKING JERSEY.jpg", import.meta.url).href, alt: "Safety Jacket (variant)", desc: "Long-sleeve safety jacket option" },
-    { id: "safety-shoes", name: "Safety Shoes", img: new URL("../assets/services/PPE/shoe1.jpeg", import.meta.url).href, alt: "Safety Shoes", desc: "Steel-toe, slip-resistant safety shoes multiple styles available" },
     { id: "work-suit-1", name: "Work Suit", img: new URL("../assets/services/PPE/WORKING SUIT.jpeg", import.meta.url).href, alt: "Work Suit", desc: "Full-body protective suit" },
     { id: "work-suit-2", name: "Work Suit", img: new URL("../assets/services/PPE/WORKING SUIT 2.jpeg", import.meta.url).href, alt: "Work Suit (alternate)", desc: "Alternate worksuit" },
     { id: "work-suit-3", name: "Work Suit", img: new URL("../assets/services/PPE/WORKING SUIT3jpg.jpg", import.meta.url).href, alt: "Work Suit (heavy-duty)", desc: "Heavy-duty worksuit" },
