@@ -23,17 +23,19 @@ const PPE = () => {
   }, []);
 
   // compute animation duration so that the scroll speed (px/sec) stays
-  // constant regardless of the viewport width. the track is duplicated so
-  // we travel half its width per cycle.
+  // consistent on desktop but becomes gentler on smaller screens. we
+  // measure the track width (which reflects two copies of the image set)
+  // and divide by a dynamic speed constant. slower speed is used below a
+  // mobile threshold.
   useEffect(() => {
-    const speed = 200; // pixels per second; tweak for desired visual pace
     const track = () => document.querySelector<HTMLDivElement>('.ppe-track');
 
     const update = () => {
       const el = track();
       if (el) {
         const width = el.offsetWidth;
-        const dur = (width / 2) / speed;
+        const currentSpeed = window.innerWidth < 640 ? 120 : 200; // px/sec
+        const dur = (width / 2) / currentSpeed;
         setPpeDuration(`${dur}s`);
       }
     };
