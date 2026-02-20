@@ -55,7 +55,7 @@ const PPE = () => {
     const node = carouselRef.current;
     if (!node) return;
     const updateDuration = () => {
-      const pxPerSecond = 150; // adjust this constant to taste
+      const pxPerSecond = 100; // lower value slows the scroll
       const width = node.offsetWidth;
       // distance traveled is 50% of track (same as animation keyframe)
       const distance = width;
