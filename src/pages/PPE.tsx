@@ -34,7 +34,8 @@ const PPE = () => {
       const el = track();
       if (el) {
         const width = el.offsetWidth;
-        const currentSpeed = window.innerWidth < 640 ? 120 : 200; // px/sec
+        // slower speeds for calmer motion: mobile 80px/s, desktop 120px/s
+        const currentSpeed = window.innerWidth < 640 ? 80 : 120; // px/sec
         const dur = (width / 2) / currentSpeed;
         setPpeDuration(`${dur}s`);
       }
@@ -115,7 +116,7 @@ const PPE = () => {
                       key={src + idx}
                       src={src}
                       alt=""
-                      className="h-24 w-auto flex-shrink-0 mx-2 object-contain"
+                      className="h-20 w-auto flex-shrink-0 mx-1 object-contain"
                     />
                   ))}
                   {rotatedImages.map((src, idx) => (
@@ -123,7 +124,7 @@ const PPE = () => {
                       key={src + idx + '-dup'}
                       src={src}
                       alt=""
-                      className="h-24 w-auto flex-shrink-0 mx-2 object-contain"
+                      className="h-20 w-auto flex-shrink-0 mx-1 object-contain"
                     />
                   ))}
                 </div>
@@ -185,7 +186,7 @@ const PPE = () => {
                         <button
                           key={src}
                           onClick={() => { setActiveImage(src); setLightboxOpen(true); }}
-                          className="rounded-md overflow-hidden bg-gray-50 h-28 sm:h-32 w-full flex items-center justify-center"
+                          className="rounded-md overflow-hidden bg-gray-50 h-24 sm:h-28 w-full flex items-center justify-center"
                           aria-label={`Open shoe ${i + 1}`}
                         >
                           <img src={src} alt={`Safety shoe ${i + 1}`} className="w-full h-full object-contain p-1" />
