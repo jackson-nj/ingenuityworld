@@ -91,8 +91,9 @@ const ServicesSection = () => {
           rafRef.current = requestAnimationFrame(step);
           return;
         }
-        // scroll a few pixels per frame
-        el.scrollLeft += 0.6;
+        // Adjust scroll speed based on window size
+        const scrollSpeed = window.innerWidth < 768 ? 0.3 : 0.6;
+        el.scrollLeft += scrollSpeed;
         if (el.scrollLeft >= el.scrollWidth / 2) {
           el.scrollLeft = 0;
         }
@@ -113,6 +114,7 @@ const ServicesSection = () => {
         onMouseLeave={() => (paused.current = false)}
         className="w-full overflow-hidden rounded-md"
         aria-hidden="false"
+        style={{ maxWidth: '100%', overflowX: 'auto' }}
       >
         <div className="flex gap-4 w-max">
           {images.concat(images).map((src, i) => (
