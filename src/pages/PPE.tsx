@@ -43,6 +43,11 @@ const PPE = () => {
 
   const shoeImages = allPpeImages.filter((src) => /shoe/i.test((src.split('/').pop() ?? '').toLowerCase()));
 
+  // debug output to confirm what was imported
+  useEffect(() => {
+    console.log('PPE carousel images count:', allPpeImages.length, allPpeImages);
+  }, [allPpeImages]);
+
   // the carousel will render two copies of the original array back-to-back.
   // leaving the order untouched lets us start with the first image, and
   // because the duplicated copy immediately follows, the animation loop
@@ -92,6 +97,10 @@ const PPE = () => {
 
               {/* auto‑scrolling showcase */}
               <div ref={carouselRef} className="ppe-carousel mt-8" aria-hidden="true" data-testid="ppe-carousel">
+              {/* show number of images in development builds */}
+              {import.meta.env.DEV && (
+                <p className="text-xs text-muted-foreground mb-2">carousel contains {allPpeImages.length} images</p>
+              )}
                 {/*
                   Two copies of the image list are rendered back‑to‑back.  this is a
                   common marquee technique that lets the animation loop infinitely
