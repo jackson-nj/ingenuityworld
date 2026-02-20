@@ -9,6 +9,7 @@ const PPE = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeImage, setActiveImage] = useState<string | null>(null);
   const [shoesOpen, setShoesOpen] = useState(false);
+  const [ppeDuration, setPpeDuration] = useState('15s');
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -21,6 +22,27 @@ const PPE = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  // compute animation duration so that the scroll speed (px/sec) stays
+  // constant regardless of the viewport width. the track is duplicated so
+  // we travel half its width per cycle.
+  useEffect(() => {
+    const speed = 200; // pixels per second; tweak for desired visual pace
+    const track = () => document.querySelector<HTMLDivElement>('.ppe-track');
+
+    const update = () => {
+      const el = track();
+      if (el) {
+        const width = el.offsetWidth;
+        const dur = (width / 2) / speed;
+        setPpeDuration(`${dur}s`);
+      }
+    };
+
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
   const ppeProducts = [
     { id: "safety-helmet", name: "Safety Helmet", img: new URL("../assets/services/PPE/SAFYEUR JHELMET.jpeg", import.meta.url).href, alt: "Safety Helmet", desc: "Certified industrial hard hat" },
     { id: "protective-gloves", name: "Protective Gloves", img: new URL("../assets/services/PPE/GLOVES.jpeg", import.meta.url).href, alt: "Protective Gloves", desc: "Grip and cut-resistant gloves" },
@@ -28,7 +50,7 @@ const PPE = () => {
     { id: "safety-jacket-1", name: "Safety Jacket", img: new URL("../assets/services/PPE/JERSY.jpeg", import.meta.url).href, alt: "Safety Jacket", desc: "Breathable hi‑vis safety jacket with reflective trims" },
     { id: "safety-jacket-2", name: "Safety Jacket", img: new URL("../assets/services/PPE/WORKING JERSEY.jpeg", import.meta.url).href, alt: "Safety Jacket (variant)", desc: "Comfortable safety jacket" },
     { id: "safety-jacket-3", name: "Safety Jacket", img: new URL("../assets/services/PPE/WORKING JERSEY.jpg", import.meta.url).href, alt: "Safety Jacket (variant)", desc: "Long-sleeve safety jacket option" },
-    { id: "safety-shoes", name: "Safety Shoes", img: new URL("../assets/services/PPE/shoe1.jpeg", import.meta.url).href, alt: "Safety Shoes", desc: "Steel-toe, slip-resistant safety shoes — multiple styles available" },
+    { id: "safety-shoes", name: "Safety Shoes", img: new URL("../assets/services/PPE/shoe1.jpeg", import.meta.url).href, alt: "Safety Shoes", desc: "Steel-toe, slip-resistant safety shoes multiple styles available" },
     { id: "work-suit-1", name: "Work Suit", img: new URL("../assets/services/PPE/WORKING SUIT.jpeg", import.meta.url).href, alt: "Work Suit", desc: "Full-body protective suit" },
     { id: "work-suit-2", name: "Work Suit", img: new URL("../assets/services/PPE/WORKING SUIT 2.jpeg", import.meta.url).href, alt: "Work Suit (alternate)", desc: "Alternate worksuit" },
     { id: "work-suit-3", name: "Work Suit", img: new URL("../assets/services/PPE/WORKING SUIT3jpg.jpg", import.meta.url).href, alt: "Work Suit (heavy-duty)", desc: "Heavy-duty worksuit" },
@@ -72,7 +94,12 @@ const PPE = () => {
               <p className="text-muted-foreground mt-4">Browse our selection of certified PPE items available for procurement.</p>
 
               {/* auto‑scrolling showcase */}
-              <div className="ppe-carousel mt-8" aria-hidden="true" data-testid="ppe-carousel">
+              <div
+                className="ppe-carousel mt-8"
+                aria-hidden="true"
+                data-testid="ppe-carousel"
+                style={{ '--ppe-duration': ppeDuration } as React.CSSProperties}
+              >
                 {/*
                   Two copies of the image list are rendered back‑to‑back.  this is a
                   common marquee technique that lets the animation loop infinitely
@@ -103,17 +130,24 @@ const PPE = () => {
 
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {ppeProducts.map((p) => (
-                  <article key={p.id} className="bg-white border rounded-lg overflow-hidden shadow-sm p-4 flex flex-col items-center text-center">
-                    <div className="w-full h-40 overflow-hidden rounded-md bg-gray-50 flex items-center justify-center">
-                      <img src={p.img} alt={p.alt} className="w-full h-full object-contain p-2" />
-                    </div>
-                    <h4 className="mt-4 font-semibold">{p.name}</h4>
-                    <p className="text-muted-foreground text-sm mt-2">{p.desc}</p>
-                    <div className="mt-4">
-                      {p.id === "safety-shoes" ? (
-                        <button onClick={() => setShoesOpen(true)} className="inline-block btn-accent-2 font-bold px-4 py-2 rounded-md">View more</button>
-                      ) : (
+                {ppeProducts.map((p) => {
+                    // if this is the shoes entry, try to use the first image
+                    // from the glob import list; it will exist if any shoe files
+                    // were imported successfully.
+                    const displayImg = p.id === "safety-shoes" && shoeImages.length
+                      ? shoeImages[0]
+                      : p.img;
+                    return (
+                      <article key={p.id} className="bg-white border rounded-lg overflow-hidden shadow-sm p-4 flex flex-col items-center text-center">
+                        <div className="w-full h-40 overflow-hidden rounded-md bg-gray-50 flex items-center justify-center">
+                          <img src={displayImg} alt={p.alt} className="w-full h-full object-contain p-2" />
+                        </div>
+                        <h4 className="mt-4 font-semibold">{p.name}</h4>
+                        <p className="text-muted-foreground text-sm mt-2">{p.desc}</p>
+                        <div className="mt-4">
+                          {p.id === "safety-shoes" ? (
+                            <button onClick={() => setShoesOpen(true)} className="inline-block btn-accent-2 font-bold px-4 py-2 rounded-md">View more</button>
+                          ) : (
                         <a
                           href={`https://api.whatsapp.com/send?phone=260976769935&text=${encodeURIComponent(`Hello, I'm interested in the ${p.name} from Ingenuity (PPE Supply). Please advise on price & availability.`)}`}
                           target="_blank"
@@ -125,7 +159,8 @@ const PPE = () => {
                       )}
                     </div>
                   </article>
-                ))}
+                    );
+                })}
               </div>
 
               <div className="mt-6 text-center">

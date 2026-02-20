@@ -468,7 +468,8 @@
   }
 
   /* PPE carousel scrolling -------------------------------------------------- */
-  /* container hides overflow, track flexes horizontally and animates leftwards */
+  /* container hides overflow, track flexes horizontally and animates leftwards. 
+     animation duration can be adjusted via --ppe-duration (in seconds). */
   .ppe-carousel {
     overflow: hidden;
     position: relative;
@@ -477,8 +478,9 @@
 
   .ppe-track {
     display: flex;
-    animation: ppeScroll 15s linear infinite;
-    /* increased pace for quicker cycling */
+    animation: ppeScroll var(--ppe-duration, 15s) linear infinite;
+    /* duration may be overridden via inline style from React for
+       constant pixels-per-second speed regardless of viewport width */
     will-change: transform;
   }
 
