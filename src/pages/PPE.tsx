@@ -49,6 +49,24 @@ const PPE = () => {
   // (0 → -50%) wraps seamlessly: at -50% we are at the beginning of the
   // second copy (same as the first), so the instant reset to 0 is invisible.
 
+  // measure carousel width and set CSS variable for smooth, consistent speed
+  const carouselRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    const node = carouselRef.current;
+    if (!node) return;
+    const updateDuration = () => {
+      const pxPerSecond = 150; // adjust this constant to taste
+      const width = node.offsetWidth;
+      // distance traveled is 50% of track (same as animation keyframe)
+      const distance = width;
+      const seconds = distance / pxPerSecond;
+      node.style.setProperty('--ppe-scroll-duration', `${seconds}s`);
+    };
+    updateDuration();
+    window.addEventListener('resize', updateDuration);
+    return () => window.removeEventListener('resize', updateDuration);
+  }, []);
+
 
 
   return (
@@ -73,7 +91,7 @@ const PPE = () => {
               <p className="text-muted-foreground mt-4">Browse our selection of certified PPE items available for procurement.</p>
 
               {/* auto‑scrolling showcase */}
-              <div className="ppe-carousel mt-8" aria-hidden="true" data-testid="ppe-carousel">
+              <div ref={carouselRef} className="ppe-carousel mt-8" aria-hidden="true" data-testid="ppe-carousel">
                 {/*
                   Two copies of the image list are rendered back‑to‑back.  this is a
                   common marquee technique that lets the animation loop infinitely

@@ -477,8 +477,8 @@
 
   .ppe-track {
     display: flex;
-    animation: ppeScroll 18s linear infinite;
-    /* slightly faster for a more engaging pace */
+    animation: ppeScroll var(--ppe-scroll-duration, 25s) linear infinite;
+    /* duration can be set via CSS variable (fallback 25s) */
     will-change: transform;
   }
 
