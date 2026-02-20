@@ -116,7 +116,7 @@ const Header = () => {
           <div className="site-header-card">
             <div className="container mx-auto px-4 flex items-center gap-3">
               {/* Logo + text: show logo and large text; ensure visible */}
-              <Link to="/" className="flex items-center gap-4 mr-auto">
+              <Link to="/" className="flex items-center gap-2 mr-auto">
                 <div className="w-16 h-16 relative overflow-hidden rounded-sm bg-gray-100 flex items-center justify-center">
                   {!logoLoaded && (
                     <svg
@@ -143,12 +143,14 @@ const Header = () => {
                     className={`w-16 h-16 object-contain shrink-0 block transition-opacity duration-300 ${logoLoaded ? 'opacity-100' : 'opacity-0'}`}
                   />
                 </div>
+                {/* vertical divider matching design */}
+                <div className="h-full w-px bg-gray-300" />
                 <div className="flex flex-col items-start w-min">
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                     INGENUITY
                   </span>
-                  <span className="font-display text-sm md:text-base text-secondary/90 uppercase tracking-[0.06em] w-full text-center leading-none mt-1">
-                    SPECIALIZED ENGINEERING
+                  <span className="font-display text-sm md:text-base text-secondary/90 tracking-[0.06em] w-full text-left leading-none mt-1">
+                    <span className="whitespace-nowrap">Specialized Engineering</span><br />Works Limited (ISEW)
                   </span>
                 </div>
               </Link>
