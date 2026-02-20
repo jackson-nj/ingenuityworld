@@ -49,14 +49,18 @@ const PPE = () => {
 
   const shoeImages = allPpeImages.filter((src) => /shoe/i.test((src.split('/').pop() ?? '').toLowerCase()));
 
+  // duplicate the image list so we can scroll seamlessly without DOM shuffling
+  const duplicatedImages = [...allPpeImages, ...allPpeImages];
+
   // debug output to confirm what was imported
   useEffect(() => {
-    console.log('PPE carousel images count:', allPpeImages.length, allPpeImages);
-  }, [allPpeImages]);
+    console.log('PPE carousel images count:', duplicatedImages.length, duplicatedImages);
+  }, [duplicatedImages]);
 
   // start/stop the automatic scroll once all imgs are in the DOM
   useEffect(() => {
-    if (loadedCount !== allPpeImages.length) return;
+    // wait for every image in the duplicated set to load before starting
+    if (loadedCount !== duplicatedImages.length) return;
 
     const container = carouselRef.current;
     const track = trackRef.current;
@@ -66,16 +70,15 @@ const PPE = () => {
     const step = (timestamp: number) => {
       const delta = timestamp - lastTimestamp;
       lastTimestamp = timestamp;
-      // move the scroll position
+      // advance the scroll position
       container.scrollLeft += (pxPerSecond * delta) / 1000;
 
-      // if the first child has completely scrolled out of view,
-      // subtract its width and append it to the end.
-      let first = track.children[0] as HTMLElement | null;
-      while (first && container.scrollLeft >= first.offsetWidth) {
-        container.scrollLeft -= first.offsetWidth;
-        track.appendChild(first);
-        first = track.children[0] as HTMLElement | null;
+      // when we've scrolled past the first copy, jump back by half the
+      // total width. the second copy is identical, so the user won't see a
+      // visual jump and the animation stays smooth.
+      const resetWidth = track.scrollWidth / 2;
+      if (container.scrollLeft >= resetWidth) {
+        container.scrollLeft -= resetWidth;
       }
 
       animationRef.current = requestAnimationFrame(step);
@@ -85,7 +88,7 @@ const PPE = () => {
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
-  }, [loadedCount, allPpeImages]);
+  }, [loadedCount, duplicatedImages]);
 
   // attach onload to each carousel image so we can recalc once they finish
   const onImgLoad = () => {
@@ -122,9 +125,9 @@ const PPE = () => {
               >
 
                 <div ref={trackRef} className="flex items-center gap-4 whitespace-nowrap">
-                  {allPpeImages.map((src, idx) => (
+                  {duplicatedImages.map((src, idx) => (
                     <img
-                      key={src + idx}
+                      key={src + '-' + idx}
                       src={src}
                       alt=""
                       onLoad={onImgLoad}
