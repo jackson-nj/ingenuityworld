@@ -47,7 +47,7 @@ const WhyChooseUsSection = () => {
                 YOUR TRUSTED PARTNER
               </h2>
                 <p className="text-muted-foreground mb-6 text-base leading-relaxed">
-                With nearly three decades of experience, Ingenuity Specialized Engineering Works Ltd (ISEW) has become the go-to choice for 
+                With nearly three decades of experience, Ingenuity Specialized Engineering Works Ltd (iSEW) has become the go-to choice for 
                 construction companies, contractors, and developers. We don't just 
                 rent equipment — we go beyond engineering to deliver complete solutions.
               </p>

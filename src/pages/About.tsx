@@ -90,7 +90,7 @@ const About = () => {
                   Ingenuity Specialized Engineering Works Ltd
                 </h2>
                 <p className="fade-up fade-up-delay-3 text-muted-foreground mb-6 text-base leading-relaxed">
-                  Ingenuity Specialized Engineering Works Ltd (ISEW) delivers engineering, construction and industrial supply solutions across Zambia. We specialise in mechanical engineering, fabrication, maintenance, civil construction and procurement prioritising safety, quality and sustainability.
+                  Ingenuity Specialized Engineering Works Ltd (iSEW) delivers engineering, construction and industrial supply solutions across Zambia. We specialise in mechanical engineering, fabrication, maintenance, civil construction and procurement prioritising safety, quality and sustainability.
                 </p>
 
                 <h3 className="mt-6 font-display text-lg font-bold">Our Values</h3>

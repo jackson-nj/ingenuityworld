@@ -150,7 +150,7 @@ const Header = () => {
                     INGENUITY
                   </span>
                   <span className="font-display text-sm md:text-base text-secondary/90 tracking-[0.06em] w-full text-left leading-none mt-1">
-                    <span className="whitespace-nowrap">Specialized Engineering</span><br />Works Limited (ISEW)
+                    <span className="whitespace-nowrap">Specialized Engineering</span><br />Works Limited (iSEW)
                   </span>
                 </div>
               </Link>

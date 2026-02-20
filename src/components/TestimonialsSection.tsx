@@ -4,7 +4,7 @@ import testimonialImg from "@/assets/services/about us2.jpg";
 const testimonial = {
   name: "Mulenga Chanda",
   role: "Project Manager, Lusaka Construction Ltd",
-  content: "Ingenuity Specialized Engineering Works Ltd (ISEW) has been our go-to equipment and engineering partner for 5 years. Their reliability and quality of machinery is unmatched. The operators are professional and the equipment is always in top condition.",
+  content: "Ingenuity Specialized Engineering Works Ltd (iSEW) has been our go-to equipment and engineering partner for 5 years. Their reliability and quality of machinery is unmatched. The operators are professional and the equipment is always in top condition.",
   rating: 5,
 };
 

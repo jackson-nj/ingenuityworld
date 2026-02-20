@@ -37,7 +37,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
           {/* Logo */}
           <div className="p-6 border-b border-white/10">
             <Link to="/" className="flex items-center gap-3">
-              <img src={logomain} alt="Ingenuity Specialized Engineering Works Ltd (ISEW)" className="w-10 h-10 object-contain" />
+              <img src={logomain} alt="Ingenuity Specialized Engineering Works Ltd (iSEW)" className="w-10 h-10 object-contain" />
               <div className="flex flex-col">
                 <span className="font-display text-sm font-bold text-white">INGENUITY</span>
                 <span className="text-[10px] text-white/60 uppercase tracking-wider">Admin Panel</span>

@@ -92,7 +92,7 @@ const Certifications = () => {
               LICENSED & <span className="text-accent-2">CERTIFIED</span>
             </h2>
             <p data-animate="fade-up" data-animate-delay="170ms" className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Ingenuity Specialized Engineering Works Ltd (ISEW) is a fully registered and compliant company, meeting all regulatory requirements 
+              Ingenuity Specialized Engineering Works Ltd (iSEW) is a fully registered and compliant company, meeting all regulatory requirements 
               in Zambia. Our certifications demonstrate our commitment to operating with integrity, transparency, 
               and adherence to all legal and industry standards.
             </p>
@@ -151,7 +151,7 @@ const Certifications = () => {
                 <p className="text-white/70 leading-relaxed mb-8">
                 We believe in doing business the right way. Our certifications and registrations 
                 are not just legal requirements they reflect our core values of integrity, 
-                responsibility, and professionalism. When you work with Ingenuity Specialized Engineering Works Ltd (ISEW), 
+                responsibility, and professionalism. When you work with Ingenuity Specialized Engineering Works Ltd (iSEW), 
                 you can be confident that you're partnering with a company that meets the highest 
                 standards of corporate governance.
               </p>

@@ -29,7 +29,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-xl font-bold text-white">
-                  Ingenuity Specialized Engineering Works Ltd <span className="text-accent-2">(ISEW)</span>
+                  Ingenuity Specialized Engineering Works Ltd <span className="text-accent-2">(iSEW)</span>
                 </span>
                 <span className="text-[10px] text-white/60 uppercase tracking-[0.2em]">We Go Beyond Engineering</span>
               </div>
@@ -159,7 +159,7 @@ const Footer = () => {
       <div className="border-t border-charcoal">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <p className="text-white/50 text-sm">
-            © {currentYear} Ingenuity Specialized Engineering Works Ltd (ISEW). All rights reserved.
+            © {currentYear} Ingenuity Specialized Engineering Works Ltd (iSEW). All rights reserved.
           </p>
         </div>
       </div>
