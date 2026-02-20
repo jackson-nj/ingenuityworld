@@ -26,30 +26,12 @@ const repairImages: string[] = Object.values(repairModules)
 const HeroSection = () => {
   const slides = [...repairImages, ...heroImages];
   const total = slides.length || 1;
-  // default to the Repair & Maintenance image named "2.jpeg" when present (robust check)
-  let defaultIndex = slides.findIndex((s) => /\/2\.(jpe?g|png|webp)(?:$|[?#])/i.test(s));
-  if (defaultIndex < 0) {
-    // fallback: prefer second repair image if available, otherwise first repair image
-    const fallbackRepair = repairImages[1] || repairImages[0];
-    defaultIndex = fallbackRepair ? slides.findIndex((s) => s === fallbackRepair) : 0;
-  }
-  const [index, setIndex] = useState(defaultIndex >= 0 ? defaultIndex : 0);
 
-  // Pre-defined Tailwind translate classes to avoid inline styles (supports up to 12 slides)
-  const translateClasses = [
-    'translate-x-0',
-    '-translate-x-full',
-    '-translate-x-[200%]',
-    '-translate-x-[300%]',
-    '-translate-x-[400%]',
-    '-translate-x-[500%]',
-    '-translate-x-[600%]',
-    '-translate-x-[700%]',
-    '-translate-x-[800%]',
-    '-translate-x-[900%]',
-    '-translate-x-[1000%]',
-    '-translate-x-[1100%]',
-  ];
+  // always start from the very first slide in the assembled list
+  const [index, setIndex] = useState(0);
+
+  // instead of a fixed array of translate classes we compute the transform
+  // inline which supports any number of slides and avoids the 12‑slide limit
 
   const paused = useRef(false);
   const intervalRef = useRef<number | null>(null);
@@ -81,7 +63,13 @@ const HeroSection = () => {
         onMouseEnter={() => (paused.current = true)}
         onMouseLeave={() => (paused.current = false)}
       >
-        <div className={`hero-track h-full flex ${translateClasses[index] ?? 'translate-x-0'}`}>
+        <div
+          className="hero-track h-full flex"
+          style={{
+            transform: `translateX(-${index * 100}%)`,
+            transition: 'transform 0.5s ease',
+          }}
+        >
           {slides.length > 0 ? (
             slides.map((src, i) => (
               <div key={`${src}-${i}`} className="hero-item relative w-full h-full flex-shrink-0">

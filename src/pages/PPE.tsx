@@ -43,10 +43,11 @@ const PPE = () => {
 
   const shoeImages = allPpeImages.filter((src) => /shoe/i.test((src.split('/').pop() ?? '').toLowerCase()));
 
-  // rotate list so last image appears just before the first on load
-  const rotatedImages = allPpeImages.length > 0
-    ? [allPpeImages[allPpeImages.length - 1], ...allPpeImages]
-    : allPpeImages;
+  // the carousel will render two copies of the original array back-to-back.
+  // leaving the order untouched lets us start with the first image, and
+  // because the duplicated copy immediately follows, the animation loop
+  // (0 → -50%) wraps seamlessly: at -50% we are at the beginning of the
+  // second copy (same as the first), so the instant reset to 0 is invisible.
 
 
 
@@ -81,7 +82,7 @@ const PPE = () => {
                   sources to form a seamless track.
                 */}
                 <div className="ppe-track">
-                  {rotatedImages.map((src, idx) => (
+                  {allPpeImages.map((src, idx) => (
                     <img
                       key={src + idx}
                       src={src}
@@ -89,7 +90,7 @@ const PPE = () => {
                       className="h-24 w-auto flex-shrink-0 mx-2 object-contain"
                     />
                   ))}
-                  {rotatedImages.map((src, idx) => (
+                  {allPpeImages.map((src, idx) => (
                     <img
                       key={src + idx + '-dup'}
                       src={src}
