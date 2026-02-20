@@ -112,9 +112,8 @@ const ServicesSection = () => {
         ref={ref}
         onMouseEnter={() => (paused.current = true)}
         onMouseLeave={() => (paused.current = false)}
-        className="w-full overflow-hidden rounded-md"
+        className="w-full max-w-full overflow-hidden overflow-x-auto rounded-md"
         aria-hidden="false"
-        style={{ maxWidth: '100%', overflowX: 'auto' }}
       >
         <div className="flex gap-4 w-max">
           {images.concat(images).map((src, i) => (

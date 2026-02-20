@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Phone, ArrowRight } from "lucide-react";
+import "./HeroSection.css";
 
 // Dynamically import all hero images from src/assets/hero (place your hero images there)
 const heroModules = import.meta.glob('../assets/hero/*.{jpg,jpeg,png,webp}', { eager: true });
@@ -35,6 +36,7 @@ const HeroSection = () => {
 
   const paused = useRef(false);
   const intervalRef = useRef<number | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const start = () => {
@@ -55,6 +57,13 @@ const HeroSection = () => {
     return () => stop();
   }, [total]);
 
+  // update transform using a CSS custom property (avoids JSX inline styles)
+  useEffect(() => {
+    if (trackRef.current) {
+      trackRef.current.style.setProperty('--hero-translate', `-${index * 100}%`);
+    }
+  }, [index]);
+
   return (
     <section id="hero" className="relative min-h-[80vh] md:min-h-screen flex items-center">
       {/* Full-bleed slideshow container (horizontal auto-scroll) */}
@@ -63,13 +72,7 @@ const HeroSection = () => {
         onMouseEnter={() => (paused.current = true)}
         onMouseLeave={() => (paused.current = false)}
       >
-        <div
-          className="hero-track h-full flex"
-          style={{
-            transform: `translateX(-${index * 100}%)`,
-            transition: 'transform 0.5s ease',
-          }}
-        >
+        <div ref={trackRef} className="hero-track h-full flex">
           {slides.length > 0 ? (
             slides.map((src, i) => (
               <div key={`${src}-${i}`} className="hero-item relative w-full h-full flex-shrink-0">

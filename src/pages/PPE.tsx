@@ -9,6 +9,12 @@ const PPE = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeImage, setActiveImage] = useState<string | null>(null);
   const [shoesOpen, setShoesOpen] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
+
+  const carouselRef = useRef<HTMLDivElement | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const animationRef = useRef<number>();
+  const pxPerSecond = 100; // adjust pace here
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -48,52 +54,43 @@ const PPE = () => {
     console.log('PPE carousel images count:', allPpeImages.length, allPpeImages);
   }, [allPpeImages]);
 
-  // the carousel will render two copies of the original array back-to-back.
-  // leaving the order untouched lets us start with the first image, and
-  // because the duplicated copy immediately follows, the animation loop
-  // (0 → -50%) wraps seamlessly: at -50% we are at the beginning of the
-  // second copy (same as the first), so the instant reset to 0 is invisible.
-
-  // measure carousel width and set CSS variable for smooth, consistent speed
-  const carouselRef = useRef<HTMLDivElement | null>(null);
-  const trackRef = useRef<HTMLDivElement | null>(null);
-
-  // when images load or container resizes, recompute animation duration and
-  // restart the CSS animation (to account for any change in track width).
-  const recalc = () => {
-    const track = trackRef.current;
-    const container = carouselRef.current;
-    if (!track || !container) return;
-
-    // px per second constant controls pace; lower = slower scroll
-    const pxPerSecond = 100;
-
-    // track.scrollWidth should equal width of both copies; half of that is the
-    // distance we want to cover each cycle.
-    const distance = track.scrollWidth / 2;
-    const seconds = distance / pxPerSecond;
-    container.style.setProperty('--ppe-scroll-duration', `${seconds}s`);
-
-    // restart animation so it uses the new duration/width
-    track.style.animation = 'none';
-    // trigger reflow
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    track.offsetWidth;
-    track.style.animation = '';
-  };
-
+  // start/stop the automatic scroll once all imgs are in the DOM
   useEffect(() => {
-    window.addEventListener('resize', recalc);
-    recalc();
-    return () => window.removeEventListener('resize', recalc);
-  }, []);
+    if (loadedCount !== allPpeImages.length) return;
+
+    const container = carouselRef.current;
+    const track = trackRef.current;
+    if (!container || !track) return;
+
+    let lastTimestamp = performance.now();
+    const step = (timestamp: number) => {
+      const delta = timestamp - lastTimestamp;
+      lastTimestamp = timestamp;
+      // move the scroll position
+      container.scrollLeft += (pxPerSecond * delta) / 1000;
+
+      // if the first child has completely scrolled out of view,
+      // subtract its width and append it to the end.
+      let first = track.children[0] as HTMLElement | null;
+      while (first && container.scrollLeft >= first.offsetWidth) {
+        container.scrollLeft -= first.offsetWidth;
+        track.appendChild(first);
+        first = track.children[0] as HTMLElement | null;
+      }
+
+      animationRef.current = requestAnimationFrame(step);
+    };
+
+    animationRef.current = requestAnimationFrame(step);
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    };
+  }, [loadedCount, allPpeImages]);
 
   // attach onload to each carousel image so we can recalc once they finish
   const onImgLoad = () => {
-    recalc();
+    setLoadedCount((c) => c + 1);
   };
-
-
 
   return (
     <div className="min-h-screen bg-white">
@@ -117,35 +114,21 @@ const PPE = () => {
               <p className="text-muted-foreground mt-4">Browse our selection of certified PPE items available for procurement.</p>
 
               {/* auto‑scrolling showcase */}
-              <div ref={carouselRef} className="ppe-carousel mt-8" aria-hidden="true" data-testid="ppe-carousel">
-              {/* show number of images in development builds */}
-              {import.meta.env.DEV && (
-                <p className="text-xs text-muted-foreground mb-2">carousel contains {allPpeImages.length} images</p>
-              )}
-                {/*
-                  Two copies of the image list are rendered back‑to‑back.  this is a
-                  common marquee technique that lets the animation loop infinitely
-                  without any visible gap.  it does *not* introduce any images that
-                  aren't already present, the duplication merely re‑uses the same
-                  sources to form a seamless track.
-                */}
-                <div ref={trackRef} className="ppe-track">
+              <div
+                ref={carouselRef}
+                className="relative overflow-hidden mt-8"  /* removed animation classes */
+                aria-hidden="true"
+                data-testid="ppe-carousel"
+              >
+
+                <div ref={trackRef} className="flex items-center gap-4 whitespace-nowrap">
                   {allPpeImages.map((src, idx) => (
                     <img
                       key={src + idx}
                       src={src}
                       alt=""
                       onLoad={onImgLoad}
-                      className="h-24 w-auto flex-shrink-0 mx-2 object-contain"
-                    />
-                  ))}
-                  {allPpeImages.map((src, idx) => (
-                    <img
-                      key={src + idx + '-dup'}
-                      src={src}
-                      alt=""
-                      onLoad={onImgLoad}
-                      className="h-24 w-auto flex-shrink-0 mx-2 object-contain"
+                      className="h-24 w-auto flex-shrink-0 object-contain"
                     />
                   ))}
                 </div>

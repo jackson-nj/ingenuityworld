@@ -1,0 +1,13 @@
+/* styles for the hero section component */
+/* add whatever rules the component relies on – this file just needs to exist */
+.hero-section {
+  /* example: full‑width background */
+  width: 100%;
+  position: relative;
+}
+
+.hero-section .overlay {
+  background: rgba(0,0,0,0.4);
+}
+
+/* …other hero‑specific styles… */
