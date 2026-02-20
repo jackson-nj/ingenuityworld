@@ -56,21 +56,42 @@ const PPE = () => {
 
   // measure carousel width and set CSS variable for smooth, consistent speed
   const carouselRef = useRef<HTMLDivElement | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+
+  // when images load or container resizes, recompute animation duration and
+  // restart the CSS animation (to account for any change in track width).
+  const recalc = () => {
+    const track = trackRef.current;
+    const container = carouselRef.current;
+    if (!track || !container) return;
+
+    // px per second constant controls pace; lower = slower scroll
+    const pxPerSecond = 100;
+
+    // track.scrollWidth should equal width of both copies; half of that is the
+    // distance we want to cover each cycle.
+    const distance = track.scrollWidth / 2;
+    const seconds = distance / pxPerSecond;
+    container.style.setProperty('--ppe-scroll-duration', `${seconds}s`);
+
+    // restart animation so it uses the new duration/width
+    track.style.animation = 'none';
+    // trigger reflow
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    track.offsetWidth;
+    track.style.animation = '';
+  };
+
   useEffect(() => {
-    const node = carouselRef.current;
-    if (!node) return;
-    const updateDuration = () => {
-      const pxPerSecond = 100; // lower value slows the scroll
-      const width = node.offsetWidth;
-      // distance traveled is 50% of track (same as animation keyframe)
-      const distance = width;
-      const seconds = distance / pxPerSecond;
-      node.style.setProperty('--ppe-scroll-duration', `${seconds}s`);
-    };
-    updateDuration();
-    window.addEventListener('resize', updateDuration);
-    return () => window.removeEventListener('resize', updateDuration);
+    window.addEventListener('resize', recalc);
+    recalc();
+    return () => window.removeEventListener('resize', recalc);
   }, []);
+
+  // attach onload to each carousel image so we can recalc once they finish
+  const onImgLoad = () => {
+    recalc();
+  };
 
 
 
@@ -108,12 +129,13 @@ const PPE = () => {
                   aren't already present, the duplication merely re‑uses the same
                   sources to form a seamless track.
                 */}
-                <div className="ppe-track">
+                <div ref={trackRef} className="ppe-track">
                   {allPpeImages.map((src, idx) => (
                     <img
                       key={src + idx}
                       src={src}
                       alt=""
+                      onLoad={onImgLoad}
                       className="h-24 w-auto flex-shrink-0 mx-2 object-contain"
                     />
                   ))}
@@ -122,6 +144,7 @@ const PPE = () => {
                       key={src + idx + '-dup'}
                       src={src}
                       alt=""
+                      onLoad={onImgLoad}
                       className="h-24 w-auto flex-shrink-0 mx-2 object-contain"
                     />
                   ))}
